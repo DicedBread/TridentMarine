@@ -1,6 +1,8 @@
 :root{
     /* color */
-    --white: ;
+    --white: white;
+
+    font-size: 16;
 }
 
 body{
@@ -10,13 +12,53 @@ body{
 
 /* main body */
 .wrapper{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     padding: 0;
     margin: 0;
 
 }
 
-header{
+h1{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
     background-color: var(--white);
+    height: 10%; /*make clamp*/
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+.nav{
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/* move to end */
+
+.nav div{
+    background-color: blue;
+    width: auto;
+    height: auto;
+    margin: 2%;
+}
+
+.main{
+    height: 1000px;
+    width: 100%;
+    background-color: blue;
 }
