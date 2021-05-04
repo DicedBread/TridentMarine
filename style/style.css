@@ -1,6 +1,11 @@
 :root{
     /* color */
     --white: white;
+    --dark-blue: #274060;
+    --blue: #335c81;
+    --light-blue: #65afff; 
+    --deep-blue: #1b2845;
+    --blue-grey: #5899e2;
 
     font-size: 16;
 }
@@ -23,38 +28,64 @@ h1{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+    color: var(--dark-blue);
 }
 
 h2{
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .header{
     background-color: var(--white);
-    height: 10%; /*make clamp*/
+    height: 50px; 
     width: 100%;
     display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
     flex-direction: row;
-    padding: 2%;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-right: clamp(10px, 3%, 90px);
+    /* padding-left: 90px; */
     box-sizing: border-box;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo{
+    width: 30px;
+    height: 100%;
+    background-color: whitesmoke;
 }
 
 .nav{
-    width: 40%;
-    height: auto;
+    /* background-color: grey; */
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: 10px;
 }
 /* move to end */
 
 .nav div{
-    background-color: blue;
-    width: auto;
-    height: auto;
-    margin: 2%;
+    background-color: var(--blue);
+    color: white;
+    width: 100px;
+    height: 28px;
+    margin: auto 1%;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .main{
