@@ -238,11 +238,18 @@ path{
     font-size: 3rem;
 }
 
+/* container */
+.search{
+    display: flex;
+    flex-direction: row;
+}
+
 .search_icon{
     height: 35px;
     width: 35px;
 }
 
+/* search bar */
 input[type=text]{
     background-color: white;
     height: 35px;
@@ -265,12 +272,9 @@ input:focus {
     border: specify yours;
  }
 
-.search{
-    display: flex;
-    flex-direction: row;
 
-}
 
+/* kill */
 .Ellipse{
     /* Ellipse 1 */
     width: 100%;
