@@ -233,6 +233,11 @@ path{
     box-sizing: border-box;
 }
 
+.title_search_cont{
+    width: 100%;
+    height: 50%;
+}
+
 .title h2{
     color: white;
     font-size: 3rem;
@@ -272,8 +277,6 @@ input:focus {
     border: specify yours;
  }
 
-
-
 /* kill */
 .Ellipse{
     /* Ellipse 1 */
@@ -282,4 +285,21 @@ input:focus {
 
     border: 6px solid #000000;
     box-sizing: border-box;
+}
+
+.coursesboxes{
+    background-color: red;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.coursesboxes div{
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    margin: 0 auto;
 }
