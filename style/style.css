@@ -23,7 +23,7 @@ body{
     margin: 0;
 }
 
-.header{
+header{
     background-color: var(--white);
     height: 50px; 
     width: 100%;
@@ -240,7 +240,7 @@ path{
 
 .title h2{
     color: white;
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 /* container */
@@ -278,17 +278,15 @@ input:focus {
  }
 
 /* kill */
-.Ellipse{
-    /* Ellipse 1 */
+/* .Ellipse{
     width: 100%;
     height: 100%;
-
     border: 6px solid #000000;
     box-sizing: border-box;
-}
+} */
 
 .coursesboxes{
-    background-color: red;
+    /* background-color: red; */
     width: 100%;
     height: 50%;
     display: flex;
@@ -298,8 +296,11 @@ input:focus {
 }
 
 .coursesboxes div{
-    width: 30%;
+    width: max(30%, 330px);
     height: 100%;
     background-color: white;
     margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-sizing: border-box;
 }
