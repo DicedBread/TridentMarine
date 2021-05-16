@@ -23,59 +23,6 @@ body{
     margin: 0;
 }
 
-header{
-    background-color: var(--white);
-    height: 50px; 
-    width: 100%;
-    display: flex;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    flex-direction: row;
-    /* padding-top: auto;
-    padding-bottom: auto; */
-    padding-right: clamp(10px, 3%, 90px);
-    /* padding-left: 90px; */
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: flex-start;
-    z-index: 1;
-}
-
-.logo{
-    width: 30px;
-    height: 100%;
-    background-color: whitesmoke;
-    /* get logo */
-}
-
-.nav{
-    /* background-color: grey; */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 10px;
-}
-/* move to end */
-
-.nav div{
-    background-color: var(--blue);
-    color: white;
-    width: 100px;
-    height: 28px;
-    margin: auto 1%;
-    font-size: 0.8rem;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .main{
     height: auto;
     width: 100%;
@@ -84,7 +31,7 @@ header{
 
 .heroimage{
     /* background-color: lightblue; */
-    background-image: url(/images/hero_image_edit_3.jpg);
+    background-image: url("../images/hero_image_4.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -194,7 +141,7 @@ path{
     overflow: hidden;
     height: 100%;
     width: 100%;
-    background-image: url(/images/img_2.jpg);
+    background-image: url("../images/hero_image_4.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

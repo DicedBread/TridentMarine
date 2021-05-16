@@ -4,31 +4,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/style/font.css">
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="style/font.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <div class="test">
-        <p id="test"></p>
-    </div>
-
     <div class="wrapper">
-        <header>
-            <div class="logo"></div>
-            <h1>Trident Marine</h1>
-            <!-- nav -->
-            <div class="nav">
-                <div>
-                    <h2>Home</h2>
-                </div>
-                <div>
-                    <h2>Courses</h2>
-                </div>
-                <div>
-                    <h2>About us</h2>
-                </div>
-            </div>
-        </header>
+    <?php include('includes/header.php') ?>
         
         <div class="main">
             <div class="heroimage">
@@ -42,7 +24,7 @@
                     </p>
                 </div>
                 <div class="info_image">
-                    <img src="/images/Img_1.jpg" alt="boat">
+                    <img src="images/Img_1.jpg" alt="boat">
                 </div>
             </div>
             
