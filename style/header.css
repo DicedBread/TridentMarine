@@ -12,11 +12,18 @@ header{
     /* padding-top: auto;
     padding-bottom: auto; */
     padding-right: clamp(10px, 3%, 90px);
+    padding-left: clamp(10px, 3%, 90px);
     /* padding-left: 90px; */
     box-sizing: border-box;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     z-index: 1;
+}
+
+.brand{
+    display: flex;
+    flex-direction: row;
+
 }
 
 .logo{
@@ -28,12 +35,13 @@ header{
 
 .nav{
     /* background-color: grey; */
-    width: 100%;
+    width: auto;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    justify-self: flex-end;
     margin-right: 10px;
 }
 
@@ -42,7 +50,7 @@ header{
     color: white;
     width: 100px;
     height: 28px;
-    margin: auto 1%;
+    margin: auto 10px;
     font-size: 0.8rem;
     white-space: nowrap;
     display: flex;
@@ -54,4 +62,23 @@ header{
 
 .nav button:hover{
     background-color: var(--dark-blue);
+}
+
+@media screen and (max-width: 700px) {
+    .nav{
+        background-color: var(--blue);
+        width: 60px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 10px;
+    }
+
+    .nav button{
+        display: none;
+    }
+
+    
 }

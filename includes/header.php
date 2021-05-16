@@ -1,6 +1,8 @@
 <header>
-    <div class="logo"></div>
+    <div class="brand">
+        <div class="logoimg"></div>
         <h1>Trident Marine</h1>
+    </div>
         <!-- nav -->
     <div class="nav">
         <!-- <div>
