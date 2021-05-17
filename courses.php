@@ -11,6 +11,14 @@
 <body>
     <div class="wrapper">
         <?php include('includes/header.php') ?>
+
+        <div class="yea">
+            <h1>Courses</h1>
+        </div>
+        <div class="courses_nav">
+            <!-- three main button  -->
+            <!-- with second div with the display crap -->
+        </div>
     </div>
     
 </body>
