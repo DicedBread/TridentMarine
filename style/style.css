@@ -40,32 +40,14 @@ body{
     overflow: hidden;    
 }
 
-/* make image not die when thing */
-
-/* .heroimage img{
-    width: 100%;
-    height: ;
-} */
-
-/* @media only screen and (max-width: 1500px) {
-    .heroimage{
-        background-color: lightblue;
-        background-image: url(/images/hero_image_edit_3.jpg);
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: 150%;
-        width: 100%;
-        height: 70vh;
-        overflow: hidden;    
-    }
-  } */
-
 .info_cont{
     background-color: var(--blue-grey);
     height: calc(35vh - 50px);
+    /* height: auto; */
     display: flex;
     flex-direction: row;
-    padding: 15px 100px;
+    justify-content: space-between;
+    padding: 15px clamp(10px, 3%, 100px);
 }
 
 .info_text{
@@ -90,12 +72,14 @@ body{
 .info_image{
     /* background-color: red; */
     width: calc(100% / 3);  /* 1/3 */
-    height: 100%;
+    height: clamp(290px, );
+    /* height: 100%; */
 }
 
 .info_image img{
     height: 100%;
     width: auto;
+    float: right;
 }
 
 .bottomhalf{

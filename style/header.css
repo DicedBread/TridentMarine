@@ -11,8 +11,8 @@ header{
     flex-direction: row;
     /* padding-top: auto;
     padding-bottom: auto; */
-    padding-right: clamp(10px, 3%, 90px);
-    padding-left: clamp(10px, 3%, 90px);
+    padding-right: clamp(10px, 3%, 100px);
+    padding-left: clamp(10px, 3%, 100px);
     /* padding-left: 90px; */
     box-sizing: border-box;
     align-items: center;
