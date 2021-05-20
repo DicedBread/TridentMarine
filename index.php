@@ -6,7 +6,10 @@
     <title>TridentMarine</title>
     <link rel="stylesheet" href="style/font.css">
     <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/courses.css">
     <link rel="stylesheet" href="style/style.css">
+
 </head>
 <body>
     <div class="wrapper">
@@ -86,9 +89,7 @@
                 </div>
 
             </div> <!-- bottomhalf end -->
-            <footer>
-                
-            </footer>
+            <?php include('includes/footer.php')?>
         </div><!--  main end -->
     </div><!-- wrap end -->
     

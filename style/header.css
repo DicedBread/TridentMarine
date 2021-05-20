@@ -17,7 +17,7 @@ header{
     box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 3;
 }
 
 .brand{
@@ -41,7 +41,6 @@ header{
     align-items: center;
     justify-content: flex-end;
     justify-self: flex-end;
-    margin-right: 10px;
 }
 
 .nav button{
@@ -49,7 +48,7 @@ header{
     color: white;
     width: 100px;
     height: 28px;
-    margin: auto 10px;
+    /* margin: auto 10px; */
     font-size: 0.8rem;
     white-space: nowrap;
     display: flex;
@@ -57,12 +56,18 @@ header{
     justify-content: center;
     border: none;
     cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav button:nth-child(2){
+    margin: 0 20px;
 }
 
 /* fix the margin problem by using nth child to only select second guy */
 
 .nav button:hover{
-    background-color: var(--dark-blue);
+    background-color: var(--blue-grey);
+    transition: 0.2s;
 }
 
 @media screen and (max-width: 700px) {
