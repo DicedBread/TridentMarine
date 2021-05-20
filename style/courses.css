@@ -1,5 +1,5 @@
 .courses_title_card{
-    background-color: var(--blue-grey);
+    background-color: var(--dark-blue);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,6 +7,31 @@
     height: 30vh;
 }
 
-.courses_title_card h1{
+.courses_title_card h2{
     color: white;
+    font-size: 3rem;
+}
+
+.courses_nav{
+    background-color: var(--blue-grey);
+    height: 25vh;
+    width: 100%;
+}
+
+.main_btn{
+    background-color: aqua;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.main_btn button{
+    /* width: ; */
+    height: 100%;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    flex-grow: 1;
 }
