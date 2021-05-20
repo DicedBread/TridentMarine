@@ -23,7 +23,6 @@ header{
 .brand{
     display: flex;
     flex-direction: row;
-
 }
 
 .logo{
@@ -60,6 +59,8 @@ header{
     cursor: pointer;
 }
 
+/* fix the margin problem by using nth child to only select second guy */
+
 .nav button:hover{
     background-color: var(--dark-blue);
 }
@@ -83,8 +84,3 @@ header{
     
 }
 
-.yea{
-    height: 50vh;
-    width: 100%;
-    background-color: black;
-}

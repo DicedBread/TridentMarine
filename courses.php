@@ -12,7 +12,7 @@
     <div class="wrapper">
         <?php include('includes/header.php') ?>
 
-        <div class="yea">
+        <div class="courses_title_card">
             <h1>Courses</h1>
         </div>
         <div class="courses_nav">

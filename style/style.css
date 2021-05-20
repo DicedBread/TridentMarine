@@ -236,3 +236,17 @@ input:focus {
     box-sizing: border-box;
 }
 
+
+/* courses page style */
+
+.courses_title_card{
+    background-color: var(--blue-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.courses_title_card h1{
+    color: white;
+}
