@@ -15,7 +15,7 @@
     <div class="wrapper">
         <?php include('includes/header.php') ?>
         <div class="courses_title_card">
-            <h2>COURSES</h2>
+            <h1>COURSES</h1>
         </div>
         <div class="courses_nav">
             <div class="courses_nav">

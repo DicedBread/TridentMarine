@@ -7,7 +7,7 @@
     height: 30vh;
 }
 
-.courses_title_card h2{
+.courses_title_card h1{
     color: white;
     font-size: 3rem;
 }
@@ -28,10 +28,25 @@
 }
 
 .main_btn button{
-    /* width: ; */
+    background-color: var(--blue);
     height: 100%;
+    min-height: 90px;
     margin: 0;
     border: none;
     box-sizing: border-box;
     flex-grow: 1;
+}
+
+.main_btn button h2{
+    color: white;
+    font-size: 2rem;
+}
+
+.main_btn button:hover{
+    cursor: pointer;
+    /* background-color: var(); */
+}
+
+.main_btn button:focus{
+    background-color: var(--blue-grey);
 }
