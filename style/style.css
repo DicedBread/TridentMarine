@@ -130,11 +130,6 @@ path{
     background-position: center;
     background-size: cover;
 }
-/* 
-.backgroundimg img{
-    width: 100%;
-    height: auto;
-} */
 
 .backgroundimg div{
     background-color: var(--blue-grey);
@@ -206,15 +201,7 @@ input[type=text]:focus{
 input:focus {
     outline: none;
     border: specify yours;
- }
-
-/* kill */
-/* .Ellipse{
-    width: 100%;
-    height: 100%;
-    border: 6px solid #000000;
-    box-sizing: border-box;
-} */
+}
 
 .coursesboxes{
     /* background-color: red; */

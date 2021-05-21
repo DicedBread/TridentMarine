@@ -16,9 +16,7 @@
     <?php include('includes/header.php') ?>
         
         <div class="main">
-            <div class="heroimage">
-                <!-- <img src="/images/hero_image_edit_3.jpg" alt="boat"> -->
-            </div>
+            <div class="heroimage"></div>
 
             <div class="info_cont">
                 <div class="info_text">
@@ -75,17 +73,12 @@
                 </div>
 
                 <!-- second background image -->
-                <div class="backgroundimg">
-                    <!-- <img src="/images/img_2.jpg" alt="poeple on boat"> -->
-                </div>
+                <div class="backgroundimg"></div>
 
                 <div class="wave_2">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                         <path fill="#0099ff" fill-opacity="1" d="M0,192L48,213.3C96,235,192,277,288,261.3C384,245,480,171,576,154.7C672,139,768,181,864,197.3C960,213,1056,203,1152,208C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                      </svg>
-                    <!-- <svg>
-                        <path fill="#0099ff" fill-opacity="1" d="M0.00,49.98 C187.63,160.36 264.95,16.28 501.97,86.34 L500.00,150.00 L0.00,150.00 Z"></path>
-                      </svg> -->     
+                      </svg>  
                 </div>
 
             </div> <!-- bottomhalf end -->

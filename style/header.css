@@ -63,8 +63,6 @@ header{
     margin: 0 20px;
 }
 
-/* fix the margin problem by using nth child to only select second guy */
-
 .nav button:hover{
     background-color: var(--blue-grey);
     transition: 0.2s;

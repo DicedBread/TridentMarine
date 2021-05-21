@@ -5,15 +5,6 @@
     </div>
         <!-- nav -->
     <div class="nav">
-        <!-- <div>
-            <h2>Home</h2>
-        </div>
-        <div>
-            <h2>Courses</h2>
-        </div>
-        <div>
-            <h2>About us</h2>
-        </div> -->
         <button onclick="document.location='./index.php'">
             <h2>Home</h2>
         </button>
