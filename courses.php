@@ -21,10 +21,10 @@
             <div class="courses_nav">
                 <div class="main_btn">
                     <button>
-                        <h2>Power Boating</h2>
+                        <h2>Personal Watercraft</h2>
                     </button>
                     <button>
-                        <h2>Personal Watercraft</h2>
+                        <h2>Power Boating</h2>
                     </button>
                     <button>
                         <h2>Motor Cruising</h2>
