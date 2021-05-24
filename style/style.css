@@ -8,6 +8,8 @@
     --blue-grey: #5899e2;
 
     font-size: 16;
+
+    --select-posistion: translateX(calc(100%));
 }
 
 body{

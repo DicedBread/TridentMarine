@@ -83,6 +83,6 @@
     background-color: red;
     opacity: 50%;
     z-index: 3;
-    transform: translateX(calc(100% * 2));
+    transform: --select-posistion;
     transition: 0.4s;
 }
