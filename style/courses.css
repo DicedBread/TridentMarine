@@ -23,9 +23,16 @@
     width: 100%;
     height: 60%;
     display: flex;
+    position: relative;
     flex-direction: row;
     /* justify-content: space-evenly; */
 }
+
+/* .button_cont{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
 
 .main_btn button{
     background-color: var(--blue);
@@ -53,4 +60,29 @@
 
 .main_btn button:focus{
     background-color: var(--blue-grey);
+}
+
+/* .select{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% / 3);
+    height: 100%;
+    background-color: red;
+    opacity: 50%;
+    z-index: 3;
+} */
+
+.main_btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% / 3);
+    height: 100%;
+    background-color: red;
+    opacity: 50%;
+    z-index: 3;
+    transform: translateX(calc(100% * 2));
+    transition: 0.4s;
 }

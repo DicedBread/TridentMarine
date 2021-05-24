@@ -17,10 +17,10 @@
         <div class="courses_title_card">
             <h1>COURSES</h1>
         </div>
-        <div class="courses_nav">
+        <div class="courses">
             <div class="courses_nav">
                 <div class="main_btn">
-                    <button>
+                    <button onclick="">
                         <h2>Personal Watercraft</h2>
                     </button>
                     <button>
