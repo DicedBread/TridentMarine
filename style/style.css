@@ -7,6 +7,9 @@
     --deep-blue: #1b2845;
     --blue-grey: #5899e2;
 
+    --blue-half: hsla(208, 43%, 35%, 0.5);
+
+
     font-size: 16;
 
     --select-posistion: translateX(calc(100%));
@@ -23,6 +26,7 @@ body{
     height: auto;
     padding: 0;
     margin: 0;
+    z-index: -10;
 }
 
 .main{

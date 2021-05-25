@@ -16,15 +16,17 @@
     background-color: var(--blue-grey);
     height: 25vh;
     width: 100%;
+    z-index: 1;
 }
 
 .main_btn{
-    background-color: aqua;
+    /* background-color: aqua; */
     width: 100%;
     height: 60%;
     display: flex;
     position: relative;
     flex-direction: row;
+    z-index: 2;
     /* justify-content: space-evenly; */
 }
 
@@ -35,7 +37,7 @@
 } */
 
 .main_btn button{
-    background-color: var(--blue);
+    background-color: var(--blue-half);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,16 +53,17 @@
 .main_btn button h2{
     color: white;
     font-size: 2rem;
+    opacity: 100%;
 }
 
 .main_btn button:hover{
     cursor: pointer;
-    background-color: var(--light-blue);
+    /* background-color: var(--light-blue); */
 }
 
-.main_btn button:focus{
+/* .main_btn button:focus{
     background-color: var(--blue-grey);
-}
+} */
 
 /* .select{
     position: absolute;
@@ -80,9 +83,18 @@
     left: 0;
     width: calc(100% / 3);
     height: 100%;
-    background-color: red;
+    background-color: var(--deep-blue);
+    box-shadow: 0px 9px 29px -4px #000000;
     opacity: 50%;
-    z-index: 3;
-    transform: --select-posistion;
+    z-index: -1;
+    transform: var(--select-position);
     transition: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.sub_btn_cont{
+    width: 100%;
+    height: 40%;
+    background-color: var(--dark-blue);
+
 }

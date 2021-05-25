@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TridentMarine</title>
     <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script/style.js"></script>
     <link rel="stylesheet" href="style/font.css">
     <link rel="stylesheet" href="style/header.css">
@@ -33,7 +34,9 @@
                         <h2>Motor Cruising</h2>
                     </button>
                 </div>
-                <div class="sub_btn"></div>
+                <div class="sub_btn_cont">
+                    <div class="button"></div>
+                </div>
             </div>
             <!-- three main button  -->
             <!-- with second div with the display crap -->
