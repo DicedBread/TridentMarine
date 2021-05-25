@@ -35,7 +35,20 @@
                     </button>
                 </div>
                 <div class="sub_btn_cont">
-                    <div class="button"></div>
+                    <div class="slide_cont">
+                        <div class="pw_sub_btn sub_btn">
+                            <button></button>
+                            <button></button>
+                            <button></button>
+                        </div>
+                        <div class="pb_sub_btn sub_btn">
+                            <button></button>
+                            <button></button>
+                        </div>
+                        <div class="mc_sub_btn sub_btn">
+                            <button></button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- three main button  -->
