@@ -255,6 +255,17 @@ input:focus {
     box-sizing: border-box;
 }
 
-
+@media screen and (max-width: 700px) {
+    
+    .info_cont{
+        background-color: var(--blue-grey);
+        height: calc(35vh - 50px);
+        min-height: 230px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px clamp(10px, 3%, 100px);
+    }  
+}
 
 
