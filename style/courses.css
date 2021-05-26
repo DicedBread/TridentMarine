@@ -37,7 +37,7 @@
 } */
 
 .main_btn button{
-    background-color: var(--blue-half);
+    background-color: rgba(255, 255, 255, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,9 +91,8 @@
     left: 0;
     width: calc(100% / 3);
     height: 100%;
-    background-color: var(--deep-blue);
-    box-shadow: 0px 9px 29px -4px #000000;
-    opacity: 50%;
+    background-color: var(--blue);
+    /* box-shadow: 0px 9px 29px -4px #000000; */
     z-index: -1;
     transform: var(--select-position);
     transition: 0.4s;
@@ -103,15 +102,17 @@
 .sub_btn_cont{
     width: 100%;
     height: 40%;
-    background-color: var(--dark-blue);
+    background-color: var(--blue);
     overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .slide_cont{
     width: 300vw;
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     transform: var(--select-subbtn-posistion);
     transition: 0.4s;

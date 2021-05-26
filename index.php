@@ -19,7 +19,9 @@
     <?php include('includes/header.php') ?>
         
         <div class="main">
-            <div class="heroimage"></div>
+            <div class="heroimage">
+                <img src="./images/hero_image_4.jpg" alt="">
+            </div>
 
             <div class="info_cont">
                 <div class="info_text">

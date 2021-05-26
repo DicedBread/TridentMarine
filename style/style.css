@@ -36,16 +36,34 @@ body{
     background-color: blue;
 }
 
-.heroimage{
-    /* background-color: lightblue; */
+/* .heroimage{
     background-image: url("../images/hero_image_4.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     width: 100%;
     height: 65vh;
+    min-width: 100vw;
     min-height: 300px;
     overflow: hidden;    
+} */
+
+/* fix image width  */
+.heroimage{
+    width: 100%;
+    height: auto;
+    min-width: 100%;
+    min-height: 300px;
+    overflow: hidden;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroimage img{
+    width: 100%;
+    min-height: 300px;
+    min-width: 818px;
 }
 
 .info_cont{
