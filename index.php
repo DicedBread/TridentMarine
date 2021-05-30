@@ -26,7 +26,7 @@
             <div class="info_cont">
                 <div class="info_text">
                     <h3>Our Purpose</h3>
-                    <p>Trident Marine sailing school provides basic to advanced RYA course in power boating as well as RYA Motor boating courses to help upcoming skippers and helmsmen get qualifications. We also provide personal water craft courses. 
+                    <p>Trident Marine’s purpose is to provide top quality maritime training to both recreational boaties and those wishing to work towards the commercial qualifications. With over 25 years of instructing maritime courses Trident marine is able to provide a wealth of knowledge to which vessel you intend to drive. 
                     </p>
                 </div>
                 <div class="info_image">

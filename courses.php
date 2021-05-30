@@ -37,9 +37,9 @@
                 <div class="sub_btn_cont">
                     <div class="slide_cont">
                         <div class="pw_sub_btn sub_btn">
-                            <button></button>
-                            <button></button>
-                            <button></button>
+                            <button>car</button>
+                            <button>boat</button>
+                            <button>grass</button>
                         </div>
                         <div class="pb_sub_btn sub_btn">
                             <button></button>
