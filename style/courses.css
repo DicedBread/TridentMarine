@@ -1,16 +1,3 @@
-.courses_title_card{
-    background-color: var(--dark-blue);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 30vh;
-}
-
-.courses_title_card h1{
-    color: white;
-    font-size: 3rem;
-}
 
 .courses_nav{
     background-color: var(--blue-grey);

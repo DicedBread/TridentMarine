@@ -284,7 +284,7 @@ input:focus {
     .content{
         z-index: 2;
         width: 100%;
-        height: 60%;
+        height: 70%;
         padding: 30px clamp(10px, 3%, 100px);
         box-sizing: border-box;
         transition: 0.1s;
@@ -314,14 +314,13 @@ input:focus {
     } */
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 990px) {
     .info_text p{
         font-size: 1.2rem;
     }
 }
 
 @media screen and (max-width: 700px) {
-    
     .info_cont{
         background-color: var(--blue-grey);
         height: calc(35vh - 50px);
@@ -353,4 +352,17 @@ input:focus {
     }
 }
 
+/* courses and about us title card */
+.title_card{
+    background-color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30vh;
+}
 
+.title_card h1{
+    color: white;
+    font-size: 3rem;
+}
