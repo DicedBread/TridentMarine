@@ -15,16 +15,19 @@
             <h2>About us</h2>
         </button>
     </div>
-    <div class="mobile_nav">
+    <div class="mobile_nav" onclick="mobileNav(open)">
         <div class="drop_icon"></div>
-        <button onclick="document.location='./index.php'">
-            <h2>Home</h2>
-        </button>
-        <button onclick="document.location='./courses.php'">
-            <h2>Courses</h2>
-        </button>
-        <button onclick="document.location='./aboutus.php'">
-            <h2>About us</h2>
-        </button>
+        <div class="mobile_nav_btn">
+            <button onclick="document.location='./index.php'">
+                <h2>Home</h2>
+            </button>
+            <button onclick="document.location='./courses.php'">
+                <h2>Courses</h2>
+            </button>
+            <button onclick="document.location='./aboutus.php'">
+                <h2>About us</h2>
+            </button>
+        </div>
+        <div class="blur"></div>
     </div>
 </header>
