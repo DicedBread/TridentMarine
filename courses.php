@@ -55,6 +55,8 @@
             <!-- with second div with the display crap -->
         </div>
     </div>
+
+    <?php include('./includes/footer.php')?>
     
 </body>
 </html>

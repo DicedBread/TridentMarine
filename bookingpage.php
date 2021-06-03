@@ -15,15 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="wrapper">
-        <?php include('includes/header.php') ?>
-    </div>
-
-    <div class="title_card">
-        <h1>ABOUT US</h1>
-    </div>
-
-    <?php include('./includes/footer.php')?>
     
 </body>
 </html>

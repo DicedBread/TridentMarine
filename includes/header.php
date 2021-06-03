@@ -15,6 +15,8 @@
             <h2>About us</h2>
         </button>
     </div>
+
+    <!-- mobile -->
     <div class="mobile_nav" onclick="mobileNav(open)">
         <div class="drop_icon"></div>
         <div class="mobile_nav_btn">
