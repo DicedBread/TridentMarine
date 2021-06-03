@@ -17,9 +17,10 @@
     </div>
 
     <!-- mobile -->
-    <div class="mobile_nav_drop" onclick="mobileNav(open)">
-        <div class="drop_icon"></div>
-        <div class="mobile_nav_cont" id="mobileNav">
+    <div class="mobile_nav_drop" onclick="mobileNav(1)">
+        <div class="drop_icon" id="dropIcon"></div>
+        <div class="blur" id="blur"></div>
+        <div class="mobile_nav_cont" id="mobileNav" onclick="mobileNav(0)">
             <button onclick="document.location='./index.php'">
                 <h2>Home</h2>
             </button>
@@ -30,6 +31,5 @@
                 <h2>About us</h2>
             </button>
         </div>
-        <div class="blur"></div>
     </div>
 </header>

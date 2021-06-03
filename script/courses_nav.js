@@ -16,6 +16,13 @@ function coursesNav(a) {
 };
 
 function mobileNav(state){
-    $("#mobileNav").css("display", "flex");
-    $("#blur").css("display", "block")
-}
+    if (state == 1) {
+        $("#mobileNav").css("display", "flex");
+        $("#blur").css("display", "block");
+        $("#dropIcon").css("transform", "rotate(180deg)")
+    } else if (state == 0) {
+        $("#mobileNav").css("display", "none");
+        $("#blur").css("display", "none");
+        $("#dropIcon").css("transform", "0")
+    }
+};
