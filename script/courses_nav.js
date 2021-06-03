@@ -14,3 +14,8 @@ function coursesNav(a) {
         console.log("3");
     }
 };
+
+function mobileNav(state){
+    $("#mobileNav").css("display", "flex");
+    $("#blur").css("display", "block")
+}
