@@ -19,10 +19,10 @@ function mobileNav(state){
     if (state == 1) {
         $("#mobileNav").css("display", "flex");
         $("#blur").css("display", "block");
-        $("#dropIcon").css("transform", "rotate(180deg)")
-    } else if (state == 0) {
+        $("#dropIcon").css("transform", "rotate(180deg)");
+    } else if (state == 2) {
         $("#mobileNav").css("display", "none");
         $("#blur").css("display", "none");
-        $("#dropIcon").css("transform", "0")
+        $("#dropIcon").css("transform", "0");
     }
 };

@@ -49,6 +49,8 @@
                             <button></button>
                         </div>
                     </div>
+                </div> <!-- nav end -->
+                <div class="course_display">
                 </div>
             </div>
             <!-- three main button  -->
