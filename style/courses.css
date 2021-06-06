@@ -118,8 +118,22 @@
 }
 
 .sub_btn button{
-    width: 30%;
-    height: 80%;
+    width: calc(100% / 4 - 10px);
+    height: 70%;
     background-color: aliceblue;
     border: none;
+    font-size: 1rem;
 }
+
+.sub_btn button:hover{
+    background-color: rgb(178, 195, 209);
+    transition: 0.3s;
+}
+
+.course_display{
+    width: 100%;
+    height: 20%;
+    background-color: white;
+}
+
+

@@ -35,26 +35,31 @@
                     </button>
                 </div>
                 <div class="sub_btn_cont">
-                    <div class="slide_cont">
+                    <div class="slide_cont"> <!-- personal watercraft -->
                         <div class="pw_sub_btn sub_btn">
-                            <button>car</button>
-                            <button>boat</button>
-                            <button>grass</button>
-                        </div>
-                        <div class="pb_sub_btn sub_btn">
+                            <button></button>
                             <button></button>
                             <button></button>
                         </div>
-                        <div class="mc_sub_btn sub_btn">
-                            <button></button>
+                        <div class="pb_sub_btn sub_btn"> <!-- power boating -->
+                            <button>Level 1 Start Powerboating</button>
+                            <button>Level 2 Powerboating Handling</button>
+                            <button>Intermediate Powerboat Day Cruising</button>
+                            <button>Advanced Powerboat Day And Night</button>
+                        </div>
+                        <div class="mc_sub_btn sub_btn"> <!-- motor  crusing -->
+                            <button>Helmsman’s Course</button>
+                            <button>Day Skipper</button>
+                            <button>Coastal Skipper</button>
                         </div>
                     </div>
-                </div> <!-- nav end -->
-                <div class="course_display">
-                </div>
+                </div> 
+            </div><!-- nav end -->
+            <div class="course_display">
+                <div class="title">
+                    <h1>Level 1 Start Powerboating</h1>
+                </div>      
             </div>
-            <!-- three main button  -->
-            <!-- with second div with the display crap -->
         </div>
     </div>
 
