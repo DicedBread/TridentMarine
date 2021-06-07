@@ -58,7 +58,21 @@
             <div class="course_display">
                 <div class="title">
                     <h1>Level 1 Start Powerboating</h1>
-                </div>      
+                </div>
+                <div class="course_outline">
+                    <dl>
+                        <dt>Aim:</dt>
+                        <dd>To teach boat handling and seamanship in powerboats. The course may be conducted in a variety of boat types, both planning and displacement. </dd>
+                        <dt>Ratio:</dt>
+                        <dd>3:1 </dd>
+                        <dt>Prerequisites:</dt>
+                        <dd>None</dd>
+                        <dt>Minimum Age:</dt>
+                        <dd>8 years old </dd>
+                        <dt>Endorsements:</dt>
+                        <dd>Is aged 12-15 and therefore should only used powered craft under the supervision of a responsible adult on board the craft </dd>
+                    </dl>
+                </div>    
             </div>
         </div>
     </div>
