@@ -56,7 +56,7 @@
                 </div> 
             </div><!-- nav end -->
             <div class="course_display">
-                <div class="title">
+                <div class="course_title">
                     <h1>Level 1 Start Powerboating</h1>
                 </div>
                 <div class="course_outline">

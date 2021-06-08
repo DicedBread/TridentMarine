@@ -9,11 +9,7 @@ header{
     left: 0;
     bottom: 0;
     flex-direction: row;
-    /* padding-top: auto;
-    padding-bottom: auto; */
-    padding-right: clamp(10px, 3%, 100px);
-    padding-left: clamp(10px, 3%, 100px);
-    /* padding-left: 90px; */
+    padding: 0 clamp(10px, 3%, 100px);
     box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
@@ -33,7 +29,6 @@ header{
 }
 
 .nav{
-    /* background-color: grey; */
     width: auto;
     height: 100%;
     display: flex;
