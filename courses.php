@@ -72,7 +72,10 @@
                         <dt>Endorsements:</dt>
                         <dd>Is aged 12-15 and therefore should only used powered craft under the supervision of a responsible adult on board the craft </dd>
                     </dl>
-                </div>    
+                </div>  
+                <div class="course_image">
+                    <img src="/images/" alt="">
+                </div>
             </div>
         </div>
     </div>

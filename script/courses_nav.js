@@ -16,13 +16,19 @@ function coursesNav(a) {
 };
 
 function mobileNav(state){
-    if (state == 1) {
-        $("#mobileNav").css("display", "flex");
-        $("#blur").css("display", "block");
-        $("#dropIcon").css("transform", "rotate(180deg)");
-    } else if (state == 2) {
-        $("#mobileNav").css("display", "none");
-        $("#blur").css("display", "none");
-        $("#dropIcon").css("transform", "0");
+    // var x = document.getElementById("myDIV");
+    if ($('#mobileNav').style.display === "none") {
+        $('#mobileNav').style.display = "flex";
+        $('#blur').style.display = "block";
+    } else {
+        $('#mobileNav').style.display = "none";
+        $('#blur').style.display = "none";
     }
 };
+
+// var x = document.getElementById("myDIV");
+//   if (x.style.display === "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }

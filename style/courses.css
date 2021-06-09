@@ -154,9 +154,9 @@
     margin: 0 auto auto 0;
 }
 
-.course_title h1{
+/* .course_title h1{
     
-}
+} */
 
 .course_outline{
     grid-area: info;
@@ -175,4 +175,5 @@
     margin-left: 30px;
 }
 
+.
 
