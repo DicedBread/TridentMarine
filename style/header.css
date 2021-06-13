@@ -72,6 +72,7 @@ header{
     display: none;
 }
 
+
 @media screen and (max-width: 700px) {
     .nav{
         display: none;
@@ -111,7 +112,7 @@ header{
         flex-direction: column;
     }
 
-    .mobile_nav_cont button{
+    .mobile_nav_cont div{
         width: 100%;
         height: calc(100% / 3);
         background-color: var(--blue);

@@ -17,7 +17,7 @@
     </div>
 
     <!-- mobile -->
-    <button class="mobile_nav_drop" onclick="mobileNav()" value="">
+    <div class="mobile_nav_drop" onclick="mobileNav()" data-state="">
         <div class="drop_icon" id="dropIcon"></div>
         <div class="blur" id="blur" onclick="mobileNav()"></div>
         <div class="mobile_nav_cont" id="mobileNav">
@@ -31,5 +31,5 @@
                 <h2>About us</h2>
             </button>
         </div>
-    </button>
+    </div>
 </header>
