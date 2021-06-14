@@ -23,6 +23,10 @@
         <h1>ABOUT US</h1>
     </div>
 
+    <div class="about_cont">
+        
+    </div>
+
     <?php include('./includes/footer.php')?>
     
 </body>
