@@ -5,19 +5,21 @@
     </div>
         <!-- nav -->
     <div class="nav">
-        <button onclick="document.location='./index.php'">
+        <a class="nav_btn" href="./index.php">
             <h2>Home</h2>
-        </button>
-        <button onclick="document.location='./courses.php'">
+        </a>
+        <a class="nav_btn" href="./courses.php">
             <h2>Courses</h2>
-        </button>
-        <button onclick="document.location='./aboutus.php'">
+        </a>
+        <a class="nav_btn" href="./aboutus.php">
             <h2>About us</h2>
-        </button>
+        </a>
     </div>
 
+    <!-- change to a and use button thing -->
+
     <!-- mobile -->
-    <div class="mobile_nav_drop" onclick="mobileNav()" data-state="">
+    <div class="mobile_nav_drop" onclick="mobileNav()">
         <div class="drop_icon" id="dropIcon"></div>
         <div class="blur" id="blur" onclick="mobileNav()"></div>
         <div class="mobile_nav_cont" id="mobileNav">

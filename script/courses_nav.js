@@ -17,12 +17,12 @@ function coursesNav(a) {
 
 function mobileNav(state){
     // var x = document.getElementById("myDIV");
-    if ($('#mobileNav').style.display === "none") {
+    if ($('#mobileNav').attr("data-state") === "closed") {
         $('#mobileNav').style.display = "flex";
         $('#blur').style.display = "block";
     } else {
-        $('#mobileNav').style.display = "none";
-        $('#blur').style.display = "none";
+        // $('#mobileNav').style.display = "none";
+        // $('#blur').style.display = "none";
     }
 };
 
