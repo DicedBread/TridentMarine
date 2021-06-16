@@ -19,19 +19,19 @@
     <!-- change to a and use button thing -->
 
     <!-- mobile -->
-    <div class="mobile_nav_drop" onclick="mobileNav()">
+    <div class="mobile_nav_toggle_btn" onclick="mobileNav()">
         <div class="drop_icon" id="dropIcon"></div>
-        <div class="blur" id="blur" onclick="mobileNav()"></div>
-        <div class="mobile_nav_cont" id="mobileNav">
-            <button onclick="document.location='./index.php'">
+        <div class="mobile_nav hide" id="mobileNav">
+            <a class="m_nav_btn" href="./index.php">
                 <h2>Home</h2>
-            </button>
-            <button onclick="document.location='./courses.php'">
+            </a>
+            <a class="m_nav_btn" href="./courses.php">
                 <h2>Courses</h2>
-            </button>
-            <button onclick="document.location='./aboutus.php'">
+            </a>
+            <a class="m_nav_btn" href="./aboutus.php">
                 <h2>About us</h2>
-            </button>
+            </a>
         </div>
+        <div class="blur hide" id="blur" onclick="mobileNav1()"></div>
     </div>
 </header>
