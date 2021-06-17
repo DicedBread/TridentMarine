@@ -32,6 +32,6 @@
                 <h2>About us</h2>
             </a>
         </div>
-        <div class="blur hide" id="blur" onclick="mobileNav1()"></div>
+        <div class="blur hide" id="blur"></div>
     </div>
 </header>
