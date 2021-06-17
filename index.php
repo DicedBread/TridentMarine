@@ -22,7 +22,12 @@
         
         <div class="main">
             <div class="heroimage">
-                <img src="./images/hero_image_4.jpg" alt="">
+                <div class="hero_slide">
+                    <img src="./images/hero_image_1.jpg" alt="">
+                    <img src="./images/hero_image_2.jpg" alt="">
+                    <img src="./images/hero_image_3.jpg" alt="">
+                    <img src="./images/hero_image_4.jpg" alt="">
+                </div>
             </div>
 
             <div class="info_cont">

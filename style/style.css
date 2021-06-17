@@ -54,14 +54,23 @@ body{
     height: auto;
     min-width: 100%;
     min-height: 300px;
+    max-height: 700px;
     overflow: hidden;   
     display: flex;
     justify-content: center;
     align-items: center;
+    /* overflow: hidden; */
 }
 
-.heroimage img{
-    width: 100%;
+.hero_slide{
+    width: 400%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.hero_slide img{
+    width: 100vw;
     min-height: 300px;
     min-width: 818px;
 }

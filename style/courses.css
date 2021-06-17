@@ -113,12 +113,16 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    margin: 0 20px;
+    box-sizing: border-box;
 }
 
 .sub_btn button{
     width: calc(100% / 4 - 15px);
     height: 70%;
+    margin: 0 10px;
+    box-sizing: border-box;
     background-color: aliceblue;
     border: none;
     font-size: 1rem;
