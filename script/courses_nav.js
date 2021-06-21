@@ -19,5 +19,9 @@ function mobileNav(){
     $('#blur').toggleClass("hide");
 };
 
+function test(){
+    
+}
+
 
 

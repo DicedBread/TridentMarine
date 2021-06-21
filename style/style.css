@@ -57,13 +57,11 @@ body{
     max-height: 700px;
     overflow: hidden;   
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /* overflow: hidden; */
+
 }
 
 .hero_slide{
-    width: 400%;
+    width: auto;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -73,6 +71,16 @@ body{
     width: 100vw;
     min-height: 300px;
     min-width: 818px;
+    object-fit: contain;
+    object-position: left top;
+}
+
+.imgtest{
+    width: 0 !important; 
+}
+
+.hero_slide{
+    
 }
 
 .info_cont{
