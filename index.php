@@ -6,7 +6,7 @@
     <title>TridentMarine</title>
     <script src="jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script/coursesNav.js"></script>
+    <script src="script/courses_nav.js"></script>
     <link rel="stylesheet" href="style/font.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/footer.css">
@@ -21,13 +21,11 @@
     <?php include('includes/header.php') ?>
         
         <div class="main">
-            <div class="heroimage" onclick="test()">
-                <div class="hero_slide">
-                    <img src="./images/hero_image_1.jpg" alt="">
-                    <img class="imgtest" src="./images/hero_image_2.jpg" alt="">
-                    <img class="imgtest" src="./images/hero_image_3.jpg" alt="">
-                    <img class="imgtest" src="./images/hero_image_4.jpg" alt="">
-                </div>
+            <div class="heroimage">
+                <img id="heroImage1" src="./images/hero_image_1.jpg" alt="">
+                <img id="heroImage2" src="./images/hero_image_2.jpg" alt="">
+                <img id="heroImage3" src="./images/hero_image_3.jpg" alt="">
+                <img id="heroImage4" src="./images/hero_image_4.jpg" alt="">
             </div>
 
             <div class="info_cont">

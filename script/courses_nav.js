@@ -20,8 +20,18 @@ function mobileNav(){
 };
 
 function test(){
+    $('#slideImage').toggleClass("opnone");
+    console.log("bruh");
+};
+
+
+
     
-}
+  
+
+
+
+
 
 
 

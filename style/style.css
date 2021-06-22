@@ -54,29 +54,20 @@ body{
     height: auto;
     min-width: 100%;
     min-height: 300px;
-    max-height: 700px;
     overflow: hidden;   
     display: flex;
-
+    justify-content: center;
+    align-items: center;
 }
 
-.hero_slide{
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-}
-
-.hero_slide img{
-    width: 100vw;
+.heroimage img{
+    width: 100%;
     min-height: 300px;
     min-width: 818px;
-    object-fit: contain;
-    object-position: left top;
 }
 
-.imgtest{
-    width: 0 !important; 
+.opnone{
+    opacity: 0;
 }
 
 .hero_slide{
