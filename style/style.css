@@ -33,7 +33,7 @@ body{
 .main{
     height: auto;
     width: 100%;
-    background-color: blue;
+    background-color: white;
 }
 
 /* .heroimage{
@@ -49,29 +49,31 @@ body{
 } */
 
 /* fix image width  */
-.heroimage{
+.heroimageslide{
     width: 100%;
     height: auto;
     min-width: 100%;
     min-height: 300px;
-    overflow: hidden;   
+    overflow: hidden;  
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.heroimage img{
+.heroimage_display{
     width: 100%;
     min-height: 300px;
     min-width: 818px;
+    /* opacity: 100%; */
+    transition: 0.2s;
 }
 
-.opnone{
-    opacity: 0;
-}
-
-.hero_slide{
-    
+.heroimage_display_none{
+    position: absolute;
+    /* width: 0; */
+    min-height: 300px;
+    transition: 0.2s;
+    display: none;
 }
 
 .info_cont{

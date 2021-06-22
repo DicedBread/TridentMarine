@@ -21,11 +21,11 @@
     <?php include('includes/header.php') ?>
         
         <div class="main">
-            <div class="heroimage">
-                <img id="heroImage1" src="./images/hero_image_1.jpg" alt="">
-                <img id="heroImage2" src="./images/hero_image_2.jpg" alt="">
-                <img id="heroImage3" src="./images/hero_image_3.jpg" alt="">
-                <img id="heroImage4" src="./images/hero_image_4.jpg" alt="">
+            <div class="heroimageslide" onclick="test()">
+                <img class="heroimage_display" id="heroImage1" src="./images/hero_image_1.jpg" alt="">
+                <img class="heroimage_display_none" id="heroImage2" src="./images/hero_image_2.jpg" alt="">
+                <img class="heroimage_display_none" id="heroImage3" src="./images/hero_image_3.jpg" alt="">
+                <img class="heroimage_display_none" id="heroImage4" src="./images/hero_image_4.jpg" alt="">
             </div>
 
             <div class="info_cont">

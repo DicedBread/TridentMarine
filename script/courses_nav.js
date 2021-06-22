@@ -20,7 +20,8 @@ function mobileNav(){
 };
 
 function test(){
-    $('#slideImage').toggleClass("opnone");
+    $('#heroImage1').toggleClass("heroimage_display_none heroimage_display");
+    $('#heroImage2').toggleClass("heroimage_display_none heroimage_display");
     console.log("bruh");
 };
 
