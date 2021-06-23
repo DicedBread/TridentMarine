@@ -25,6 +25,11 @@ function test(){
     console.log("bruh");
 };
 
+$(document).ready(function(){
+    
+    
+  
+  });
 
 
     

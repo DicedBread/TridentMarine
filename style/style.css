@@ -364,6 +364,12 @@ input:focus {
     }
 }
 
+@media screen and (max-width: 425px) {
+    .info_text p{
+        font-size: 1rem;
+    }
+}
+
 /* courses and about us title card */
 .title_card{
     background-color: var(--dark-blue);
