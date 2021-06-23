@@ -1,4 +1,3 @@
-
 //courses nav
 function coursesNav(a) {
     if(a == 1){
@@ -19,17 +18,18 @@ function mobileNav(){
     $('#blur').toggleClass("hide");
 };
 
-function test(){
-    $('#heroImage1').toggleClass("heroimage_display_none heroimage_display");
-    $('#heroImage2').toggleClass("heroimage_display_none heroimage_display");
-    console.log("bruh");
-};
+// function test(){
+//     $('#heroImage1').toggleClass("heroimage_display_none heroimage_display");
+//     $('#heroImage2').toggleClass("heroimage_display_none heroimage_display");
+//     console.log("bruh");
+// };
 
 $(document).ready(function(){
-    
-    
-  
-  });
+    window.setInterval(function(){
+        $('#heroImage1').toggleClass("heroimage_display_none heroimage_display");
+        $('#heroImage2').toggleClass("heroimage_display_none heroimage_display");
+    }, 2000);
+});
 
 
     
