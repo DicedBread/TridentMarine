@@ -155,10 +155,6 @@
     margin: 0 auto auto 0;
 }
 
-/* .course_title h1{
-    
-} */
-
 .course_outline{
     grid-area: info;
     width: 100%;
@@ -176,5 +172,28 @@
     margin-left: 30px;
 }
 
+/* hide mobile nav */
+.courses_nav_mobile{
+    display: none;
+}
 
+@media screen and (max-width: 850px) {
+    .sub_btn button{
+        font-size: 0.8rem;
+    } 
+}
+
+@media screen and (max-width: 600px) {
+    /* hide normal nav */
+    .courses_nav{
+        display: none;
+    }
+
+    .courses_nav_mobile{
+        display: flex;
+        width: 100%;
+        width: auto;
+        background-color: coral;
+    }
+}
 

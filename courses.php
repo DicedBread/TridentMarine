@@ -55,6 +55,18 @@
                     </div>
                 </div> 
             </div><!-- nav end -->
+            <div class="courses_nav_mobile">
+                <div class="main_btn">
+                    
+                </div>
+                <div class="main_btn">
+                    
+                </div>
+                <div class="main_btn">
+                    
+                </div>
+            </div>
+
             <div class="course_display">
                 <div class="course_title">
                     <h1>Level 1 Start Powerboating</h1>
