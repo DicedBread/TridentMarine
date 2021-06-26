@@ -191,9 +191,17 @@
 
     .courses_nav_mobile{
         display: flex;
+        flex-direction: column;
         width: 100%;
-        width: auto;
+        height: auto;
         background-color: coral;
+    }
+
+    .main_btn_mobile{
+        background-color: var(--blue-grey);
+        width: 100%;
+        height: 10vh;
+        min-height: 50px;
     }
 }
 

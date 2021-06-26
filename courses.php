@@ -56,14 +56,30 @@
                 </div> 
             </div><!-- nav end -->
             <div class="courses_nav_mobile">
-                <div class="main_btn">
-                    
+                <div class="main_btn_mobile">
+                    Personal Watercraft
                 </div>
-                <div class="main_btn">
-                    
+                <div class="sub_button_mobile">
+                    <button></button>
+                    <button></button>
+                    <button></button>
                 </div>
-                <div class="main_btn">
-                    
+                <div class="main_btn_mobile">
+                    Power Boating
+                </div>
+                <div class="sub_button_mobile">
+                    <button>Level 1 Start Powerboating</button>
+                    <button>Level 2 Powerboating Handling</button>
+                    <button>Intermediate Powerboat Day Cruising</button>
+                    <button>Advanced Powerboat Day And Night</button>
+                </div>
+                <div class="main_btn_mobile">
+                    Motor Cruising
+                </div>
+                <div class="sub_button_mobile">
+                    <button>Helmsman’s Course</button>
+                    <button>Day Skipper</button>
+                    <button>Coastal Skipper</button>
                 </div>
             </div>
 
