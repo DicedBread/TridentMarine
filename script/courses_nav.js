@@ -18,10 +18,38 @@ function mobileNav(){
     $('#blur').toggleClass("hide");
 };
 
-
-function test(){
-    $(':root')[0].style.setProperty('--bruh', 'auto');
+function mobileCoursesNav(a){
+    if (a == 1){ //personal watercraft
+        $('#subNavPW').toggleClass("open closed");
+        $('#dropIconPW').toggleClass("rotate");
+        $('#subNavPB').toggleClass("closed", true);
+        $('#subNavPB').toggleClass("open", false);
+        $('#subNavMC').toggleClass("closed", true);
+        $('#subNavMC').toggleClass("open", false);
+        $('#dropIconPB').toggleClass("rotate", false);
+        $('#dropIconMC').toggleClass("rotate", false);
+    } else if (a == 2){ //power boating
+        $('#subNavPB').toggleClass("open closed");
+        $('#dropIconPB').toggleClass("rotate");
+        $('#subNavPW').toggleClass("closed", true,);
+        $('#subNavPW').toggleClass("open", false);
+        $('#subNavMC').toggleClass("closed", true);
+        $('#subNavMC').toggleClass("open", false);
+        $('#dropIconPW').toggleClass("rotate", false);
+        $('#dropIconMC').toggleClass("rotate", false);
+    } else if (a == 3){ //motor cruising 
+        $('#subNavMC').toggleClass("open closed");
+        $('#dropIconMC').toggleClass("rotate");
+        $('#subNavPW').toggleClass("closed", true);
+        $('#subNavPW').toggleClass("open", false);
+        $('#subNavPB').toggleClass("closed", true);
+        $('#subNavPB').toggleClass("open", false);
+        $('#dropIconPW').toggleClass("rotate", false);
+        $('#dropIconPB').toggleClass("rotate", false);
+    }
 }
+
+
 
 $(document).ready(function(){
     window.setInterval(function(){
