@@ -49,8 +49,6 @@ function mobileCoursesNav(a){
     }
 }
 
-
-
 $(document).ready(function(){
     window.setInterval(function(){
         $('#heroImage1').toggleClass("heroimage_display_none heroimage_display");

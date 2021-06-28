@@ -26,12 +26,6 @@
                 <img class="heroimage_display_none" id="heroImage2" src="./images/hero_image_2.jpg" alt="">
                 <img class="heroimage_display_none" id="heroImage3" src="./images/hero_image_3.jpg" alt="">
                 <img class="heroimage_display_none" id="heroImage4" src="./images/hero_image_4.jpg" alt="">
-
-                <!-- <div class="bruh">
-                    <div>
-                        <img class="heroimage_display" id="heroImage1" src="./images/hero_image_1.jpg" alt="">
-                    </div>
-                </div> -->
             </div>
 
             <div class="info_cont">
