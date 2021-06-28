@@ -236,13 +236,19 @@
         box-sizing: border-box;
     }
 
+    .sub_button_mobile button:hover{
+        background-color: var(--blue);
+    }
+
     .open{
-        height: auto;
+        /* height: auto; */
+        max-height: 300px;
         transition: 0.2s;
     }
 
     .closed{
-        height: 0px;
+        max-height: 0px;
+        /* height: 0px; */
         transition: 0.2s;
     }
 
@@ -251,6 +257,13 @@
         height: 50px;
         clip-path: polygon(91% 33%, 50% 84%, 8% 35%, 33% 35%, 50% 56%, 65% 33%);
         background-color: var(--dark-blue);
+        transition: 0.3s;
+        transform: rotate(0deg);
+    }
+
+    .rotate{
+        transform: rotate(180deg);
+        transition: 0.3s;
     }
 }
 

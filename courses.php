@@ -60,16 +60,17 @@
             <div class="courses_nav_mobile">
                 <div class="main_btn_mobile" onclick="mobileCoursesNav(1)">
                     <h2>Personal Watercraft</h2>
-                    <div class="course_drop_icon"></div>
+                    <div class="course_drop_icon" id="dropIconPW"></div>
                 </div>
                 <div class="sub_button_mobile closed" id="subNavPW">
                     <button></button>
                     <button></button>
                     <button></button>
                 </div>
+
                 <div class="main_btn_mobile" onclick="mobileCoursesNav(2)">
                     <h2>Power Boating</h2>
-                    <div class="course_drop_icon"></div>
+                    <div class="course_drop_icon" id="dropIconPB"></div>
                 </div> 
                 <div class="sub_button_mobile closed" id="subNavPB">
                     <button>Level 1 Start Powerboating</button>
@@ -77,9 +78,10 @@
                     <button>Intermediate Powerboat Day Cruising</button>
                     <button>Advanced Powerboat Day And Night</button>
                 </div>
+
                 <div class="main_btn_mobile" onclick="mobileCoursesNav(3)">
                     <h2>Motor Cruising</h2>
-                    <div class="course_drop_icon"></div>
+                    <div class="course_drop_icon" id="dropIconMC"></div>
                 </div>
                 <div class="sub_button_mobile closed" id="subNavMC">
                     <button>Helmsman’s Course</button>
