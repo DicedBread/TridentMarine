@@ -20,8 +20,6 @@ function mobileNav(){
 
 function mobileCoursesNav(a){
     if (a == 1){ //personal watercraft
-
-        //the moemnt when both classes exist for some reason
         $('#subNavPW').toggleClass("open closed");
         $('#subNavPB').toggleClass("closed", true);
         $('#subNavPB').toggleClass("open", false);
@@ -29,12 +27,16 @@ function mobileCoursesNav(a){
         $('#subNavMC').toggleClass("open", false);
     } else if (a == 2){ //power boating
         $('#subNavPB').toggleClass("open closed");
-        $('#subNavPW').toggleClass("closed", true, "open", false);
-        $('#subNavMC').toggleClass("closed", true, "open", false);
+        $('#subNavPW').toggleClass("closed", true,);
+        $('#subNavPW').toggleClass("open", false);
+        $('#subNavMC').toggleClass("closed", true);
+        $('#subNavMC').toggleClass("open", false);
     } else if (a == 3){ //motor cruising 
         $('#subNavMC').toggleClass("open closed");
-        $('#subNavPW').toggleClass("closed", true, "open", false);
-        $('#subNavPB').toggleClass("closed", true, "open", false);
+        $('#subNavPW').toggleClass("closed", true);
+        $('#subNavPW').toggleClass("open", false);
+        $('#subNavPB').toggleClass("closed", true);
+        $('#subNavPB').toggleClass("open", false);
     }
 }
 
