@@ -50,49 +50,95 @@ function mobileCoursesNav(a){
 }
 
 $(document).ready(function(){
-    window.setInterval(function(){
-        count = 1;
-        if (count == 1){
-            $('#heroImage1').toggleClass("heroimage_display_none heroimage_display");
-            $('#heroImage2').toggleClass("heroimage_display_none", true );
-            $('#heroImage2').toggleClass("heroimage_display", false );
-            count = count + 1;
-        } else if (count == 2){
-            $('#heroImage2').toggleClass("heroimage_display_none", false );
-            $('#heroImage2').toggleClass("heroimage_display", true );
-            $('#heroImage1').toggleClass("heroimage_display_none", true );
-            $('#heroImage1').toggleClass("heroimage_display", false );
-            count = count + 1;
-        } else {
-            count = 1;
-        }
-        // console.log(count)
-    }, 1000);
+    slideShow();
+    // if (count == 1){
+    //     $('#heroImage1').toggleClass("heroimage_display_none heroimage_display");
+    //     $('#heroImage2').toggleClass("heroimage_display_none", true );
+    //     $('#heroImage2').toggleClass("heroimage_display", false );
+    //     count = count + 1;
+    // } else if (count == 2){
+    //     $('#heroImage2').toggleClass("heroimage_display_none", false );
+    //     $('#heroImage2').toggleClass("heroimage_display", true );
+    //     $('#heroImage1').toggleClass("heroimage_display_none", true );
+    //     $('#heroImage1').toggleClass("heroimage_display", false );
+    //     count = count + 1;
+    // }
 
-    
-
-    window.setInterval(function(bruh){
-        // bruh = 1;
-        console.log(bruh);
-        if (bruh == 1){
-            console.log("bruh 2")
-            bruh++;
-        } else if (bruh == 2) {
-            console.log("bruh 2")
-            bruh = bruh + 1;
-        } else if (bruh == 3){
-            console.log("bruh 3")
-            bruh++;
-        } else if (bruh == 4){
-            console.log("bruh 4")
-            bruh++;
-        } else {
-            bruh = 1;
-        }
-        console.log(bruh);
-    }, 2000);
 });
 
+function slideShow(){
+    let num = 0;
+    window.setInterval(function(){
+        num = (num + 1) % 4;
+        // console.log(num);
+        if (num == 1){
+            //visable
+            $('#heroImage1').toggleClass("heroimage_display_none", false);
+            $('#heroImage1').toggleClass("heroimage_display", true);
+            //hidden
+            $('#heroImage2').toggleClass("heroimage_display_none", true );
+            $('#heroImage2').toggleClass("heroimage_display", false );
+            $('#heroImage3').toggleClass("heroimage_display_none", true );
+            $('#heroImage3').toggleClass("heroimage_display", false );
+            $('#heroImage4').toggleClass("heroimage_display_none", true );
+            $('#heroImage4').toggleClass("heroimage_display", false );
+            
+        } else if (num == 2){
+            //visable
+            $('#heroImage2').toggleClass("heroimage_display_none", false );
+            $('#heroImage2').toggleClass("heroimage_display", true );
+            //hidden
+            $('#heroImage1').toggleClass("heroimage_display_none", true );
+            $('#heroImage1').toggleClass("heroimage_display", false );
+            $('#heroImage3').toggleClass("heroimage_display_none", true );
+            $('#heroImage3').toggleClass("heroimage_display", false );
+            $('#heroImage4').toggleClass("heroimage_display_none", true );
+            $('#heroImage4').toggleClass("heroimage_display", false );
+            
+        } else if (num == 3){
+            //visable
+            $('#heroImage3').toggleClass("heroimage_display_none", false );
+            $('#heroImage3').toggleClass("heroimage_display", true );
+            //hidden
+            $('#heroImage1').toggleClass("heroimage_display_none", true );
+            $('#heroImage1').toggleClass("heroimage_display", false );
+            $('#heroImage2').toggleClass("heroimage_display_none", true );
+            $('#heroImage2').toggleClass("heroimage_display", false );
+            $('#heroImage4').toggleClass("heroimage_display_none", true );
+            $('#heroImage4').toggleClass("heroimage_display", false );
+        } else if (num == 0){
+            //visable 
+            $('#heroImage4').toggleClass("heroimage_display_none", false );
+            $('#heroImage4').toggleClass("heroimage_display", true );
+            //hidden
+            $('#heroImage1').toggleClass("heroimage_display_none", true );
+            $('#heroImage1').toggleClass("heroimage_display", false );
+            $('#heroImage2').toggleClass("heroimage_display_none", true );
+            $('#heroImage2').toggleClass("heroimage_display", false );
+            $('#heroImage3').toggleClass("heroimage_display_none", true );
+            $('#heroImage3').toggleClass("heroimage_display", false );
+        }
+
+    }, 5000);
+}
+
+function bruhTest(){
+    let bruh = 0
+    window.setInterval(function(){
+        bruh = (bruh + 1) % 4;
+
+        console.log(bruh);
+        if (bruh == 1){
+            console.log("bruh 1");
+        } else if (bruh == 2) {
+            console.log("bruh 2");
+        } else if (bruh == 3){
+            console.log("bruh 3");
+        } else if (bruh == 4){
+            console.log("bruh 4");
+        }
+    }, 2000);
+}
 
     
   
