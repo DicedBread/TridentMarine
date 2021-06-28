@@ -27,7 +27,6 @@
                 <div class="main_btn" id="main_btn">
                     <button onclick="coursesNav(1)">
                         <h2>Personal Watercraft</h2>
-                        <div></div>
                     </button>
                     <button onclick="coursesNav(2)"> 
                         <h2>Power Boating</h2>
