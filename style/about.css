@@ -1,0 +1,3 @@
+.about_cont{
+    padding: 20px clamp(10px, 3%, 100px);
+}

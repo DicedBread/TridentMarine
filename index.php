@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/courses.css">
+    <link rel="stylesheet" href="style/about.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
@@ -21,7 +22,7 @@
     <?php include('includes/header.php') ?>
         
         <div class="main">
-            <div class="heroimageslide" onclick="test()">
+            <div class="heroimageslide">
                 <img class="heroimage_display" id="heroImage1" src="./images/hero_image_1.jpg" alt="">
                 <img class="heroimage_display_none" id="heroImage2" src="./images/hero_image_2.jpg" alt="">
                 <img class="heroimage_display_none" id="heroImage3" src="./images/hero_image_3.jpg" alt="">

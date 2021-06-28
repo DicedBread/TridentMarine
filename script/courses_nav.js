@@ -49,12 +49,47 @@ function mobileCoursesNav(a){
     }
 }
 
-
-
 $(document).ready(function(){
     window.setInterval(function(){
-        $('#heroImage1').toggleClass("heroimage_display_none heroimage_display");
-        $('#heroImage2').toggleClass("heroimage_display_none heroimage_display");
+        count = 1;
+        if (count == 1){
+            $('#heroImage1').toggleClass("heroimage_display_none heroimage_display");
+            $('#heroImage2').toggleClass("heroimage_display_none", true );
+            $('#heroImage2').toggleClass("heroimage_display", false );
+            count = count + 1;
+        } else if (count == 2){
+            $('#heroImage2').toggleClass("heroimage_display_none", false );
+            $('#heroImage2').toggleClass("heroimage_display", true );
+            $('#heroImage1').toggleClass("heroimage_display_none", true );
+            $('#heroImage1').toggleClass("heroimage_display", false );
+            count = count + 1;
+        } else {
+            count = 1;
+        }
+        // console.log(count)
+    }, 1000);
+
+    
+
+    window.setInterval(function(bruh){
+        // bruh = 1;
+        console.log(bruh);
+        if (bruh == 1){
+            console.log("bruh 2")
+            bruh++;
+        } else if (bruh == 2) {
+            console.log("bruh 2")
+            bruh = bruh + 1;
+        } else if (bruh == 3){
+            console.log("bruh 3")
+            bruh++;
+        } else if (bruh == 4){
+            console.log("bruh 4")
+            bruh++;
+        } else {
+            bruh = 1;
+        }
+        console.log(bruh);
     }, 2000);
 });
 

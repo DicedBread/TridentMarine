@@ -206,6 +206,7 @@
         align-items: center;
         padding: 0 clamp(10px, 3%, 100px);
         box-sizing: border-box;
+        cursor: pointer;
     }
 
     .main_btn_mobile h2{
@@ -234,6 +235,7 @@
         padding: 0 clamp(15px, 5%, 100px);
         border-bottom: 1px solid var(--deep-blue);
         box-sizing: border-box;
+        cursor: pointer;
     }
 
     .sub_button_mobile button:hover{
