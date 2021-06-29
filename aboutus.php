@@ -25,6 +25,7 @@
     </div>
 
     <div class="about_cont">
+    <div class="bruh"></div>
         <h2>ABOUT</h2>
         <p>
         Trident Marine is Auckland based, offering maritime courses to any commercial or recreational mariner wishing to start working in the maritime industry or develop their skills to gain higher qualifications. 

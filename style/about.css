@@ -1,3 +1,16 @@
 .about_cont{
     padding: 20px clamp(10px, 3%, 100px);
 }
+
+.bruh{
+    width: 50%;
+    height: 50%;
+    shape-outside: circle();
+    float: left;
+    transform: translateX(-300px);
+}
+
+.about_count h2{
+    display: inline;
+}
+
