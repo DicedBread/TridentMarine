@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/courses.css">
     <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/booking.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
@@ -108,8 +109,13 @@
                         <dd>Is aged 12-15 and therefore should only used powered craft under the supervision of a responsible adult on board the craft </dd>
                     </dl>
                 </div>  
-                <div class="course_image">
-                    <img src="/images/" alt="">
+                <div class="course_other">
+                    <div class="course_image">
+                        <img src="/images/" alt="">
+                    </div>
+                    <button class="book_btn" onclick="location.href = './bookingpage.php'">
+                        <h1>Book</h1>
+                    </button>
                 </div>
             </div>
         </div>

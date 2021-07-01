@@ -11,11 +11,21 @@
     <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/courses.css">
     <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/booking.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="wrapper">
+        <?php include('includes/header.php') ?>
+            <form action="">
+                <fieldset>
+                    <legend>bruh</legend>
+                </fieldset>
+            </form>
+
+        <?php include('includes/footer.php')?>
+    </div>
 </body>
 </html>
