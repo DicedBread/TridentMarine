@@ -220,7 +220,7 @@ path{
 }
 
 /* search bar */
-input[type=text]{
+.search input[type=text]{
     background-color: white;
     height: 35px;
     width: 300px;
@@ -231,13 +231,13 @@ input[type=text]{
     border: none;
 }
 
-input[type=text]:focus{
+.search input[type=text]:focus{
     background-color: whitesmoke;
     border-bottom: 2px solid #1b2845  ;
     border-top: 2px solid white;
 }
 
-input:focus {
+.search input:focus {
     outline: none;
     border: specify yours;
 }

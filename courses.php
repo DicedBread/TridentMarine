@@ -113,7 +113,7 @@
                     <div class="course_image">
                         <img src="/images/" alt="">
                     </div>
-                    <button class="book_btn" onclick="location.href = './bookingpage.php'">
+                    <button class="book_btn" onclick="location.href = './booking.php'">
                         <h1>Book</h1>
                     </button>
                 </div>

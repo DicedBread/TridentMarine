@@ -18,10 +18,17 @@
 </head>
 <body>
     <div class="wrapper">
-        <?php include('includes/header.php') ?>
-            <form action="">
+        <?php include('includes/header.php')?>
+            <form action="" class="booking_form">
                 <fieldset>
-                    <legend>bruh</legend>
+                    <legend><h2>Booking</h2></legend>
+
+                    <input type="text" placeholder="First Name...">
+                    <input type="text" placeholder="Last Name...">
+                    <br>
+                    <input type="text" placeholder="Email...">
+                    
+
                 </fieldset>
             </form>
 
