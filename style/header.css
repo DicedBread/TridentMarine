@@ -91,12 +91,14 @@ header{
     }
 
     .drop_icon{
-        /* clip-path: polygon(49% 68%, 16% 39%, 81% 39%); */
-        clip-path: polygon(91% 33%, 50% 84%, 8% 35%, 33% 35%, 50% 56%, 65% 33%);
+        /* clip-path: polygon(91% 33%, 50% 84%, 8% 35%, 33% 35%, 50% 56%, 65% 33%); */
+        clip-path: polygon(90% 50%, 50% 80%, 10% 50%, 10% 20%, 50% 50%, 90% 20%);
         background-color: var(--light-blue);
         display: block;
         width: 100%;
         height: 100%;
+        transform: rotate(0deg);
+        transition: 0.3s;
     }
     
     .mobile_nav{

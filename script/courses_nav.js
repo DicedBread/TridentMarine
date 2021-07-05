@@ -16,6 +16,7 @@ function coursesNav(a) {
 function mobileNav(){
     $('#mobileNav').toggleClass("hide");
     $('#blur').toggleClass("hide");
+    $('#dropIcon').toggleClass("rotate");
 };
 
 function mobileCoursesNav(a){
