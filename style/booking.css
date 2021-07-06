@@ -1,34 +1,55 @@
 .booking_form{
     margin: 20px 20%;
-
 }
 
-.booking_form fieldset{
+.booking_form b{
+    font-size: 1.1rem;
+}
+
+.booking_form p{
+    font-size: 1rem;
+}
+
+.form_wrap{
     border: 2px solid var(--blue);
+    padding: 0 10px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column; 
 }
+
+.form_list{
+    list-style-type: none;
+}
+
 
 legend{
     background-color: var(--dark-blue);
     border-radius: 20px;
     padding: 2px 30px;  
     color: white;
+}
 
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto 0 auto;
 }
 
 .booking_form input{
-    background-color: white;
+    background-color: hsl(0, 0%, 100%);
     border: none;
     outline: none;
     border-bottom: 2px solid var(--blue);
-    width: 200px;
-    height: 30px;
+    width: 220px;
+    height: 40px;
     box-sizing: border-box;
     margin: 10px 10px;
 }
 
 .booking_form input:focus-visible{
-    background-color: lightgray;
+    /* background-color: lightgray; */
     border: none;
+    box-shadow: inset 3px 3px 16px -4px #00000079;
     border-bottom: 2px solid var(--light-blue);
+    color: black;
 }

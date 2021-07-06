@@ -20,18 +20,45 @@
     <div class="wrapper">
         <?php include('includes/header.php')?>
             <form action="" class="booking_form">
-                <fieldset>
+                <!-- <fieldset class="form_wrap">
                     <legend><h2>Booking</h2></legend>
-
+                    <label for="Fname">First Name</label>
                     <input type="text" placeholder="First Name...">
+                    <label for="Lname">Last Name</label>
                     <input type="text" placeholder="Last Name...">
                     <br>
                     <input type="text" placeholder="Email...">
+                    <br>
 
-                    <h3>Selected course</h3>
-                        <p>Level 1 Start Powerboating</p>
+                    <b>Selected course:</b>
+                    <p>Level 1 Start Powerboating</p>
+                    <button>Change</button>
 
-                </fieldset>
+                </fieldset> -->
+
+                <div class="form_wrap">
+                    <ul class="form_list">
+                        <li>
+                            <label for="Fname">Full Name</label>
+                            <br>
+                            <input type="text" placeholder="First Name...">
+                            <input type="text" placeholder="Last Name...">
+                        </li>
+                        <li>
+                            <label for="Email">Email</label>
+                            <br>
+                            <input type="text" placeholder="Email...">
+                        </li>
+                    </ul>
+                    
+                    
+                    
+
+                    <b>Selected course:</>
+                    <p>Level 1 Start Powerboating</p>
+                    <button>Change</button>
+
+                </div>
             </form>
 
         <?php include('includes/footer.php')?>
