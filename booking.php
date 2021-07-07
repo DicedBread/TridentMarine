@@ -34,7 +34,7 @@
                             <input type="email" placeholder="Email..." id="email">
                         </li>
                         <li>
-                            <label for="course">Selected Course</label>
+                            <label for="course">Selected Course:</label>
                             <select name="course" id="">
                                 <option value="1">Level 1 Start Powerboating</option>
                             </select>
