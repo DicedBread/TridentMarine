@@ -20,44 +20,30 @@
     <div class="wrapper">
         <?php include('includes/header.php')?>
             <form action="" class="booking_form">
-                <!-- <fieldset class="form_wrap">
-                    <legend><h2>Booking</h2></legend>
-                    <label for="Fname">First Name</label>
-                    <input type="text" placeholder="First Name...">
-                    <label for="Lname">Last Name</label>
-                    <input type="text" placeholder="Last Name...">
-                    <br>
-                    <input type="text" placeholder="Email...">
-                    <br>
-
-                    <b>Selected course:</b>
-                    <p>Level 1 Start Powerboating</p>
-                    <button>Change</button>
-
-                </fieldset> -->
-
                 <div class="form_wrap">
                     <ul class="form_list">
                         <li>
                             <label for="Fname">Full Name</label>
                             <br>
-                            <input type="text" placeholder="First Name...">
-                            <input type="text" placeholder="Last Name...">
+                            <input type="text" placeholder="First Name..." id="Fname">
+                            <input type="text" placeholder="Last Name..." id="Lname">
                         </li>
                         <li>
-                            <label for="Email">Email</label>
+                            <label for="email">Email</label>
                             <br>
-                            <input type="text" placeholder="Email...">
+                            <input type="email" placeholder="Email..." id="email">
+                        </li>
+                        <li>
+                            <label for="course">Selected Course</label>
+                            <select name="course" id="">
+                                <option value="1">Level 1 Start Powerboating</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="date">Avalible date</label>
+                            <input type="date" name="date">
                         </li>
                     </ul>
-                    
-                    
-                    
-
-                    <b>Selected course:</>
-                    <p>Level 1 Start Powerboating</p>
-                    <button>Change</button>
-
                 </div>
             </form>
 
