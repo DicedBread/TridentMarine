@@ -50,23 +50,6 @@ function mobileCoursesNav(a){
     }
 }
 
-$(document).ready(function(){
-    slideShow();
-    // if (count == 1){
-    //     $('#heroImage1').toggleClass("heroimage_display_none heroimage_display");
-    //     $('#heroImage2').toggleClass("heroimage_display_none", true );
-    //     $('#heroImage2').toggleClass("heroimage_display", false );
-    //     count = count + 1;
-    // } else if (count == 2){
-    //     $('#heroImage2').toggleClass("heroimage_display_none", false );
-    //     $('#heroImage2').toggleClass("heroimage_display", true );
-    //     $('#heroImage1').toggleClass("heroimage_display_none", true );
-    //     $('#heroImage1').toggleClass("heroimage_display", false );
-    //     count = count + 1;
-    // }
-
-});
-
 function slideShow(){
     let num = 0;
     window.setInterval(function(){

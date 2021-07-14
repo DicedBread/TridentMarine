@@ -29,19 +29,31 @@
                             <input type="text" placeholder="Last Name..." id="Lname">
                         </li>
                         <li>
-                            <label for="email">Email</label>
-                            <br>
-                            <input type="email" placeholder="Email..." id="email">
+                            <div>
+                                <label for="email">Email</label>
+                                <br>
+                                <input type="email" placeholder="Email..." id="email">
+                            </div>
+                            <div>
+                                <label for="phoneNumer">Phone Number</label>
+                                <br>
+                                <input type="tel" placeholder="Phone" id="Phone">
+                            </div>
                         </li>
                         <li>
                             <label for="course">Selected Course:</label>
+                            <br>
                             <select name="course" id="">
                                 <option value="1">Level 1 Start Powerboating</option>
                             </select>
                         </li>
                         <li>
                             <label for="date">Avalible date</label>
+                            <br>
                             <input type="date" name="date">
+                        </li>
+                        <li>
+                            <button class="submit" id="submit">Book</button>
                         </li>
                     </ul>
                 </div>

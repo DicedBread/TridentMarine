@@ -35,7 +35,7 @@ label{
     /* background-color: hsl(0, 0%, 85%); */
     border: none;
     outline: none;
-    border-bottom: 2px solid var(--blue);
+    border: 1px solid var(--blue);
     width: 220px;
     height: 40px;
     box-sizing: border-box;
@@ -43,10 +43,8 @@ label{
 }
 
 .booking_form input:focus-visible{
-    /* background-color: lightgray; */
     border: none;
-    /* box-shadow: inset 3px 3px 16px -4px #00000079; */
-    border-bottom: 2px solid var(--light-blue);
+    border: 1px solid var(--light-blue);
     color: black;
 }
 
@@ -59,4 +57,22 @@ label{
     height: 40px;
     box-sizing: border-box;
     margin: 10px 10px;
+}
+
+.submit{
+    background-color: var(--blue-grey);
+    padding: 10px 30px;
+    border: 1px solid var(--blue-grey);
+    margin: 20px 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit:hover{
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    box-sizing: border-box;
+    color: white;
+    transition: 0.3s;
 }
