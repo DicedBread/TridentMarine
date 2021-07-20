@@ -1,12 +1,15 @@
 .about_cont{
     padding: 20px clamp(10px, 3%, 100px);
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - (25vh + 100px));
+    box-sizing: border-box;
 }
 
-.bruh{
-    width: 50%;
-    height: 50%;
-    float: left;
-    transform: translateX(-300px);
+.images{
+    width: 40%;
+    height: 100%;
+    background-color: blue;
 }
 
 .about_count h2{

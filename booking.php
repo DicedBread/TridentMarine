@@ -29,16 +29,15 @@
                             <input type="text" placeholder="Last Name..." id="Lname">
                         </li>
                         <li>
-                            <div>
+
                                 <label for="email">Email</label>
-                                <br>
+
                                 <input type="email" placeholder="Email..." id="email">
-                            </div>
-                            <div>
-                                <label for="phoneNumer">Phone Number</label>
-                                <br>
-                                <input type="tel" placeholder="Phone" id="Phone">
-                            </div>
+
+                                <label for="phoneNumer" class="label2">Phone Number</label>
+
+                                <input type="tel" placeholder="Phone" id="Phone" class="input2">
+
                         </li>
                         <li>
                             <label for="course">Selected Course:</label>
@@ -48,7 +47,7 @@
                             </select>
                         </li>
                         <li>
-                            <label for="date">Avalible date</label>
+                            <label for="date">Avalible dates</label>
                             <br>
                             <input type="date" name="date">
                         </li>
