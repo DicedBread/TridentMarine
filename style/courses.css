@@ -185,6 +185,12 @@
 
 .tooltip_info{
     display: none;
+    position: fixed;
+    
+}
+
+.tooltip:hover .tooltip_info{
+    display: block;
 }
 
 .course_other{
@@ -204,8 +210,8 @@
 
 .book_btn{
     background-color: var(--blue-grey);
+    border: none;
     padding: 5px 20px;
-    border: 3px solid var(--blue-grey);
     margin: 20px 0px;
     box-sizing: border-box;
     cursor: pointer;
@@ -213,15 +219,16 @@
 }
 
 .book_btn:hover{
-    background-color: var(--blue-grey);
-    border: 3px solid var(--blue);
+    background-color: var(--dark-blue);
+    /* border: 3px solid var(--blue); */
     box-sizing: border-box;
     color: white;
     transition: 0.3s;
 }
 
-.book_btn h2{
-    font-size: 2rem;
+.book_btn:hover h1{
+    color: white;
+    transition: 0.3s;
 }
 
 /* hide mobile nav */
