@@ -99,7 +99,11 @@
                     <dl>
                         <dt>Aim:</dt>
                         <dd>To teach boat handling and seamanship in powerboats. The course may be conducted in a variety of boat types, both planning and displacement. </dd>
-                        <dt>Ratio<span class="tooltip">?</span>:</dt> 
+                        <dt>Ratio<span class="tooltip">?
+                            <span class="tooltip_info">
+                                <p>The numeber of students per techer</p>
+                            </span>
+                        </span>:</dt> 
                         <dd>3:1 </dd>
                         <dt>Prerequisites:</dt>
                         <dd>None</dd>
