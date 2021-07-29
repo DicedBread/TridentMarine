@@ -39,6 +39,9 @@
                                 <input type="tel" placeholder="Phone" id="Phone" class="input2">
 
                         </li>
+
+                        <!-- age -->
+
                         <li>
                             <label for="course">Selected Course:</label>
                             <br>
