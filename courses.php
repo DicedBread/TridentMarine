@@ -43,6 +43,8 @@
                             <button></button>
                             <button></button>
                         </div>
+
+
                         <div class="pb_sub_btn sub_btn"> <!-- power boating -->
                             <button>Level 1 Start Powerboating</button>
                             <button>Level 2 Powerboating Handling</button>
@@ -91,7 +93,60 @@
                 </div>
             </div>
 
+
+            <?php //finds names of courses of certain type e.g power boating returns level 1 power boating 
+                $powerBoating = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Power Boating'";
+                $powerBoating_result = $conn->query($powerBoating);
+                $powerBoating_count = $powerBoating_result->num_rows;
+                //wack
+
+            ?>
+
+            <?php 
+                $course_info_query = "SELECT `id`, `course_type`, `course_name`, `aim`, `prerequisite`, `minimum_age`, `endorsement`, `image_path` FROM `courses` WHERE 1";
+                $result = $conn->query($course_info_query);
+                $count = $result->num_rows;
+                $find = $result->fetch_assoc();
+
+                $courseId = $find["id"];
+                $courseType = $find["course_type"];
+                $courseName = $find["course_name"];
+                $aim = $find["aim"];
+                $prereq = $find["prerequisite"];
+                $minAge = $find["minimum_age"];
+                $endorsment = $find["endorsement"];
+            ?>
+
+
             <div class="course_display">
+                <div class="course_title">
+                    <h1> <?php echo $courseName;?> </h1>
+                </div>
+                <div class="course_outline">
+                    <dl>
+                        <dt>Aim:</dt>
+                        <dd> <?php echo $aim; ?> </dd>
+                        <dt>Prerequisites:</dt>
+                        <dd> <?php echo $prereq; ?></dd>
+                        <dt>Minimum Age:</dt>
+                        <dd> <?php echo $minAge; ?></dd>
+                        <dt>Endorsements:</dt>
+                        <dd> <?php echo $aim; ?></dd>
+                    </dl>
+                </div>  
+                <div class="course_other">
+                    <div class="course_image">
+                        <img src="/images/" alt="">
+                    </div>
+                    <button class="book_btn" onclick="location.href = './booking.php'">
+                        <h1>Book</h1>
+                    </button>
+                </div>
+            </div>
+
+
+
+            <!-- <div class="course_display">
                 <div class="course_title">
                     <h1>Level 1 Start Powerboating</h1>
                 </div>
@@ -99,12 +154,6 @@
                     <dl>
                         <dt>Aim:</dt>
                         <dd>To teach boat handling and seamanship in powerboats. The course may be conducted in a variety of boat types, both planning and displacement. </dd>
-                        <dt>Ratio<span class="tooltip">?
-                            <span class="tooltip_info">
-                                <p>The numeber of students per techer</p>
-                            </span>
-                        </span>:</dt> 
-                        <dd>3:1 </dd>
                         <dt>Prerequisites:</dt>
                         <dd>None</dd>
                         <dt>Minimum Age:</dt>
@@ -121,7 +170,7 @@
                         <h1>Book</h1>
                     </button>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 

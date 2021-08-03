@@ -19,7 +19,6 @@
 </head>
 <body>
     <div class="wrapper">
-    <?php //include('setup.php')?>
     <?php include('includes/header.php') ?>
         
         <div class="main">

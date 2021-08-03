@@ -1,3 +1,4 @@
+<?php include('setup.php')?>
 <header>
     <div class="brand">
         <div class="logoimg"></div>
