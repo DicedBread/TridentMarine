@@ -98,8 +98,17 @@
                 $powerBoating = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Power Boating'";
                 $powerBoating_result = $conn->query($powerBoating);
                 $powerBoating_count = $powerBoating_result->num_rows;
-                $names = $powerBoating_result->fetch_assoc()["course_name"];
-                echo $names;
+                $powerBoating_find = $powerBoating_result->fetch_assoc();
+                
+
+                if ($powerBoating_count < 1) {
+                    echo "no courses";
+                }
+                else{
+                    do{
+                        echo $powerBoating_find["course_name"];
+                    } while ($powerBoating_find = $powerBoating_result->fetch_assoc());  
+                }
 
             ?>
 
