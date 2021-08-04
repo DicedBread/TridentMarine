@@ -6,6 +6,7 @@
     <script src="jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script/courses_nav.js"></script>
+    <script src="script/ajax_test.js"></script>
     <link rel="stylesheet" href="style/font.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/footer.css">
@@ -39,22 +40,60 @@
                 <div class="sub_btn_cont">
                     <div class="slide_cont"> <!-- personal watercraft -->
                         <div class="pw_sub_btn sub_btn">
-                            <button></button>
-                            <button></button>
-                            <button></button>
+                        <?php //finds names of courses of certain type 
+                            $personalWatercraft = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Personal Watercraft'";
+                            $personalWatercraft_result = $conn->query($personalWatercraft);
+                            $personalWatercraft_count = $personalWatercraft_result->num_rows;
+                            $personalWatercraft_find = $personalWatercraft_result->fetch_assoc();
+
+                            if ($personalWatercraft_count < 1) {
+                                echo "no courses";
+                            }
+                            else{
+                                do{
+                                    echo "<button>" . $personalWatercraft_find["course_name"] . "</button>";
+                                } while ($personalWatercraft_find = $personalWatercraft_result->fetch_assoc());  
+                            }
+                        ?>
                         </div>
 
+                        <!-- Power Boating -->
+                        <div class="pb_sub_btn sub_btn"> 
+                        <?php //finds names of courses of certain type e.g power boating returns level 1 power boating 
+                            $powerBoating = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Power Boating'";
+                            $powerBoating_result = $conn->query($powerBoating);
+                            $powerBoating_count = $powerBoating_result->num_rows;
+                            $powerBoating_find = $powerBoating_result->fetch_assoc();
 
-                        <div class="pb_sub_btn sub_btn"> <!-- power boating -->
-                            <button>Level 1 Start Powerboating</button>
-                            <button>Level 2 Powerboating Handling</button>
-                            <button>Intermediate Powerboat Day Cruising</button>
-                            <button>Advanced Powerboat Day And Night</button>
+                            if ($powerBoating_count < 1) {
+                                echo "no courses";
+                            }
+                            else{
+                                do{
+                                    echo "<button>" . $powerBoating_find["course_name"] . "</button>";
+                                } while ($powerBoating_find = $powerBoating_result->fetch_assoc());  
+                            }
+                        ?>
                         </div>
+
                         <div class="mc_sub_btn sub_btn"> <!-- motor  crusing -->
-                            <button>Helmsman’s Course</button>
-                            <button>Day Skipper</button>
-                            <button>Coastal Skipper</button>
+                        <?php //finds names of courses of certain type e.g power boating returns level 1 power boating
+                           $motorCruising = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Motor Cruising'";
+                           $motorCruising_result = $conn->query($motorCruising);
+                           $motorCruising_count = $motorCruising_result->num_rows;
+                           $motorCruising_find = $motorCruising_result->fetch_assoc();
+ 
+                           if ($motorCruising_count < 1) {
+                               echo "no courses";
+                           }
+                           else{
+                               do{
+                                   echo "<button>" . $motorCruising_find["course_name"] . "</button>";
+                               } while ($motorCruising_find = $motorCruising_result->fetch_assoc()); 
+                           }
+                       ?>
+
+
                         </div>
                     </div>
                 </div> 
@@ -93,27 +132,8 @@
                 </div>
             </div>
 
-
-            <?php //finds names of courses of certain type e.g power boating returns level 1 power boating 
-                $powerBoating = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Power Boating'";
-                $powerBoating_result = $conn->query($powerBoating);
-                $powerBoating_count = $powerBoating_result->num_rows;
-                $powerBoating_find = $powerBoating_result->fetch_assoc();
-                
-
-                if ($powerBoating_count < 1) {
-                    echo "no courses";
-                }
-                else{
-                    do{
-                        echo $powerBoating_find["course_name"];
-                    } while ($powerBoating_find = $powerBoating_result->fetch_assoc());  
-                }
-
-            ?>
-
             <?php 
-                $course_info_query = "SELECT `id`, `course_type`, `course_name`, `aim`, `prerequisite`, `minimum_age`, `endorsement`, `image_path` FROM `courses` WHERE 1";
+                $course_info_query = "SELECT `id`, `course_type`, `course_name`, `aim`, `prerequisite`, `minimum_age`, `endorsement`, `image_path` FROM `courses` WHERE course_name='Level 1 Start Powerboating'";
                 $result = $conn->query($course_info_query);
                 $count = $result->num_rows;
                 $find = $result->fetch_assoc();
@@ -154,7 +174,7 @@
                 </div>
             </div>
 
-
+            
 
             <!-- <div class="course_display">
                 <div class="course_title">
@@ -187,4 +207,6 @@
     <?php include('./includes/footer.php')?>
     
 </body>
+<button onclick="loadDoc()">bruh</button>
+<p id="demo"></p>
 </html>
