@@ -37,6 +37,24 @@
                         <h2>Motor Cruising</h2>
                     </button>
                 </div>
+                <?php 
+                    $names = "SELECT `id`, `course_name`, `course_type` FROM `courses` ORDER BY `course_type`";
+                    $names_result = $conn->query($names);
+                    $names_count = $names_result->num_rows;
+                    $names_find = $names_result->fetch_assoc();
+                    $type = array();
+                    while ($row = $names_find){
+                        $type[$row['course_type']][] = $row['course_name'];
+                    }
+
+                    foreach ($type as $key => $type){
+                        echo $key.'<br>';
+                        foreach ($type as $item){
+                            echo $item.'<br>';
+                        }
+                    }
+                ?>
+
                 <div class="sub_btn_cont">
                     <div class="slide_cont"> <!-- personal watercraft -->
                         <div class="pw_sub_btn sub_btn">
@@ -204,6 +222,4 @@
     <?php include('./includes/footer.php')?>
     
 </body>
-<button onclick="displayCourse()">bruh</button>
-<p id="demo"></p>
 </html>

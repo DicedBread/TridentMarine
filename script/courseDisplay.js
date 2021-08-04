@@ -15,7 +15,6 @@
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
       document.getElementById("courseDisplay").innerHTML = this.responseText;
-      document.getElementById("demo").innerHTML = selected;
     }
     xhttp.open("GET", url, true);
     xhttp.send();
