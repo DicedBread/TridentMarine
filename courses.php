@@ -6,7 +6,7 @@
     <script src="jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script/courses_nav.js"></script>
-    <script src="script/ajax_test.js"></script>
+    <script src="script/courseDisplay.js"></script>
     <link rel="stylesheet" href="style/font.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/footer.css">
