@@ -253,7 +253,8 @@
         flex-direction: column;
         width: 100%;
         height: auto;
-        background-color: coral;
+        color: white;
+        background-color: var(--blue);
     }
 
     .main_btn_mobile{

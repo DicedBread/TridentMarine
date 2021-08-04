@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="displayCourse(1)">
     <h1 id="test"></h1>
     <div class="wrapper">
         <?php include('includes/header.php') ?>
@@ -51,7 +51,7 @@
                             }
                             else{
                                 do{
-                                    echo "<button>" . $personalWatercraft_find["course_name"] . "</button>";
+                                    echo "<button onclick=\"displayCourse(" . $personalWatercraft_find["id"] . ")\" >" . $personalWatercraft_find["course_name"] . "</button>";
                                 } while ($personalWatercraft_find = $personalWatercraft_result->fetch_assoc());  
                             }
                         ?>
@@ -70,7 +70,7 @@
                             }
                             else{
                                 do{
-                                    echo "<button>" . $powerBoating_find["course_name"] . "</button>";
+                                    echo "<button onclick=\"displayCourse(" . $powerBoating_find["id"] . ")\" >" . $powerBoating_find["course_name"] . "</button>";
                                 } while ($powerBoating_find = $powerBoating_result->fetch_assoc());  
                             }
                         ?>
@@ -88,7 +88,7 @@
                            }
                            else{
                                do{
-                                   echo "<button>" . $motorCruising_find["course_name"] . "</button>";
+                                   echo "<button onclick=\"displayCourse(" . $motorCruising_find["id"] . ")\" >" . $motorCruising_find["course_name"] . "</button>";
                                } while ($motorCruising_find = $motorCruising_result->fetch_assoc()); 
                            }
                        ?>
@@ -105,9 +105,21 @@
                     <div class="course_drop_icon" id="dropIconPW"></div>
                 </div>
                 <div class="sub_button_mobile closed" id="subNavPW">
-                    <button></button>
-                    <button></button>
-                    <button></button>
+                    <?php //finds names of courses of certain type 
+                        $personalWatercraft = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Personal Watercraft'";
+                        $personalWatercraft_result = $conn->query($personalWatercraft);
+                        $personalWatercraft_count = $personalWatercraft_result->num_rows;
+                        $personalWatercraft_find = $personalWatercraft_result->fetch_assoc();
+
+                        if ($personalWatercraft_count < 1) {
+                            echo "no courses";
+                        }
+                        else{
+                            do{
+                                echo "<button onclick=\"displayCourse(" . $personalWatercraft_find["id"] . ")\" >" . $personalWatercraft_find["course_name"] . "</button>";
+                            } while ($personalWatercraft_find = $personalWatercraft_result->fetch_assoc());  
+                        }
+                    ?>
                 </div>
 
                 <div class="main_btn_mobile" onclick="mobileCoursesNav(2)">
@@ -115,10 +127,21 @@
                     <div class="course_drop_icon" id="dropIconPB"></div>
                 </div> 
                 <div class="sub_button_mobile closed" id="subNavPB">
-                    <button>Level 1 Start Powerboating</button>
-                    <button>Level 2 Powerboating Handling</button>
-                    <button>Intermediate Powerboat Day Cruising</button>
-                    <button>Advanced Powerboat Day And Night</button>
+                    <?php
+                        $powerBoating = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Power Boating'";
+                        $powerBoating_result = $conn->query($powerBoating);
+                        $powerBoating_count = $powerBoating_result->num_rows;
+                        $powerBoating_find = $powerBoating_result->fetch_assoc();
+                        if ($powerBoating_count < 1) {
+                            echo "no courses";
+                        }
+                        else{
+                            do{
+                                echo "<button onclick=\"displayCourse(" . $powerBoating_find["id"] . ")\" >" . $powerBoating_find["course_name"] . "</button>";
+                            } while ($powerBoating_find = $powerBoating_result->fetch_assoc());  
+                        }
+                    ?>
+
                 </div>
 
                 <div class="main_btn_mobile" onclick="mobileCoursesNav(3)">
@@ -126,52 +149,26 @@
                     <div class="course_drop_icon" id="dropIconMC"></div>
                 </div>
                 <div class="sub_button_mobile closed" id="subNavMC">
-                    <button>Helmsman’s Course</button>
-                    <button>Day Skipper</button>
-                    <button>Coastal Skipper</button>
+                    <?php //finds names of courses of certain type e.g power boating returns level 1 power boating
+                        $motorCruising = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Motor Cruising'";
+                        $motorCruising_result = $conn->query($motorCruising);
+                        $motorCruising_count = $motorCruising_result->num_rows;
+                        $motorCruising_find = $motorCruising_result->fetch_assoc();
+ 
+                        if ($motorCruising_count < 1) {
+                            echo "no courses";
+                        }
+                        else{
+                            do{
+                                echo "<button onclick=\"displayCourse(" . $motorCruising_find["id"] . ")\" >" . $motorCruising_find["course_name"] . "</button>";
+                            } while ($motorCruising_find = $motorCruising_result->fetch_assoc()); 
+                        }
+                    ?>
                 </div>
             </div>
 
-            <?php 
-                $course_info_query = "SELECT `id`, `course_type`, `course_name`, `aim`, `prerequisite`, `minimum_age`, `endorsement`, `image_path` FROM `courses` WHERE course_name='Level 1 Start Powerboating'";
-                $result = $conn->query($course_info_query);
-                $count = $result->num_rows;
-                $find = $result->fetch_assoc();
-
-                $courseId = $find["id"];
-                $courseType = $find["course_type"];
-                $courseName = $find["course_name"];
-                $aim = $find["aim"];
-                $prereq = $find["prerequisite"];
-                $minAge = $find["minimum_age"];
-                $endorsment = $find["endorsement"];
-            ?>
-
-
-            <div class="course_display">
-                <div class="course_title">
-                    <h1> <?php echo $courseName;?> </h1>
-                </div>
-                <div class="course_outline">
-                    <dl>
-                        <dt>Aim:</dt>
-                        <dd> <?php echo $aim; ?> </dd>
-                        <dt>Prerequisites:</dt>
-                        <dd> <?php echo $prereq; ?></dd>
-                        <dt>Minimum Age:</dt>
-                        <dd> <?php echo $minAge; ?></dd>
-                        <dt>Endorsements:</dt>
-                        <dd> <?php echo $aim; ?></dd>
-                    </dl>
-                </div>  
-                <div class="course_other">
-                    <div class="course_image">
-                        <img src="/images/" alt="">
-                    </div>
-                    <button class="book_btn" onclick="location.href = './booking.php'">
-                        <h1>Book</h1>
-                    </button>
-                </div>
+            <div class="course_display" id="courseDisplay">
+            
             </div>
 
             
@@ -199,14 +196,14 @@
                     <button class="book_btn" onclick="location.href = './booking.php'">
                         <h1>Book</h1>
                     </button>
-                </div>
-            </div> -->
+                </div>-->
+            </div> 
         </div>
     </div>
 
     <?php include('./includes/footer.php')?>
     
 </body>
-<button onclick="loadDoc()">bruh</button>
+<button onclick="displayCourse()">bruh</button>
 <p id="demo"></p>
 </html>
