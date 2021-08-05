@@ -42,17 +42,16 @@
                     $names_result = $conn->query($names);
                     $names_count = $names_result->num_rows;
                     $names_find = $names_result->fetch_assoc();
-                    $type = array();
-                    while ($row = $names_find){
-                        $type[$row['course_type']][] = $row['course_name'];
+                    $current_cat = null;
+
+                    while  ($names_find){
+                        if ($names_find['course_type'] != $current_cat){
+                            $current_cat = $names_find['course_type'];
+                            echo "cat" . $current_cat . "/n";
+                        }
+                        echo $row['course_name'];
                     }
 
-                    foreach ($type as $key => $type){
-                        echo $key.'<br>';
-                        foreach ($type as $item){
-                            echo $item.'<br>';
-                        }
-                    }
                 ?>
 
                 <div class="sub_btn_cont">
