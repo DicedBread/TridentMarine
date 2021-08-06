@@ -38,19 +38,19 @@
                     </button>
                 </div>
                 <?php 
-                    $names = "SELECT `id`, `course_name`, `course_type` FROM `courses` ORDER BY `course_type`";
+                    $names = "SELECT `id`, `course_name`, `course_type` FROM `courses` ";
                     $names_result = $conn->query($names);
                     $names_count = $names_result->num_rows;
                     $names_find = $names_result->fetch_assoc();
-                    $current_cat = null;
+                    
 
-                    while  ($names_find){
-                        if ($names_find['course_type'] != $current_cat){
-                            $current_cat = $names_find['course_type'];
-                            echo "cat" . $current_cat . "/n";
+                    do{
+                        if ($names_find['course_type'] == "Power Boating"){
+                            echo "<button onclick=\"displayCourse(" . $names_find["id"] . ")\" >" . $names_find["course_name"] . "</button>";
                         }
-                        echo $row['course_name'];
-                    }
+                        else{
+                        }
+                    } while ($names_find = $names_result->fetch_assoc());
 
                 ?>
 
