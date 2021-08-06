@@ -38,20 +38,10 @@
                     </button>
                 </div>
                 <?php 
-                    $names = "SELECT `id`, `course_name`, `course_type` FROM `courses` ";
+                    $names = "SELECT `id`, `course_name`, `course_type` FROM `courses`";
                     $names_result = $conn->query($names);
                     $names_count = $names_result->num_rows;
                     $names_find = $names_result->fetch_assoc();
-                    
-
-                    do{
-                        if ($names_find['course_type'] == "Power Boating"){
-                            echo "<button onclick=\"displayCourse(" . $names_find["id"] . ")\" >" . $names_find["course_name"] . "</button>";
-                        }
-                        else{
-                        }
-                    } while ($names_find = $names_result->fetch_assoc());
-
                 ?>
 
                 <div class="sub_btn_cont">
@@ -77,37 +67,21 @@
                         <!-- Power Boating -->
                         <div class="pb_sub_btn sub_btn"> 
                         <?php //finds names of courses of certain type e.g power boating returns level 1 power boating 
-                            $powerBoating = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Power Boating'";
-                            $powerBoating_result = $conn->query($powerBoating);
-                            $powerBoating_count = $powerBoating_result->num_rows;
-                            $powerBoating_find = $powerBoating_result->fetch_assoc();
-
-                            if ($powerBoating_count < 1) {
-                                echo "no courses";
-                            }
-                            else{
-                                do{
-                                    echo "<button onclick=\"displayCourse(" . $powerBoating_find["id"] . ")\" >" . $powerBoating_find["course_name"] . "</button>";
-                                } while ($powerBoating_find = $powerBoating_result->fetch_assoc());  
-                            }
+                        do{
+                            if ($names_find['course_type'] == "Power Boating"){
+                                echo "<button onclick=\"displayCourse(" . $names_find["id"] . ")\" >" . $names_find["course_name"] . "</button>";
+                            }else{}
+                        } while ($names_find = $names_result->fetch_assoc());
                         ?>
                         </div>
 
                         <div class="mc_sub_btn sub_btn"> <!-- motor  crusing -->
                         <?php //finds names of courses of certain type e.g power boating returns level 1 power boating
-                           $motorCruising = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Motor Cruising'";
-                           $motorCruising_result = $conn->query($motorCruising);
-                           $motorCruising_count = $motorCruising_result->num_rows;
-                           $motorCruising_find = $motorCruising_result->fetch_assoc();
- 
-                           if ($motorCruising_count < 1) {
-                               echo "no courses";
-                           }
-                           else{
-                               do{
-                                   echo "<button onclick=\"displayCourse(" . $motorCruising_find["id"] . ")\" >" . $motorCruising_find["course_name"] . "</button>";
-                               } while ($motorCruising_find = $motorCruising_result->fetch_assoc()); 
-                           }
+                        do{
+                            if ($names_find['course_type'] == "Motor Cruising"){
+                                echo "<button onclick=\"displayCourse(" . $names_find["id"] . ")\" >" . $names_find["course_name"] . "</button>";
+                            }else{}
+                        } while ($names_find = $names_result->fetch_assoc());
                        ?>
 
 
