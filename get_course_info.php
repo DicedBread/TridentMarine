@@ -30,7 +30,7 @@
             <dt>Minimum Age:</dt>
             <dd> <?php echo $minAge; ?></dd>
             <dt>Endorsements:</dt>
-            <dd> <?php echo $aim; ?></dd>
+            <dd> <?php echo $endorsment; ?></dd>
         </dl>
     </div>  
     <div class="course_other">

@@ -16,3 +16,11 @@
     display: inline;
 }
 
+.about_text h2{
+    margin: 0 0 5px 15px;
+}
+
+.about_text p{
+    margin: 0 0 20px 20px;
+    text-align: justify;
+}
