@@ -6,6 +6,8 @@
     <!-- <script src="jquery-3.6.0.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 
     <script src="script/courses_nav.js"></script>
     <script src="script/dateSelector.js"></script>
@@ -53,10 +55,13 @@
                             </select>
                         </li>
                         <li>
-                            <div id="datepicker"></div>
+                            
                             <label for="date">Avalible dates</label>
                             <br>
-                            <input type="date" name="date">
+                            <!-- <input type="date" name="date"> -->
+                            
+                            <input type="text" id="dateDisplay">
+                            <div id="datePicker"></div>
                         </li>
                         <li>
                             <button class="submit" id="submit">Book</button>

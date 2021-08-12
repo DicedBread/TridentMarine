@@ -1,4 +1,11 @@
-//we make into list 
+$(document).ready(function() {
+    $("#datePicker").datepicker({  
+        dateFormat: "dd-mm-yy",
+        altField: "#dateDisplay",
+        altFormat: "dd-mm-yy",
+    }); //end date picker
+});
+
 
 
 

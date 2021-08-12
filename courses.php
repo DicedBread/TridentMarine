@@ -158,7 +158,7 @@
                         $motorCruising = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Motor Cruising'";
                         $motorCruising_result = $conn->query($motorCruising);
                         $motorCruising_count = $motorCruising_result->num_rows;
-                        $motorCruising_find = $motorCruising_result->fetch_assoc();
+                        $motorCruising_find = $motorCruising_result->fetch_assoc(); 
  
                         if ($motorCruising_count < 1) {
                             echo "no courses";
