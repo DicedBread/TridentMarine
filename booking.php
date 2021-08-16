@@ -28,40 +28,60 @@
                 <div class="form_wrap">
                     <ul class="form_list">
                         <li>
-                            <label for="Fname">Full Name</label>
-                            <br>
-                            <input type="text" placeholder="First Name..." id="Fname">
-                            <input type="text" placeholder="Last Name..." id="Lname">
+                            <div>
+                                <label for="Fname">First Name</label>
+                                <br>
+                                <input type="text" placeholder="First Name..." id="Fname">
+                            </div>
+                            <div>
+                                <label for="Fname">Last Name</label>
+                                <br>
+                                <input type="text" placeholder="Last Name..." id="Lname">
+                            </div>    
                         </li>
                         <li>
-
+                            <div>
                                 <label for="email">Email</label>
-
+                                <br>
                                 <input type="email" placeholder="Email..." id="email">
-
+                            </div>
+                            <div>
                                 <label for="phoneNumer" class="label2">Phone Number</label>
-
+                                <br>
                                 <input type="tel" placeholder="Phone" id="Phone" class="input2">
-
+                            </div>
                         </li>
 
                         <!-- age -->
+                        <li>
+                            <div>
+                                <label for="age">Age</label>
+                                <br>
+                                <input type="number">
+                            </div>
+                        </li>
 
                         <li>
-                            <label for="course">Selected Course:</label>
-                            <br>
-                            <select name="course" id="">
-                                <option value="1">Level 1 Start Powerboating</option>
-                            </select>
+                            <div>
+                                <label for="course">Selected Course:</label>
+                                <br>
+                                <select name="course" id="">
+                                    <option value="1">Level 1 Start Powerboating</option>
+                                </select>
+                            </div>
                         </li>
                         <li>
-                            
-                            <label for="date">Avalible dates</label>
-                            <br>
-                            <!-- <input type="date" name="date"> -->
-                            
-                            <input type="text" id="dateDisplay">
-                            <div id="datePicker"></div>
+                            <div>
+                                <label for="date">Avalible dates</label>
+                                <br>
+                                
+                                <div class="" id="datePicker"></div>
+                            </div>
+                            <div>
+                                <label for="coursedates" class="label2">Selected Date</label>
+                                <br>
+                                <input type="text" id="dateDisplay">
+                            </div>
                         </li>
                         <li>
                             <button class="submit" id="submit">Book</button>
