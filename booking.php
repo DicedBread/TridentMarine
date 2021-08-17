@@ -7,7 +7,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
     <script src="script/courses_nav.js"></script>
     <script src="script/dateSelector.js"></script>
@@ -75,13 +76,13 @@
                                 <label for="date">Avalible dates</label>
                                 <br>
                                 
-                                <div class="" id="datePicker"></div>
+                                <input class="datePicker" id="datePicker">
                             </div>
-                            <div>
+                            <!-- <div>
                                 <label for="coursedates" class="label2">Selected Date</label>
                                 <br>
                                 <input type="text" id="dateDisplay">
-                            </div>
+                            </div> -->
                         </li>
                         <li>
                             <button class="submit" id="submit">Book</button>
