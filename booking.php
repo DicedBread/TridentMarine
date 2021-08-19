@@ -25,31 +25,31 @@
 <body>
     <div class="wrapper">
         <?php include('includes/header.php')?>
-            <form action="" class="booking_form">
+            <form action="booking_form.php" class="booking_form" method="POST">
                 <div class="form_wrap">
                     <ul class="form_list">
                         <li>
                             <div>
                                 <label for="Fname">First Name</label>
                                 <br>
-                                <input type="text" placeholder="First Name..." id="Fname">
+                                <input type="text" placeholder="First Name..." name="first_name">
                             </div>
                             <div>
                                 <label for="Fname">Last Name</label>
                                 <br>
-                                <input type="text" placeholder="Last Name..." id="Lname">
+                                <input type="text" placeholder="Last Name..." name="last_name">
                             </div>    
                         </li>
                         <li>
                             <div>
                                 <label for="email">Email</label>
                                 <br>
-                                <input type="email" placeholder="Email..." id="email">
+                                <input type="email" placeholder="Email..." name="email">
                             </div>
                             <div>
                                 <label for="phoneNumer" class="label2">Phone Number</label>
                                 <br>
-                                <input type="tel" placeholder="Phone" id="Phone" class="input2">
+                                <input type="tel" placeholder="Phone" name="phone" class="input2">
                             </div>
                         </li>
 
@@ -58,7 +58,7 @@
                             <div>
                                 <label for="age">Age</label>
                                 <br>
-                                <input type="number">
+                                <input name="age" type="number">
                             </div>
                         </li>
 
@@ -75,8 +75,9 @@
                             <div>
                                 <label for="date">Avalible dates</label>
                                 <br>
-                                
-                                <input class="datePicker" id="datePicker">
+                                <div class="datePickerCont">
+                                    <input class="datePicker" id="datePicker">
+                                </div>
                             </div>
                             <!-- <div>
                                 <label for="coursedates" class="label2">Selected Date</label>

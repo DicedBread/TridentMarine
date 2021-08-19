@@ -1,23 +1,11 @@
 $(document).ready(function() {
     $("#datePicker").datepicker({  
         dateFormat: "dd-mm-yy",
+        showOn: "both",
+        buttonImage: "./images/date_icon.png"
     }); //end date picker
+
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

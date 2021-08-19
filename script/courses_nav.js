@@ -103,26 +103,9 @@ function slideShow(){
             $('#heroImage3').toggleClass("heroimage_display", false );
         }
 
-    }, 5000);
-}
-
-function bruhTest(){
-    let bruh = 0
-    window.setInterval(function(){
-        bruh = (bruh + 1) % 4;
-
-        console.log(bruh);
-        if (bruh == 1){
-            console.log("bruh 1");
-        } else if (bruh == 2) {
-            console.log("bruh 2");
-        } else if (bruh == 3){
-            console.log("bruh 3");
-        } else if (bruh == 4){
-            console.log("bruh 4");
-        }
     }, 2000);
 }
+
 
     
   
