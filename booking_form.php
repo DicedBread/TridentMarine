@@ -13,13 +13,16 @@ $sql = "INSERT INTO students (first_name, last_name, email, phone, age)
 VALUES ('$first_name', '$last_name', '$email', '$phone', '$age')";
 
 if ($conn->query($sql) === TRUE) {
+  $last_id = $conn->insert_id;
   echo "New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
+
+
 $sql = "INSERT INTO enrolments (course_id, student_id)
-VALUES ('$first_name', '$last_name', '$email', '$phone', '$age')";
+VALUES ('$course', '$last_id')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
@@ -35,4 +38,3 @@ $conn->close();
 
 
 
-[first_name] => Benjamin [last_name] => Read [email] => benjijread@gmail.com [phone] => 0224042620 [course] => 1 
