@@ -27,7 +27,7 @@
 <body>
     <div class="login_wrapper">
         <div class="login_cont">
-            <form class="login_form" action="/admin/admin.php">
+            <form class="login_form" action="/admin/admin.php" method="POST">
                 <div>
                     <label  for="uname">Username</label>
                     <br>
