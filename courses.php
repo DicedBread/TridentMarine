@@ -173,7 +173,7 @@
             </div>
 
             <div class="course_display" id="courseDisplay">
-            
+                <!-- info rendered here by get_course_info.php -->
             </div>
 
             

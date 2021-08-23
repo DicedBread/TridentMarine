@@ -19,8 +19,6 @@ if ($conn->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-
-
 $sql = "INSERT INTO enrolments (course_id, student_id)
 VALUES ('$course', '$last_id')";
 

@@ -37,7 +37,18 @@
         <div class="course_image">
             <img src="/images/" alt="">
         </div>
-        <button class="book_btn" onclick="location.href = './booking.php'">
-            <h1>Book</h1>
-        </button>
+        
+            <?php 
+                if (isset($_SESSION['loggedin'])){
+                    echo "
+                    <button class=\"book_btn\" onclick=\"location.href = './booking.php'\"><h1>Book</h1></button>
+                    ";
+                }else{
+                    echo "
+                    <button class=\"book_btn\" onclick=\"location.href = './login.php'\"><h1>Login To Book</h1></button>
+                    ";
+                }
+            ?>
+            
+
     </div>

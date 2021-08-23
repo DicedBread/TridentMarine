@@ -25,20 +25,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <?php include('includes/header.php')?>
     <div class="login_wrapper">
         <div class="login_cont">
-            <form class="login_form" action="/admin/admin.php" method="POST">
+            <form class="login_form" action="./login/authenticate.php" method="POST">
                 <div>
                     <label  for="uname">Username</label>
                     <br>
-                    <input class="login_input" type="text" name="username">
+                    <input class="login_input" type="text" name="username" placeholder="User Name..." required>
                 </div>
                 <div>
                     <label for="password">Password</label>
                     <br>
-                    <input class="login_input" type="password" name="password">
+                    <input class="login_input" type="password" name="password" placeholder="Password..." required>
                 </div>
+
+                <input type="submit">
+                
             </form>
+
         </div>
     </div>
 </body>
