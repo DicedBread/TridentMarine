@@ -30,7 +30,7 @@
         <div class="login_cont">
             <form class="login_form" action="./login/register.php" method="POST">
                 <div>
-                    <h1 class="login_title" >register</h1>
+                    <h1 class="login_title" >Register</h1>
                 </div>
                 <div>
                     <label  for="uname">Username</label>

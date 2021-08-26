@@ -17,9 +17,9 @@
         exit('Email is not valid!');
     }
 
-    // if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
-    //     exit('Password must be between 5 and 20 characters long!');
-    // }
+    if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
+        exit('Password must be between 5 and 20 characters long!');
+    }
     
     // We need to check if the account with that username exists.
     // Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
