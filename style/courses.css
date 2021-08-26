@@ -173,26 +173,6 @@
     margin-left: 30px;
 }
 
-/* ratio tooltip */
-.tooltip{
-    /* background-color: rgb(131, 79, 79); */
-    /* clip-path: circle(50.0% at 50% 50%); */
-    border-radius: 50px;
-    border: 1px solid black;
-    padding: 2px 6px;
-    margin: 0 2px;
-}
-
-.tooltip_info{
-    display: none;
-    position: fixed;
-    
-}
-
-.tooltip:hover .tooltip_info{
-    display: block;
-}
-
 .course_other{
     grid-area: other;
     display: flex;

@@ -28,9 +28,9 @@
     <?php include('includes/header.php')?>
     <div class="login_wrapper">
         <div class="login_cont">
-            <form class="login_form" action="./login/authenticate.php" method="POST">
+            <form class="login_form" action="./login/register.php" method="POST">
                 <div>
-                    <h1 class="login_title">Login</h1>
+                    <h1 class="login_title" >register</h1>
                 </div>
                 <div>
                     <label  for="uname">Username</label>
@@ -42,9 +42,13 @@
                     <br>
                     <input class="login_input" type="password" name="password" placeholder="Password..." required>
                 </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input class="login_input" type="email" name="email" placeholder="Email" id="email" required>
+                </div>
 
                 <input class="login_submit" type="submit">
-                <p>New user? <a href="register_form.php">register</a> </p>
+                <p>Already registered? <a href="login.php">login</a> </p>
             </form>
 
         </div>
