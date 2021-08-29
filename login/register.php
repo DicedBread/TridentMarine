@@ -29,7 +29,8 @@
 	$stmt->store_result(); // Store the result so we can check if the account exists in the database.
 	if ($stmt->num_rows > 0) {
 		// Username already exists
-		echo 'Username exists, please choose another!';
+		// echo 'Username exists, please choose another!';
+        $userErr = "Username exists, please choose another";
 
 	} else {
 
@@ -52,5 +53,5 @@
 	    echo 'Could not prepare statement!';
     }
     $conn->close();
-?>
+
 

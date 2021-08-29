@@ -43,6 +43,10 @@
     margin-top: 10px;
 }
 
+.input_cont{
+    padding-top: 10px;
+}
+
 .login_input{
     border: none;
     outline: none;
@@ -50,7 +54,7 @@
     width: 100%;
     height: 40px;
     box-sizing: border-box;
-    margin: 10px 10px 15px 0;
+    margin: 10px 0 5px 0;
 }
 
 .login_input:focus{
@@ -75,4 +79,10 @@
     box-sizing: border-box;
     color: white;
     transition: 0.3s;
+}
+
+.error{
+    color: red;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
 }

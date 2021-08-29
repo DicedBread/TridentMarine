@@ -30,6 +30,7 @@
         $inputNotValid = false;
         $emailNotValid = false;
         $passwordNotValid = false;
+        $userErr = "";
         $inputErr = "";
         $emailErr = "";
         $passwordErr = "";
@@ -63,14 +64,10 @@
             }
 
             if($inputNotValid == false && $emailNotValid == false && $passwordNotValid == false){
-                include('/login/register.php');
+                include('login/register.php');
             }
-
         };
     ?>
-    
-
-
 
     <div class="login_wrapper">
         <div class="login_cont">
@@ -78,22 +75,26 @@
                 <div>
                     <h1 class="login_title">Register</h1>
                 </div>
-                <div>
-                    <label  for="uname">Username</label>
+                <div class="input_cont">
+                    <label for="uname">Username</label>
                     <br>
                     <input class="login_input" type="text" name="username" placeholder="User Name..." required>
+                    <span class="error"><?php echo $userErr ?></span>
                 </div>
-                <div>
+                <div class="input_cont">
                     <label for="password">Password</label>
                     <br>
                     <input class="login_input" type="password" name="password" placeholder="Password..." required>
+                    <span class="error"><?php echo $passwordErr ?></span>
                 </div>
-                <div>
+                <div class="input_cont">
                     <label for="email">Email</label>
-                    <input class="login_input" type="email" name="email" placeholder="Email" id="email" required>
+                    <input class="login_input" type="email" name="email" placeholder="Email..." id="email" required>
+                    <span class="error"><?php echo $emailErr ?></span>
                 </div>
 
                 <input class="login_submit" type="submit">
+                <span class="error"><?php echo $inputErr?></span>
                 <p>Already registered? <a href="login.php">login</a> </p>
             </form>
 
