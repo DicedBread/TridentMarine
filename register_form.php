@@ -26,11 +26,57 @@
 </head>
 <body>
     <?php include('includes/header.php')?>
+    <?php
+        $inputNotValid = false;
+        $emailNotValid = false;
+        $passwordNotValid = false;
+        $inputErr = "";
+        $emailErr = "";
+        $passwordErr = "";
+
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
+                $inputValid = true;
+                $inputErr = "Please complete the registration form";
+
+                // exit('Please complete the registration form!');
+            }
+
+            if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email'])) {
+                $inputValid = true;
+                $inputErr = "Please complete the registration form";
+                // exit('Please complete the registration form');
+            }
+
+                //email validation
+            if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+                $emailNotValid = true;
+                $emailErr = "Please use valid email";
+                // exit('Email is not valid!');
+            }
+
+            if (strlen($_POST['password']) < 5) {
+                $passwordNotValid = true;
+                $passwordErr = "Password must be have at least 5 charaters";
+                // exit('Password must be between 5 and 20 characters long!');
+            }
+
+            if($inputNotValid == false && $emailNotValid == false && $passwordNotValid == false){
+                include('/login/register.php');
+            }
+
+        };
+    ?>
+    
+
+
+
     <div class="login_wrapper">
         <div class="login_cont">
-            <form class="login_form" action="./login/register.php" method="POST">
+            <form class="login_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <div>
-                    <h1 class="login_title" >Register</h1>
+                    <h1 class="login_title">Register</h1>
                 </div>
                 <div>
                     <label  for="uname">Username</label>
