@@ -1,12 +1,12 @@
 <?php 
     include('../setup.php');
 
-    $username = trim($_POST['username']);
+    $email = trim($_POST['email']);
     $password = trim($_POST["password"]);
 
     // If the email and password are not blank strings
-    if(empty($username) || empty($password)){
-        exit('Please fill both the username and password fields!');
+    if(empty($email) || empty($password)){
+        exit('Please fill both the email and password fields!');
     }
 
     // if ( !isset($_POST['username'], $_POST['password']) ) {
@@ -15,9 +15,9 @@
     // }
 
     //searches for username and stores pass and id
-    if ($stmt = $conn->prepare("SELECT id, password FROM `accounts` WHERE username = ?")) {
+    if ($stmt = $conn->prepare("SELECT student_id, password FROM `accounts` WHERE email = ?")) {
         // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
-        $stmt->bind_param('s', $_POST['username']);
+        $stmt->bind_param('s', $_POST['email']);
         $stmt->execute();
         // Store the result so we can check if the account exists in the database.
         $stmt->store_result();
@@ -32,17 +32,17 @@
                 // Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
                 session_regenerate_id();
                 $_SESSION['loggedin'] = TRUE;
-                $_SESSION['name'] = $_POST['username'];
+                $_SESSION['name'] = $_POST['email'];
                 $_SESSION['id'] = $id;
                 header('Location: ../courses.php');
 
             } else {
                 // Incorrect password
-                echo 'Incorrect username and/or password!';
+                echo 'Incorrect email and/or password!';
             }
         } else {
             // Incorrect username
-            echo 'Incorrect username and/or password!';
+            echo 'Incorrect email and/or password!';
         }
         
         $stmt->close();

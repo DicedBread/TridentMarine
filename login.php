@@ -27,32 +27,20 @@
 </head>
 <body>
     <?php include('includes/header.php')?>
+    <?php
+        if ($_SESSION['successful_reg']){
+            $autofill = $_SESSION['email'];
+        } else {
+            $autofill = "";
+        }
+    ?>
     <div class="login_wrapper">
         <div class="login_cont">
-            <!-- <form class="login_form" action="./login/authenticate.php" method="POST">
-                <div>
-                    <h1 class="login_title">Login</h1>
-                </div>
-                <div>
-                    <label  for="uname">Username</label>
-                    <br>
-                    <input class="login_input" type="text" name="username" placeholder="User Name..." required>
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <br>
-                    <input class="login_input" type="password" name="password" placeholder="Password..." required>
-                </div>
-
-                <input class="login_submit" type="submit">
-                <p>New user? <a href="register_form.php">register</a> </p>
-            </form> -->
-
             <form class="login_form" action="./login/authenticate.php" method="POST">
                 <h1 class="login_title">Login</h1>
                 <div class="login_email">
                     <label for="email">Email</label>
-                    <input class="input_reg" type="email" name="email" placeholder="Email...">
+                    <input class="input_reg" type="email" name="email" placeholder="Email..." value="<?php echo "$autofill"?>">
                 </div>
                 <div class="login_password">
                     <label for="password">Password</label>

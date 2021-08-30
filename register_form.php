@@ -30,31 +30,33 @@
         $inputNotValid = false;
         $emailNotValid = false;
         $passwordNotValid = false;
-        $userErr = "";
+        // $userErr = "";
         $inputErr = "";
         $emailErr = "";
         $passwordErr = "";
-
+	    $successful = false;
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
-                $inputValid = true;
+            if (!isset($_POST['first_name'], $_POST['last_name'], $_POST['phone'], $_POST['age'], $_POST['email'], $_POST['password'], $_POST['confirm_pass'])) {
+                $inputNotValid = true;
                 $inputErr = "Please complete the registration form";
-
-                // exit('Please complete the registration form!');
             }
 
-            if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email'])) {
-                $inputValid = true;
+            if (empty($_POST['first_name']) || empty($_POST['last_name']) || empty($_POST['phone']) || empty($_POST['age']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['confirm_pass'])) {
+                $inputNotValid = true;
                 $inputErr = "Please complete the registration form";
-                // exit('Please complete the registration form');
             }
 
-                //email validation
+            //email validation
             if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
                 $emailNotValid = true;
                 $emailErr = "Please use valid email";
                 // exit('Email is not valid!');
+            }
+
+            if (trim($_POST['password']) != trim($_POST['confirm_pass'])){
+                $passwordNotValid = true;
+                $passwordErr = "Passwords do not match";
             }
 
             if (strlen($_POST['password']) < 5) {
@@ -71,80 +73,51 @@
 
     <div class="login_wrapper">
         <div class="login_cont">
-            <!-- <form class="login_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-                <div>
-                    <h1 class="login_title">Register</h1>
-                </div>
-                <div class="input_cont">
-                    <label for="uname">Username</label>
-                    <br>
-                    <input class="login_input" type="text" name="username" placeholder="User Name..." required>
-                    <span class="error"><?php echo $userErr ?></span>
-                </div>
-                <div class="input_cont">
-                    <label for="password">Password</label>
-                    <br>
-                    <input class="login_input" type="password" name="password" placeholder="Password..." required>
-                    <span class="error"><?php echo $passwordErr ?></span>
-                </div>
-                <div class="input_cont">
-                    <label for="email">Email</label>
-                    <input class="login_input" type="email" name="email" placeholder="Email..." id="email" required>
-                    <span class="error"><?php echo $emailErr ?></span>
-                </div>
-
-                <input class="login_submit" type="submit">
-                <span class="error"><?php echo $inputErr?></span>
-                <p>Already registered? <a href="login.php">login</a> </p>
-            </form> -->
-
             <form class="register_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <h1 class="title">Register</h1>
                 <div class="first_name">
                     <label for="first_name">First name</label>
-                    <input class="input_reg" type="text" name="first_name" placeholder="First name...">
+                    <input class="input_reg" type="text" name="first_name" placeholder="First name..." required>
                 </div>
 
                 <div class="last_name">
                     <label for="last_name">Last name</label>
-                    <input class="input_reg" type="text" name="last_name" placeholder="Last name...">
+                    <input class="input_reg" type="text" name="last_name" placeholder="Last name..." required>
                 </div>
 
                 <div class="phone">
                     <label for="phone">Phone</label>
-                    <input class="input_reg" type="tel" name="phone" placeholder="Phone...">
+                    <input class="input_reg" type="tel" name="phone" placeholder="Phone..." required>
                 </div>
 
                 <div class="age">
                     <label for="age">Age</label>
-                    <input class="input_reg" type="number" name="age" placeholder="Age...">
+                    <input class="input_reg" type="number" name="age" placeholder="Age..." required>
                 </div>
 
                 <div class="email">
                     <label for="email">Email</label>
-                    <input class="input_reg" type="email" name="email" placeholder="Email...">
+                    <input class="input_reg" type="email" name="email" placeholder="Email..." required>
                 </div>
 
                 <span class="email_err error"><?php echo $emailErr ?></span>
 
                 <div class="password">
                     <label for="password">Password</label>
-                    <input class="input_reg" type="password" name="password" placeholder="Password...">
+                    <input class="input_reg" type="password" name="password" placeholder="Password..." required>
                 </div>
 
                 <div class="confirm_pass">
                     <label for="confirm password">Confirm password</label>
-                    <input class="input_reg" type="password" name="confirm_pass" placeholder="Retype password...">
+                    <input class="input_reg" type="password" name="confirm_pass" placeholder="Retype password..." required>
                 </div>
-                <span class="info_err error"><?php echo $userErr ?></span>
+
                 <span class="pass_err error"><?php echo $passwordErr ?></span>
+                <span class="pass_err error"><?php echo $inputErr ?></span>
                 <input class="submit" type="submit">
 
                 <p class="thing">Already registered? <a href="login.php">login</a></p>
             </form>
-            
-
-
         </div>
     </div>
 </body>

@@ -23,24 +23,24 @@
     
     // We need to check if the account with that username exists.
     // Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
-    if ($stmt = $conn->prepare("SELECT id, password FROM accounts WHERE username = ?")) {
-	$stmt->bind_param('s', $_POST['username']);
+    if ($stmt = $conn->prepare("SELECT student_id FROM accounts WHERE email = ?")) {
+	$stmt->bind_param('s', $_POST['email']);
 	$stmt->execute();
 	$stmt->store_result(); // Store the result so we can check if the account exists in the database.
 	if ($stmt->num_rows > 0) {
 		// Username already exists
-		// echo 'Username exists, please choose another!';
-        $userErr = "Username exists, please choose another";
-
+        $emailErr = "There is already an account associated with this email address";
 	} else {
-
 		// Username doesnt exists, insert new account
-        if ($stmt = $conn->prepare("INSERT INTO accounts (username, password, email) VALUES (?, ?, ?)")) {
+        if ($stmt = $conn->prepare("INSERT INTO accounts (email, password, first_name, last_name, phone, age) VALUES (?, ?, ?, ?, ?, ?)")) {
 	    // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
-	    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-	    $stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
-	    $stmt->execute();
-	    echo 'You have successfully registered, you can now login!';
+	        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+	        $stmt->bind_param('ssssii', $_POST['email'], $password, $_POST['first_name'], $_POST['last_name'], $_POST['phone'], $_POST['age'] );
+	        $stmt->execute();
+	        echo 'You have successfully registered, you can now login!';
+	        $_SESSION['successful_reg'] = TRUE;
+            $_SESSION['email'] = $_POST['email'];
+            header('Location: ./login.php');
         } else {
 	        echo 'Could not prepare statement!';
         }
