@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style/about.css">
     <link rel="stylesheet" href="style/booking.css">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/login_register.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
 </head>
@@ -71,7 +71,7 @@
 
     <div class="login_wrapper">
         <div class="login_cont">
-            <form class="login_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+            <!-- <form class="login_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <div>
                     <h1 class="login_title">Register</h1>
                 </div>
@@ -96,7 +96,54 @@
                 <input class="login_submit" type="submit">
                 <span class="error"><?php echo $inputErr?></span>
                 <p>Already registered? <a href="login.php">login</a> </p>
+            </form> -->
+
+            <form class="register_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+                <h1 class="title">Register</h1>
+                <div class="first_name">
+                    <label for="first_name">First name</label>
+                    <input class="input_reg" type="text" name="first_name" placeholder="First name...">
+                </div>
+
+                <div class="last_name">
+                    <label for="last_name">Last name</label>
+                    <input class="input_reg" type="text" name="last_name" placeholder="Last name...">
+                </div>
+
+                <div class="phone">
+                    <label for="phone">Phone</label>
+                    <input class="input_reg" type="tel" name="phone" placeholder="Phone...">
+                </div>
+
+                <div class="age">
+                    <label for="age">Age</label>
+                    <input class="input_reg" type="number" name="age" placeholder="Age...">
+                </div>
+
+                <div class="email">
+                    <label for="email">Email</label>
+                    <input class="input_reg" type="email" name="email" placeholder="Email...">
+                </div>
+
+                <span class="email_err error"><?php echo $emailErr ?></span>
+
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input class="input_reg" type="password" name="password" placeholder="Password...">
+                </div>
+
+                <div class="confirm_pass">
+                    <label for="confirm password">Confirm password</label>
+                    <input class="input_reg" type="password" name="confirm_pass" placeholder="Retype password...">
+                </div>
+                <span class="info_err error"><?php echo $userErr ?></span>
+                <span class="pass_err error"><?php echo $passwordErr ?></span>
+                <input class="submit" type="submit">
+
+                <p class="thing">Already registered? <a href="login.php">login</a></p>
             </form>
+            
+
 
         </div>
     </div>

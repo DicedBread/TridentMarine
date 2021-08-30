@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="style/about.css">
     <link rel="stylesheet" href="style/booking.css">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/login_register.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
 </head>
@@ -28,7 +29,7 @@
     <?php include('includes/header.php')?>
     <div class="login_wrapper">
         <div class="login_cont">
-            <form class="login_form" action="./login/authenticate.php" method="POST">
+            <!-- <form class="login_form" action="./login/authenticate.php" method="POST">
                 <div>
                     <h1 class="login_title">Login</h1>
                 </div>
@@ -45,6 +46,21 @@
 
                 <input class="login_submit" type="submit">
                 <p>New user? <a href="register_form.php">register</a> </p>
+            </form> -->
+
+            <form class="login_form" action="./login/authenticate.php" method="POST">
+                <h1 class="login_title">Login</h1>
+                <div class="login_email">
+                    <label for="email">Email</label>
+                    <input class="input_reg" type="email" name="email" placeholder="Email...">
+                </div>
+                <div class="login_password">
+                    <label for="password">Password</label>
+                    <input class="input_reg" type="password" name="password" placeholder="Password...">
+                    <span class="error"></span>
+                </div>
+                <input class="login_submit submit" type="submit">
+                <p class="logthing">New user? <a href="register_form.php">register</a> </p>
             </form>
 
         </div>

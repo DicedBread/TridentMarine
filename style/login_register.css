@@ -1,0 +1,208 @@
+.login_wrapper{
+    width: 100vw;
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_cont{
+    width: auto;
+    height: auto;
+    /* min-width: 300px; */
+    padding: 20px 100px;
+    border-radius: 20px;
+    border: 3px solid var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: auto 0; */
+    /* background-color: var(--blue); */
+}
+
+.register_form{
+    display: grid;
+    width: 400px;
+    grid-template-columns: [one] 1fr [two] 1fr;
+    grid-template-rows:
+    [title] auto [name] 1fr [blank] auto [phone] 1fr [blank_2] auto [email] 1fr
+    [email_err] auto [pass] 1fr [pass_err] auto [submit] 1fr [thing] auto
+     ;
+    grid-template-areas: 
+        "title title"
+        "first_name last_name"
+        ". ."
+        "phone age"
+        ". ."
+        "email email"
+        "email_err ."
+        "password confirm_pass"
+        "pass_err ."
+        "submit submit"
+        "thing thing"
+    ;
+    column-gap: 20px;
+    row-gap: 8px;
+}
+
+.register_form div{
+    display: flex;
+    flex-direction: column;
+}
+
+/* bruh */
+.title{
+    grid-area: title;
+    color: var(--blue);
+    font-size: 2.5rem;
+    border-bottom: 1px solid var(--dark-blue);
+    padding-bottom: 5px;
+}
+
+.first_name{
+    grid-area: first_name;
+}
+
+.last_name{
+    grid-area: last_name;
+}
+
+.phone{
+    grid-area: phone;
+}
+
+.age{
+    grid-area: age;
+}
+
+.email{
+    grid-area: email;
+}
+
+.email_err{
+    grid-area: email_err;
+}
+
+.password{
+    grid-area: password;
+}
+
+.confirm_pass{
+    grid-area: confirm_pass;
+}
+
+.pass_err{
+    grid-area: pass_err;
+}
+
+.info_err{
+    grid-area: pass_err;
+}
+
+.submit{
+    grid-area: submit;
+}
+
+.thing{
+    grid-area: thing;
+}
+/* bruh */
+
+.input_reg{
+    border: none;
+    outline: none;
+    border: 1px solid var(--blue);
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    margin: 10px 0 0 0;
+    border-radius: 5px;
+}
+
+.input_reg:focus{
+    border: none;
+    border: 1px solid var(--light-blue);
+    color: black;
+}
+
+.submit{
+    background-color: var(--blue-grey);
+    padding: 10px 30px;
+    border: 1px solid var(--blue-grey);
+    margin: 14px 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.submit:hover{
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    box-sizing: border-box;
+    color: white;
+    transition: 0.3s;
+}
+
+.login_form{
+    display: grid;
+    width: 300px;
+    grid-template-columns: 1fr;
+    grid-template-rows:
+    [title] auto [email] 1fr [pass] 1fr [submit] 1fr [thing] auto
+     ;
+    grid-template-areas: 
+        "logtitle"
+        "logemail"
+        /* "logemail_err" */
+        "logpassword"
+        /* "pass_err" */
+        "logsubmit"
+        "logthing"
+    ;
+    column-gap: 20px;
+    row-gap: 8px;
+}
+
+/* .login_form{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+} */
+
+.login_form div{
+    display: flex;
+    flex-direction: column;
+}
+
+.login_title{
+    grid-area: logtitle;
+    color: var(--blue);
+    font-size: 2.5rem;
+    border-bottom: 1px solid var(--dark-blue);
+    padding-bottom: 5px;
+}
+
+.login_email{
+    grid-area: logemail;
+}
+
+.login_password{
+    grid-area: logpassword;
+}
+
+.login_submit{
+    grid-area: logsubmit;
+}
+
+.logthing{
+    grid-area: logthing;
+}
+
+.error{
+    color: red;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+

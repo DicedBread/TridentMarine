@@ -91,20 +91,3 @@ label{
 
 
 
-.submit{
-    background-color: var(--blue-grey);
-    padding: 10px 30px;
-    border: 1px solid var(--blue-grey);
-    margin: 20px 0px;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.submit:hover{
-    background-color: var(--blue);
-    border: 1px solid var(--blue);
-    box-sizing: border-box;
-    color: white;
-    transition: 0.3s;
-}
