@@ -4,9 +4,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background-color: blue; */
+    background-image: url(../images/wave.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
 
 .login_cont{
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     width: auto;
     height: auto;
     /* min-width: 300px; */
@@ -16,8 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: auto 0; */
-    /* background-color: var(--blue); */
+
 }
 
 .register_form{

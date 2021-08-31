@@ -1,13 +1,12 @@
 <?php 
-    include('../setup.php');
+    // include('../setup.php');
 
-    $email = trim($_POST['email']);
-    $password = trim($_POST["password"]);
+
 
     // If the email and password are not blank strings
-    if(empty($email) || empty($password)){
-        exit('Please fill both the email and password fields!');
-    }
+    // if(empty($email) || empty($password)){
+    //     exit('Please fill both the email and password fields!');
+    // }
 
     // if ( !isset($_POST['username'], $_POST['password']) ) {
     //     // Could not get the data that should have been sent.
@@ -34,15 +33,17 @@
                 $_SESSION['loggedin'] = TRUE;
                 $_SESSION['name'] = $_POST['email'];
                 $_SESSION['id'] = $id;
-                header('Location: ../courses.php');
+                header('Location: ./courses.php');
 
             } else {
                 // Incorrect password
-                echo 'Incorrect email and/or password!';
+                // echo 'Incorrect email and/or password!';
+                $incorrectInput = "Incorrect email and/or password!";
             }
         } else {
             // Incorrect username
-            echo 'Incorrect email and/or password!';
+            // echo 'Incorrect email and/or password!';
+            $incorrectInput = "Incorrect email and/or password!";
         }
         
         $stmt->close();

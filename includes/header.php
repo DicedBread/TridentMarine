@@ -1,4 +1,6 @@
-<?php include('setup.php')?>
+<?php include('./setup.php');
+    $bruh = "bruh";
+?>
 <header>
     <div class="brand">
         <div class="logoimg"></div>

@@ -27,16 +27,45 @@
 </head>
 <body>
     <?php include('includes/header.php')?>
+
     <?php
+    if  (isset($_SESSION['successful_reg'])){
         if ($_SESSION['successful_reg']){
             $autofill = $_SESSION['email'];
+            $autofocus = "autofocus";
         } else {
             $autofill = "";
+            $autofocus = "";
         }
+    } else {
+        $autofill = "";
+        $autofocus = "";
+    }
+
+    $inputNotValid = false;
+    $userErr = "";
+    $incorrectInput = "";
+
+
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $email = trim($_POST['email']);
+        $password = trim($_POST["password"]);
+        if(empty($email) || empty($password)){
+            // exit('Please fill both the email and password fields!');
+            $userErr = "Please fill both the email and password fields";
+            $loginNotValid = true;
+        }
+
+        if (!$inputNotValid){
+            include ('./login/authenticate.php');
+        }else{}
+    }
     ?>
     <div class="login_wrapper">
+
         <div class="login_cont">
-            <form class="login_form" action="./login/authenticate.php" method="POST">
+            <form class="login_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <h1 class="login_title">Login</h1>
                 <div class="login_email">
                     <label for="email">Email</label>
@@ -44,11 +73,12 @@
                 </div>
                 <div class="login_password">
                     <label for="password">Password</label>
-                    <input class="input_reg" type="password" name="password" placeholder="Password...">
-                    <span class="error"></span>
+                    <input class="input_reg" type="password" name="password" placeholder="Password..." <?php echo "$autofocus"?>>
+                    <span class="error"><?php echo $userErr ?></span>
+                    <span class="error"><?php echo $incorrectInput ?></span>
                 </div>
                 <input class="login_submit submit" type="submit">
-                <p class="logthing">New user? <a href="register_form.php">register</a> </p>
+                <p class="logthing">New user? <a href="register_form.php">register</a></p>
             </form>
 
         </div>
