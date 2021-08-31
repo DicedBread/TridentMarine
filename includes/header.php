@@ -17,9 +17,11 @@
         <a class="nav_btn" href="./aboutus.php">
             <h2>About us</h2>
         </a>
-    </div>
 
-    <!-- change to a and use button thing -->
+        <div class="user_icon">
+
+        </div>
+    </div>
 
     <!-- mobile -->
     <div class="mobile_nav_toggle_btn" onclick="mobileNav()">
