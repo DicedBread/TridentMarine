@@ -137,6 +137,7 @@
 .course_display{
     /* width: 100%; */
     height: auto;
+    min-height: calc(100% - 590px);
     background-color: white;
     padding: 15px clamp(10px, 3%, 100px);
     display: grid;
@@ -214,6 +215,17 @@
 /* hide mobile nav */
 .courses_nav_mobile{
     display: none;
+}
+
+.date_table{
+    border: 1px solid black;
+}
+
+.date_table td{
+    text-align: center;
+    /* width: calc(100% / 3); */
+    border: 1px solid black;
+    margin: 0;
 }
 
 @media screen and (max-width: 850px) {

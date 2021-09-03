@@ -34,19 +34,34 @@
         </dl>
     </div>  
     <div class="course_other">
-        <div class="course_image">
+        <!-- <div class="course_image">
             <img src="/images/" alt="">
-        </div>
+        </div> -->
+        <table class="date_table">
+            <caption>Avalible dates</caption>
+            <tr>
+                <td>16-07-2021</td>
+                <td>16-07-2021</td>
+                <td>16-07-2021</td>
+            </tr>
+            <tr>
+                <td>book</td>
+                <td>book</td>
+                <td>book</td>
+            </tr>
+        </table>
         
+
+
             <?php 
-                if (isset($_SESSION['loggedin'])){
-                    echo "
-                    <button class=\"book_btn\" onclick=\"location.href = './booking.php'\"><h1>Book</h1></button>
-                    ";
-                }else{
-                    echo "
-                    <button class=\"book_btn\" onclick=\"location.href = './login.php'\"><h1>Login To Book</h1></button>
-                    ";
-                }
+                // if (isset($_SESSION['loggedin'])){
+                //     echo "
+                //     <button class=\"book_btn\" onclick=\"location.href = './booking.php'\"><h1>Book</h1></button>
+                //     ";
+                // }else{
+                //     echo "
+                //     <button class=\"book_btn\" onclick=\"location.href = './login.php'\"><h1>Login To Book</h1></button>
+                //     ";
+                // }
             ?>
     </div>
