@@ -37,22 +37,20 @@
         <!-- <div class="course_image">
             <img src="/images/" alt="">
         </div> -->
-        <table class="date_table">
-            <caption>Avalible dates</caption>
-            <tr>
-                <td>16-07-2021</td>
-                <td>16-07-2021</td>
-                <td>16-07-2021</td>
-            </tr>
-            <tr>
-                <td>book</td>
-                <td>book</td>
-                <td>book</td>
-            </tr>
-        </table>
+        <h2>Avalible Dates</h2>
+        <div class="date_table">
+            <div class="table_row">
+                <div>12-07-2021</div>
+                <div>12-07-2021</div>
+                <div>12-07-2021</div>
+            </div>
+            <div class="table_row">
+                <button>Book</button>
+                <button>Book</button>
+                <button>Book</button>
+            </div>
+        </div>
         
-
-
             <?php 
                 // if (isset($_SESSION['loggedin'])){
                 //     echo "

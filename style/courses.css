@@ -218,14 +218,43 @@
 }
 
 .date_table{
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
 }
 
-.date_table td{
-    text-align: center;
-    /* width: calc(100% / 3); */
-    border: 1px solid black;
-    margin: 0;
+.table_row{
+    display: flex;
+    flex-direction: row;
+}
+
+.table_row div{
+    width: calc(100% / 3);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--blue);
+    font-size: 1.2rem;
+}
+
+.table_row button{
+    width: calc(100% / 3);
+    border: none;
+    background-color: var(--blue-grey);
+    padding: 10px 30px;
+    border: 1px solid var(--blue-grey);
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+
+.table_row button:hover{
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    box-sizing: border-box;
+    color: white;
+    transition: 0.3s;
 }
 
 @media screen and (max-width: 850px) {
