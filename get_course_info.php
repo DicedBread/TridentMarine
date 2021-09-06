@@ -49,17 +49,37 @@ include('setup.php')?>
         </div> -->
 
         <?php
-            $dates_quer = "SELECT `id` `course_id` `course_date` `start_time` `enrolment_count` FROM `course_dates` WHERE id='$selectedCourse' ORDER BY `course_dates`.`course_date` ASC";
-            
+            // $dates_query = "SELECT `id` `course_id` `course_date` `start_time` `enrolment_count` FROM `course_dates` WHERE id='$selectedCourse' ORDER BY `course_dates`.`course_date` ASC";
+            // $date_result = $conn->query($dates_query);
+            // $date_count = $date_result->num_rows;
+            // $date_find = $date_result->fetch_assoc();
+
+            $dates_query = "SELECT `id`, `course_id`, `course_date`, `start_time`, `enrolment_count` FROM `course_dates` WHERE course_id='$selectedCourse' ORDER BY `course_date` ASC";
+            $dates_result = $conn->query($dates_query);
+            $dates_count = $dates_result->num_rows;
+            $dates_find = $dates_result->fetch_assoc();
         ?>
 
 
         <h2>Avalible Dates</h2>
         <div class="date_table">
             <div class="table_row">
-                <div>12-07-2021</div>
+                <?php
+                    $i = 0;
+                    if ($dates_count > 0){
+                        do{
+                            echo "<div>" . $dates_find['course_date'] . "</div>";
+                        //    $i++; 
+                        } while ($dates_find = $dates_result->fetch_assoc());
+                    } else {
+                        echo "no upcoming sessions";
+                    }
+
+
+                ?>
+                <!-- <div>12-07-2021</div>
                 <div>19-07-2021</div>
-                <div>26-07-2021</div>
+                <div>26-07-2021</div> -->
             </div>
             <div class="table_row">
                 <button><a href="booking.php?bookingDate=12-07-2021&courseId= <?php echo $courseId ?>">Book</a></button>
