@@ -222,23 +222,38 @@
     flex-direction: column;
 }
 
-.table_row{
+.book_row{
     display: flex;
     flex-direction: row;
 }
 
-.table_row div{
-    width: calc(100% / 3);
+.book_col{
     height: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--blue);
     font-size: 1.2rem;
 }
 
-.table_row button{
-    width: calc(100% / 3);
+.book_col div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.book_col a{
+    width: 100%;
+    height: 100%;
+}
+
+.book_col a button{
+    width: 100%;
     border: none;
     background-color: var(--blue-grey);
     padding: 10px 30px;
@@ -249,13 +264,19 @@
     font-size: 1.2rem;
 }
 
-.table_row button:hover{
+.book_col:hover div{
+    background-color: rgba(178, 195, 209, 0.439);
+    transition: 0.3s;
+}
+
+.book_col:hover a button{
     background-color: var(--blue);
     border: 1px solid var(--blue);
     box-sizing: border-box;
     color: white;
     transition: 0.3s;
 }
+
 
 @media screen and (max-width: 850px) {
     .sub_btn button{

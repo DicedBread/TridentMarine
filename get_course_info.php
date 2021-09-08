@@ -63,28 +63,20 @@ include('setup.php')?>
 
         <h2>Avalible Dates</h2>
         <div class="date_table">
-            <div class="table_row">
+            <div class="book_row">
                 <?php
-                    $i = 0;
                     if ($dates_count > 0){
                         do{
-                            echo "<div>" . $dates_find['course_date'] . "</div>";
-                        //    $i++; 
+                            //button with date 
+                            echo "<div class=\"book_col\" style=\"width: calc(100% /" . $dates_count . ");\">";
+                            echo "<div><p>" . $dates_find['course_date'] . "</p></div>";
+                            echo "<a href=\"booking.php?bookingDate=" . $dates_find['course_date'] . "&courseId=" . $courseId . "\"><button>Book</button></a>";
+                            echo "</div>";
                         } while ($dates_find = $dates_result->fetch_assoc());
                     } else {
-                        echo "no upcoming sessions";
+                        echo "<h2>No upcoming sessions</h2>"; //no result
                     }
-
-
                 ?>
-                <!-- <div>12-07-2021</div>
-                <div>19-07-2021</div>
-                <div>26-07-2021</div> -->
-            </div>
-            <div class="table_row">
-                <button><a href="booking.php?bookingDate=12-07-2021&courseId= <?php echo $courseId ?>">Book</a></button>
-                <button>Book</button>
-                <button>Book</button>
             </div>
         </div>
         
