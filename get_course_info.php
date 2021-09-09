@@ -70,7 +70,7 @@ include('setup.php')?>
                             //button with date 
                             echo "<div class=\"book_col\" style=\"width: calc(100% /" . $dates_count . ");\">";
                             echo "<div><p>" . $dates_find['course_date'] . "</p></div>";
-                            echo "<a href=\"booking.php?bookingDate=" . $dates_find['course_date'] . "&courseId=" . $courseId . "\"><button>Book</button></a>";
+                            echo "<a href=\"booking.php?bookingDate=" . $dates_find['course_date'] . "&courseId=" . $courseId . "&course_date_id=" . $dates_find['id'] . "\"><button>Book</button></a>";
                             echo "</div>";
                         } while ($dates_find = $dates_result->fetch_assoc());
                     } else {
