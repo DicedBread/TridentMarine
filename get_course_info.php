@@ -65,30 +65,39 @@ include('setup.php')?>
         <div class="date_table">
             <div class="book_row">
                 <?php
-                    if ($dates_count > 0){
-                        do{
-                            //button with date 
-                            echo "<div class=\"book_col\" style=\"width: calc(100% /" . $dates_count . ");\">";
-                            echo "<div><p>" . $dates_find['course_date'] . "</p></div>";
-                            echo "<a href=\"booking.php?bookingDate=" . $dates_find['course_date'] . "&courseId=" . $courseId . "&course_date_id=" . $dates_find['id'] . "\"><button>Book</button></a>";
-                            echo "</div>";
-                        } while ($dates_find = $dates_result->fetch_assoc());
+                    if (isset($_SESSION['loggedin'])){
+                        if ($dates_count > 0){
+                            do{
+                                //logged in display 
+                                ?>
+                                    <div class="book_col" style="width: calc(100%/<?php echo $dates_count; ?>);"> 
+                                        <div><p><?php echo $dates_find['course_date']; ?></p></div>
+                                        <a href="booking.php?bookingDate=<?php echo $dates_find['course_date'];?>&courseId=<?php echo $courseId;?>&course_date_id=<?php echo $dates_find['id']; ?>">
+                                            <button>Book</button>
+                                        </a>
+                                    </div>
+                                <?php
+                            } while ($dates_find = $dates_result->fetch_assoc());
+                        } else {
+                            echo "<h2>No upcoming sessions</h2>"; //no result
+                        }
                     } else {
-                        echo "<h2>No upcoming sessions</h2>"; //no result
+                        if ($dates_count > 0){
+                            do{ //not logged in display
+                            ?>  
+                                <div class="book_col" style="width: calc(100%/<?php echo $dates_count; ?>);"> 
+                                    <div><p><?php echo $dates_find['course_date']; ?></p></div>
+                                </div>
+                            <?php
+                            } while ($dates_find = $dates_result->fetch_assoc());
+                        } else {
+                            echo "<h2>No upcoming sessions</h2>"; //no result
+                        }
+                        ?>
+                        <a class="login_btn" href="login.php"><button>Login to book</button></a>
+                        <?php
                     }
                 ?>
             </div>
         </div>
-        
-            <?php 
-                // if (isset($_SESSION['loggedin'])){
-                //     echo "
-                //     <button class=\"book_btn\" onclick=\"location.href = './booking.php'\"><h1>Book</h1></button>
-                //     ";
-                // }else{
-                //     echo "
-                //     <button class=\"book_btn\" onclick=\"location.href = './login.php'\"><h1>Login To Book</h1></button>
-                //     ";
-                // }
-            ?>
     </div>
