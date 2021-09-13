@@ -1,0 +1,18 @@
+.user_inter{
+    width: 100vw;
+    height: calc(100vh - 50px);
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+}
+
+.course_feed{
+    background-color: white;
+    width: 80vw;
+    min-width: 600px;
+    height: 100%;
+}
+
+.user_info{
+    
+}
