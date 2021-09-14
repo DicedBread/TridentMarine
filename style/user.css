@@ -8,11 +8,39 @@
 
 .course_feed{
     background-color: white;
-    width: 80vw;
+    width: 60vw;
     min-width: 600px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.course_feed h2{
+    margin: 5px 0;
+}
+
+.enrol_info{
+    /* background-color: blue; */
+    border-top: 4px solid black;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.enrolment{
+    background-color: white;
+    border: 2px solid var(--blue-grey);
+    border-radius: 20px;
+    width: auto;
+    height: 300px;
+    margin: 10px;
+    box-sizing: border-box;
 }
 
 .user_info{
     
 }
+

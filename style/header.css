@@ -72,17 +72,31 @@ header{
     display: none;
 }
 
-.user_icon{
+.icon{
     width: 40px;
     height: 40px;
     background-color: var(--blue);
     margin-left: 20px;
     /* clip-path: circle(50% at 50% 50%); */
     border-radius: 5px;
-    background-image: url(../images/account_icon_white.svg);
+    /* background-image: url(../images/account_icon_white.svg); */
     background-position: center;
     background-repeat: none;
     background-size: cover;
+    transition: 0.3s;
+}
+
+.icon:hover{
+    background-color: var(--light-blue);
+    transition: 0.3s;
+}
+
+.user_icon{
+    background-image: url(../images/account_icon_white.svg);
+}
+
+.logout_icon{
+    background-image: url(../images/logout_2.png);
 }
 
 @media screen and (max-width: 700px) {

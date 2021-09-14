@@ -21,11 +21,15 @@
             if (!isset($_SESSION['loggedin'])){
                 header('Location: login.php');
             } else {
-                ?>    
+            ?>    
+            
                 <div class="user_inter">
                     <div class="course_feed">
+                        <h2>Your Courses</h2>
                         <div class="enrol_info">
-                            
+                            <div class="enrolment">
+                                
+                            </div>
                         </div>
                     </div>
                     <div class="user_info">
@@ -35,9 +39,8 @@
                     </div>
                 </div>
 
-                <?php
+            <?php
             }
-    
         ?>
     </div>
 </body>

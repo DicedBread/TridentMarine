@@ -1,5 +1,5 @@
 <?php include('./setup.php');
-    $bruh = "bruh";
+
 ?>
 <header>
     <div class="brand">
@@ -17,10 +17,8 @@
         <a class="nav_btn" href="./aboutus.php">
             <h2>About us</h2>
         </a>
-
-        <div class="user_icon">
-
-        </div>
+        <a class="user_icon icon" href="./user.php"></a>
+        <a class="logout_icon icon" href="./login/logout.php"></a>
     </div>
 
     <!-- mobile -->
