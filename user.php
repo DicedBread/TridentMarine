@@ -25,10 +25,15 @@
             
                 <div class="user_inter">
                     <div class="course_feed">
-                        <h2>Your Courses</h2>
+                        <h2>Your Courses</h3>
                         <div class="enrol_info">
                             <div class="enrolment">
-                                
+                                <div class="course_name">
+                                    <h2>Course Name</h2>
+                                </div>
+                                <div class="info_col">
+
+                                </div>
                             </div>
                         </div>
                     </div>
