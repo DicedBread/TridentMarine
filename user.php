@@ -21,8 +21,24 @@
             if (!isset($_SESSION['loggedin'])){
                 header('Location: login.php');
             } else {
+
+               sql = "SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+                FROM Orders
+                INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;";
+
+                $sql = "SELECT * FROM `accounts`  
+                                                                   
+                ";
+
+
+                $find_sql = "SELECT * FROM `game_details` 
+                JOIN `genre` ON (game_details.GenreID = genre.GenreID)
+                JOIN `developer` ON (game_details.DeveloperID = developer.DeveloperID)
+                WHERE `Name` LIKE '%$dev_name%' OR `developer` LIKE '%$dev_name%'
+                ";
+
+
             ?>    
-            
                 <div class="user_inter">
                     <div class="course_feed">
                         <h2>Your Courses</h3>
@@ -39,7 +55,10 @@
                     </div>
                     <div class="user_info">
                         <div class="user">
+                            <?php  
 
+
+                            ?>
                         </div>
                     </div>
                 </div>
