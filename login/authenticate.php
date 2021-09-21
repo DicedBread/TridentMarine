@@ -32,7 +32,7 @@
                 session_regenerate_id();
                 $_SESSION['loggedin'] = TRUE;
                 $_SESSION['name'] = $_POST['email'];
-                $_SESSION['id'] = $id;
+                $_SESSION['student_id'] = $studnetid;
                 header('Location: ./courses.php');
 
             } else {

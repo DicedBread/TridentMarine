@@ -61,7 +61,7 @@ include('setup.php')?>
         ?>
 
 
-        <h2>Avalible Dates</h2>
+        <h2>Available Dates</h2>
         <div class="date_table">
             <div class="book_row">
                 <?php

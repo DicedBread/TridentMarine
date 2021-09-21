@@ -22,21 +22,23 @@
                 header('Location: login.php');
             } else {
 
-               sql = "SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
-                FROM Orders
-                INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;";
 
-                $sql = "SELECT * FROM `accounts`  
-                                                                   
-                ";
+            $sql = "SELECT * FROM `accounts` 
+            JOIN `enrolments` 
+            ON accounts.student_id = enrolments.student_id 
+            JOIN `course_dates` 
+            ON id = enrolments.course_date_id 
+            JOIN `courses`
+            ON courses.id = course_dates.course_id 
+            WHERE accounts.student_id = 1";
+            $sql_result = $conn->query($sql);
+            $sql_count = $sql_result->num_rows;
+            $sql_find = $sql_result->fetch_assoc();
 
-
-                $find_sql = "SELECT * FROM `game_details` 
-                JOIN `genre` ON (game_details.GenreID = genre.GenreID)
-                JOIN `developer` ON (game_details.DeveloperID = developer.DeveloperID)
-                WHERE `Name` LIKE '%$dev_name%' OR `developer` LIKE '%$dev_name%'
-                ";
-
+        // SELECT * FROM `accounts` JOIN `enrolments` ON accounts.student_id = enrolments.student_id JOIN `course_dates` ON id = enrolments.course_date_id 
+        // JOIN `courses`
+        // ON courses.id = course_dates.course_id 
+        // WHERE accounts.student_id = 1
 
             ?>    
                 <div class="user_inter">
