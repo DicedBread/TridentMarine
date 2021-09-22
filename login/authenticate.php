@@ -22,7 +22,7 @@
         $stmt->store_result();
         
         if ($stmt->num_rows > 0) {
-            $stmt->bind_result($id, $password);
+            $stmt->bind_result($student_id, $password);
             $stmt->fetch();
             // Account exists, now we verify the password.
             // Note: remember to use password_hash in your registration file to store the hashed passwords.
@@ -32,7 +32,7 @@
                 session_regenerate_id();
                 $_SESSION['loggedin'] = TRUE;
                 $_SESSION['name'] = $_POST['email'];
-                $_SESSION['student_id'] = $studnetid;
+                $_SESSION['student_id'] = $student_id;
                 header('Location: ./courses.php');
 
             } else {

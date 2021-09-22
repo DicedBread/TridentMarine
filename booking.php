@@ -11,7 +11,7 @@
     
     $selectedDate = $_GET['bookingDate'];
     $course_date_id = $_GET['course_date_id'];
-    $studentId = $_SESSION['id'];
+    $studentId = $_SESSION['student_id'];
 
     $sql = "INSERT INTO `enrolments`(`course_date_id`, `student_id`) 
             VALUES ('$course_date_id', '$studentId')";

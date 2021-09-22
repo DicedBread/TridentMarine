@@ -1,7 +1,7 @@
 .user_inter{
     width: 100vw;
     height: calc(100vh - 50px);
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     flex-direction: row;
 }
@@ -57,10 +57,12 @@
 .info_col{
     width: 25%;
     height: calc(100% - 39px);
-    background-color: red;
+    /* background-color: red; */
 }
 
 .user_info{
-    
+    width: 40vw;
+    height: 100%;
+    /* background-color: red; */
 }
 
