@@ -18,7 +18,7 @@
  
     <div class="wrapper">
         <?php include('includes/header.php'); 
-            print_r($_SESSION); 
+            // print_r($_SESSION); 
         ?>
         <?php 
             if (!isset($_SESSION['loggedin'])){
@@ -56,25 +56,21 @@
                     <div class="course_feed">
                         <h2>Your Courses</h3>
                         <div class="enrol_info">
-                            <div class="enrolment">
-                                <?php 
 
+                                <?php
                                     do{
-                                        echo $sql_find['course_name'];
+                                        ?>
+                                        <div class="enrolment">
+                                            <div class="course_name">
+                                                <h2><?php echo $sql_find['course_name'];?> </h2>
+                                            </div>
+                                            <div class="info_col">
+                                                <p><?php $sql_find['course_date'] ?></p>
+                                            </div>
+                                        </div>
+                                        <?php 
                                     } while ($sql_find = $sql_result->fetch_assoc());  
-
                                 ?>
-
-
-
-
-                                <div class="course_name">
-                                    <h2>Course Name</h2>
-                                </div>
-                                <div class="info_col">
-
-                                </div>
-                            </div>
                         </div>
                     </div> <!-- end feed -->
                     <div class="user_info">

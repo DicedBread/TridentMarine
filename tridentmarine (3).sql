@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 09, 2021 at 03:48 AM
+-- Generation Time: Sep 23, 2021 at 04:13 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -120,9 +120,11 @@ CREATE TABLE `enrolments` (
 --
 
 INSERT INTO `enrolments` (`enrol_id`, `course_date_id`, `student_id`) VALUES
-(2, 1, 1),
-(3, 5, 1),
-(5, 1, 0);
+(20, 1, 1),
+(11, 1, 2),
+(21, 4, 1),
+(24, 5, 1),
+(23, 6, 1);
 
 --
 -- Indexes for dumped tables
@@ -151,7 +153,8 @@ ALTER TABLE `course_dates`
 -- Indexes for table `enrolments`
 --
 ALTER TABLE `enrolments`
-  ADD PRIMARY KEY (`enrol_id`);
+  ADD PRIMARY KEY (`enrol_id`),
+  ADD UNIQUE KEY `course_enrolment` (`course_date_id`,`student_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -179,7 +182,7 @@ ALTER TABLE `course_dates`
 -- AUTO_INCREMENT for table `enrolments`
 --
 ALTER TABLE `enrolments`
-  MODIFY `enrol_id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `enrol_id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
