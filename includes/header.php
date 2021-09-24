@@ -1,7 +1,7 @@
 <?php include('./setup.php');
 
 ?>
-<header>
+<header class="speed">
     <div class="brand">
         <div class="logoimg"></div>
         <h1>Trident Marine</h1>

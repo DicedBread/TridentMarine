@@ -29,7 +29,7 @@
                 <img class="heroimage_display_none" id="heroImage4" src="./images/hero_image_4.jpg" alt="">
             </div>
 
-            <div class="info_cont">
+            <div class="info_cont speed">
                 <div class="info_text">
                     <h3>Our Purpose</h3>
                     <p>Trident Marine’s purpose is to provide top quality maritime training to both recreational boaties and those wishing to work towards the commercial qualifications. With over 25 years of instructing maritime courses Trident marine is able to provide a wealth of knowledge to which vessel you intend to drive. 
@@ -49,7 +49,7 @@
 
                 <!-- bottomhalf foreground -->
                 <div class="content_wrap">
-                    <div class="content">
+                    <div class="content speed">
                         <div class="title_search_cont">
                             <div class="title">
                                 <h2>Courses</h2>

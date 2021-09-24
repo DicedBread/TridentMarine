@@ -172,36 +172,9 @@
                 </div>
             </div>
 
-            <div class="course_display" id="courseDisplay">
+                <div class="course_display speed" id="courseDisplay">
                 <!-- info rendered here by get_course_info.php -->
-            </div>
-
-            
-
-            <!-- <div class="course_display">
-                <div class="course_title">
-                    <h1>Level 1 Start Powerboating</h1>
                 </div>
-                <div class="course_outline">
-                    <dl>
-                        <dt>Aim:</dt>
-                        <dd>To teach boat handling and seamanship in powerboats. The course may be conducted in a variety of boat types, both planning and displacement. </dd>
-                        <dt>Prerequisites:</dt>
-                        <dd>None</dd>
-                        <dt>Minimum Age:</dt>
-                        <dd>8 years old </dd>
-                        <dt>Endorsements:</dt>
-                        <dd>Is aged 12-15 and therefore should only used powered craft under the supervision of a responsible adult on board the craft </dd>
-                    </dl>
-                </div>  
-                <div class="course_other">
-                    <div class="course_image">
-                        <img src="/images/" alt="">
-                    </div>
-                    <button class="book_btn" onclick="location.href = './booking.php'">
-                        <h1>Book</h1>
-                    </button>
-                </div>-->
             </div> 
         </div>
     </div>

@@ -14,6 +14,15 @@
     /* changing */
     --select-position: translateX(0);
     --select-subbtn-posistion: translateX(0);
+
+    /* main page padding */
+    --page-padding: clamp(10px, 10%, 300px);
+}
+
+@media screen and (max-width: 1200px){
+    :root{
+        --page-padding: clamp(10px, 3%, 200px);
+    }
 }
 
 body{
@@ -74,7 +83,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 15px clamp(10px, 3%, 100px);
+    padding: 15px var(--page-padding);
 }
 
 .info_text{
@@ -194,7 +203,7 @@ path{
     z-index: 2;
     width: 100%;
     height: 50%;
-    padding: 30px clamp(10px, 3%, 100px);
+    padding: 30px var(--page-padding);
     box-sizing: border-box;
 }
 
@@ -266,6 +275,11 @@ path{
     margin: 0 auto;
 }
 
+.speed{
+    transition: 0.2s;
+}
+
+
 /* courses info breckpoint */
 @media screen and (max-width: 900px) {
     /* .bottomhalf{
@@ -288,7 +302,7 @@ path{
         z-index: 2;
         width: 100%;
         height: 70%;
-        padding: 30px clamp(10px, 3%, 100px);
+        padding: 30px var(--page-padding);
         box-sizing: border-box;
         transition: 0.1s;
     }
@@ -330,7 +344,7 @@ path{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 15px clamp(10px, 3%, 100px);
+        padding: 15px var(--page-padding);
     }  
 
     .info_image{
