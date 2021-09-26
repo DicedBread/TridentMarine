@@ -103,7 +103,7 @@ function slideShow(){
             $('#heroImage3').toggleClass("heroimage_display", false );
         }
 
-    }, 2000);
+    }, 10000);
 }
 
 
