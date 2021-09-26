@@ -153,6 +153,8 @@ body{
     left: 0;
     height: 50%;
     width: 100%;
+    /* min-width: 840px; */
+    overflow: hidden;
     /* display: flex;
     flex-direction: column-reverse; */
 }
@@ -160,6 +162,7 @@ body{
 .wave_2 svg{
     position: absolute;
     bottom: 0;
+    min-width: 840;
 }
 
 path{
@@ -261,18 +264,65 @@ path{
     align-content: center;
 }
 
-.coursesboxes div{
+.course_box_old{
     width: max(30%, 270px);
     height: 100%;
-    background-color: white;
-    /* margin: 0 auto; */
+    /* background-color: white;
+    margin: 0 auto; */
     border-radius: 10px;
-    padding: 10px 20px;
+
     box-sizing: border-box;
 }
 
-.coursesboxes div:nth-child(2){
+.course_box_old:nth-child(2){
     margin: 0 auto;
+}
+
+.course_box{
+    background-color: white;
+    width: max(30%, 270px);
+    height: 100%;
+    border-radius: 10px;
+    /* padding: 10px 20px; */
+    /* border: 3px solid white; */
+    box-sizing: border-box;
+    color: black;
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; */
+    /* justify-content: center; */
+    position: relative;
+    /* display: block; */
+    overflow: hidden;
+}
+
+.course_box h2{
+    width: 50%;
+    margin: 10px 0 0 20px ;
+    float: left;
+}
+
+.course_box p{
+    width: 50%;
+    margin: 0 0 10px 20px ;
+    float: left;
+}
+
+.info_dis{
+    background-color: blue;
+    color: black;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    /* border: 3px solid white; */
+    box-sizing: border-box;
+    /* position: absolute; */
+    float: right;
+    shape-outside: circle(50%);
+    clip-path: circle(50%);
+    position: absolute;
+    top: 0;
+    left: 40%;
 }
 
 .speed{

@@ -66,16 +66,20 @@
                         </div>
 
                         <div class="coursesboxes">
-                            <div>
-                                <h2>Personal Watercraft </h2>
-                                <p>Personal Watercraft courses provide a way to learn how to properly operate personal water crafts.</p>
+                            <div class="course_box">
+                            <h2>Personal Watercraft</h2>
+                            <p>Personal Watercraft courses provide a way to learn how to properly operate personal water crafts.</p>
+                            <!-- <img src="./images/Img_1.jpg" class="info_dis" alt=""> -->
+                                <div class="info_dis">
+
+                                </div>
                             </div>
-                            <div>
+                            <div class="course_box_old">
                                 <h2>Power Boating</h2>
                                 <p>The power boating courses provide  
-                                    courses for beginners to powerboating as well as courses that are more advanced.</p>
+                                courses for beginners to powerboating as well as courses that are more advanced.</p>
                             </div>
-                            <div>
+                            <div class="course_box_old">
                                 <h2>Motor Boating</h2>
                                 <p>Motor Boating courses provides experience to skipper a boat or be a proficient helmsman.</p>
                             </div>
