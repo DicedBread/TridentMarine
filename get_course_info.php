@@ -1,6 +1,6 @@
 <?php 
 // session_start();
-include('setup.php')?>
+include('./includes/setup.php')?>
 
 <?php
     $selectedCourse = $_GET['selection'];
