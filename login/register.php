@@ -1,25 +1,25 @@
 <?php 
     // include('../setup.php');
 
-    // // Now we check if the data was submitted, isset() function will check if the data exists.
-    // if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
-	// // Could not get the data that should have been sent.
-	//     exit('Please complete the registration form!');
-    // }
-    // // Make sure the submitted registration values are not empty.
-    // if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email'])) {
-	// // One or more values are empty.
-	//     exit('Please complete the registration form');
-    // }
+    // Now we check if the data was submitted, isset() function will check if the data exists.
+    if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
+	// Could not get the data that should have been sent.
+	    exit('Please complete the registration form!');
+    }
+    // Make sure the submitted registration values are not empty.
+    if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email'])) {
+	// One or more values are empty.
+	    exit('Please complete the registration form');
+    }
 
-    // //email validation
-    // if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    //     exit('Email is not valid!');
-    // }
+    //email validation
+    if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        exit('Email is not valid!');
+    }
 
-    // if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
-    //     exit('Password must be between 5 and 20 characters long!');
-    // }
+    if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
+        exit('Password must be between 5 and 20 characters long!');
+    }
     
     // We need to check if the account with that username exists.
     // Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
