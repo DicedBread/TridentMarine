@@ -3,15 +3,15 @@
 
 
 
-    // If the email and password are not blank strings
-    if(empty($email) || empty($password)){
-        exit('Please fill both the email and password fields!');
-    }
+    // // If the email and password are not blank strings
+    // if(empty($email) || empty($password)){
+    //     exit('Please fill both the email and password fields!');
+    // }
 
-    if ( !isset($_POST['username'], $_POST['password']) ) {
-        // Could not get the data that should have been sent.
-        exit('Please fill both the username and password fields!');
-    }
+    // if ( !isset($_POST['username'], $_POST['password']) ) {
+    //     // Could not get the data that should have been sent.
+    //     exit('Please fill both the username and password fields!');
+    // }
 
     //searches for username and stores pass and id
     if ($stmt = $conn->prepare("SELECT student_id, password FROM `accounts` WHERE email = ?")) {
