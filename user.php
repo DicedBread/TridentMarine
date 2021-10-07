@@ -50,11 +50,10 @@
             $firstName = $sql_find['first_name'];
             $lastName = $sql_find['last_name'];
 
-
-            ?>    
+            ?>
                 <div class="user_inter">
                     <div class="course_feed">
-                        <h2>Your Courses</h3>
+                        <h2>Your Enrolments</h2>
                         <div class="enrol_info">
 
                                 <?php
@@ -65,7 +64,8 @@
                                                 <h2><?php echo $sql_find['course_name'];?> </h2>
                                             </div>
                                             <div class="info_col">
-                                                <p><?php $sql_find['course_date'] ?></p>
+                                                <p> Date: <?php echo $sql_find['course_date'] ?></p>
+                                                <p> Start time: <?php echo $sql_find['start_time'] ?></p>
                                             </div>
                                         </div>
                                         <?php 

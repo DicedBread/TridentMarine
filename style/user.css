@@ -8,8 +8,8 @@
 
 .course_feed{
     background-color: white;
-    width: 60vw;
-    min-width: 600px;
+    width: 40vw;
+    min-width: 200px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -61,6 +61,10 @@
     width: 25%;
     height: calc(100% - 39px);
     /* background-color: red; */
+}
+
+.info_col p{
+    padding: 3px 0;
 }
 
 .user_info{

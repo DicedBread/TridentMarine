@@ -71,7 +71,7 @@
                             <p>Personal Watercraft courses provide a way to learn how to properly operate personal water crafts.</p>
                             <!-- <img src="./images/Img_1.jpg" class="info_dis" alt=""> -->
                                 <div class="info_dis">
-
+                                    
                                 </div>
                             </div>
                             <div class="course_box_old">
