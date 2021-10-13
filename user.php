@@ -55,7 +55,6 @@
                     <div class="course_feed">
                         <h2>Your Enrolments</h2>
                         <div class="enrol_info">
-
                                 <?php
                                     do{
                                         ?>
@@ -64,8 +63,15 @@
                                                 <h2><?php echo $sql_find['course_name'];?> </h2>
                                             </div>
                                             <div class="info_col">
-                                                <p> Date: <?php echo $sql_find['course_date'] ?></p>
-                                                <p> Start time: <?php echo $sql_find['start_time'] ?></p>
+                                                <p>Date: <br> <?php echo $sql_find['course_date'] ?></p>
+                                                <p>Start time: <br> <?php echo $sql_find['start_time'] ?></p>
+                                            </div>
+                                            <div class="info_col"></div>
+                                            <div class="info_col"></div>
+                                            <div class="last_col">
+                                                <div class="un_e" onclick="unenrol">
+                                                    <a href=""><p>Unenroll<p></a>
+                                                </div> 
                                             </div>
                                         </div>
                                         <?php 

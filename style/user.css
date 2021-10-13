@@ -58,9 +58,18 @@
 } */
 
 .info_col{
+    display: flex;
+    flex-direction: column;
     width: 25%;
     height: calc(100% - 39px);
     /* background-color: red; */
+}
+
+.last_col{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 25%;
+    height: calc(100% - 39px);
 }
 
 .info_col p{
@@ -71,5 +80,12 @@
     width: 40vw;
     height: 100%;
     /* background-color: red; */
+}
+
+.un_e{
+    border-radius: 8px;
+    border: 1px solid red;
+    align-self: flex-end;
+    padding: 3px;
 }
 

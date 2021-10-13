@@ -29,6 +29,7 @@
     <?php include('includes/header.php')?>
 
     <?php
+    // auto fill login if successful reg
     if  (isset($_SESSION['successful_reg'])){
         if ($_SESSION['successful_reg']){
             $autofill = $_SESSION['email'];
@@ -42,10 +43,12 @@
         $autofocus = "";
     }
 
+    // error message declear
     $inputNotValid = false;
     $userErr = "";
     $incorrectInput = "";
 
+    //is method post?
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = trim($_POST['email']);
         $password = trim($_POST["password"]);
