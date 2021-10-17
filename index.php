@@ -67,21 +67,27 @@
 
                         <div class="coursesboxes">
                             <div class="course_box">
-                            <h2>Personal Watercraft</h2>
-                            <p>Personal Watercraft courses provide a way to learn how to properly operate personal water crafts.</p>
-                            <!-- <img src="./images/Img_1.jpg" class="info_dis" alt=""> -->
-                                <div class="info_dis">
-                                    
+                                <h2>Personal Watercraft</h2>
+                                <p>Personal Watercraft courses provide a way to learn how to properly operate personal water crafts.</p>
+                                <!-- <img src="./images/Img_1.jpg" class="info_dis" alt=""> -->
+                                <div class="info_photo">
+                                    <img src="images/small_boat.jpg" alt="small_boat">
                                 </div>
                             </div>
-                            <div class="course_box_old">
+                            <div class="course_box">
                                 <h2>Power Boating</h2>
                                 <p>The power boating courses provide  
                                 courses for beginners to powerboating as well as courses that are more advanced.</p>
+                                    <div class="info_photo">
+                                        <img src="images/4_boat.jpg" alt="">
+                                    </div>
                             </div>
-                            <div class="course_box_old">
+                            <div class="course_box">
                                 <h2>Motor Boating</h2>
                                 <p>Motor Boating courses provides experience to skipper a boat or be a proficient helmsman.</p>
+                                <div class="info_photo">
+                                    <img src="images/big_boat.jpg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
