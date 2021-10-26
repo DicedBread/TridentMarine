@@ -1,5 +1,5 @@
 <?php
-    include('./setup.php');
+    include('includes/header.php');
     // session_start();
     print_r($_SESSION);
     print_r($_GET);
