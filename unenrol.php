@@ -19,5 +19,9 @@
             <?php include('includes/header.php'); 
                 // print_r($_SESSION); 
             ?>
+            <div class="">
+                <p>Are you sure you want to unenrol from the <?php ?> course?</p>
+                <button></button> 
+            </div>
     </div>
 </body>

@@ -26,7 +26,7 @@
             } else {
 
 
-            $sql = "SELECT accounts.student_id, accounts.email, accounts.first_name, accounts.last_name, accounts.phone, accounts.age, course_dates.course_id, course_dates.course_date, course_dates.start_time, courses.course_name  FROM `accounts` 
+            $sql = "SELECT accounts.student_id, accounts.email, accounts.first_name, accounts.last_name, accounts.phone, accounts.age, course_dates.course_id, course_dates.course_date, course_dates.start_time, courses.course_name, enrolments.enrol_id  FROM `accounts` 
             JOIN `enrolments` 
             ON accounts.student_id = enrolments.student_id 
             JOIN `course_dates` 
@@ -40,7 +40,7 @@
             $sql_count = $sql_result->num_rows;
             $sql_find = $sql_result->fetch_assoc();
 
-            // print_r($sql_find);
+            print_r($sql_find);
 
         // SELECT * FROM `accounts` JOIN `enrolments` ON accounts.student_id = enrolments.student_id JOIN `course_dates` ON id = enrolments.course_date_id 
         // JOIN `courses`
@@ -70,7 +70,8 @@
                                             <div class="info_col"></div>
                                             <div class="last_col">
                                                 <div class="un_e" onclick="unenrol">
-                                                    <a href=""><p>Unenroll<p></a>
+                                                    <a <?php echo "href=\"unenrol.php?enrolment=" . $sql_find['enrol_id'] . "\""?>> <p>Unenroll<p></a>
+                                                    
                                                 </div> 
                                             </div>
                                         </div>
