@@ -16,12 +16,20 @@
 </head>
 <body>
     <div class="wrapper">
-            <?php include('includes/header.php'); 
-                // print_r($_SESSION); 
+            <?php 
+                include('includes/header.php'); 
+                print_r($_SESSION);
+
+                $student_id = $_SESSION['student_id'];
+                $enrolment_id = $_GET['enrolment'];
+                $sql = "SELECT * FROM `enrolments` 
+                WHERE student_id = $student_id 
+                ORDER BY `course_dates`.`course_date` ASC
+                ";                
             ?>
-            <div class="">
+            <form class="unenrol_form">
                 <p>Are you sure you want to unenrol from the <?php ?> course?</p>
                 <button></button> 
-            </div>
+            </form>
     </div>
 </body>
