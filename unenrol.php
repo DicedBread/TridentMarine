@@ -23,15 +23,28 @@
 
                 $student_id = $_SESSION['student_id'];
                 $enrolment_id = $_GET['enrolment'];
-                $sql = "SELECT * FROM `enrolments` 
-                WHERE student_id = $student_id AND 
+                $sql = "SELECT enrolments.enrol_id, enrolments.course_date_id, enrolments.student_id, course_dates.id, course_date.course_id, courses.id, courses.course_name FROM `enrolments` 
+                JOIN `course_dates` 
+                ON enrolments.course_date_id = course_dates.id
+                WHERE student_id = $student_id AND enrol_id = $enrolment_id
                 ORDER BY `course_dates`.`course_date` ASC 
-                ";                
+                ";
+
+
+          $sql = "SELECT accounts.student_id, accounts.email, accounts.first_name, accounts.last_name, accounts.phone, accounts.age, course_dates.course_id, course_dates.course_date, course_dates.start_time, courses.course_name, enrolments.enrol_id  FROM `accounts` 
+            JOIN `enrolments` 
+            ON accounts.student_id = enrolments.student_id 
+            JOIN `course_dates` 
+            ON id = enrolments.course_date_id 
+            JOIN `courses`
+            ON courses.id = course_dates.course_id 
+            WHERE accounts.student_id = 1
+            ORDER BY `course_dates`.`course_date` ASC;
             ?>
             <div class="unenrol_cont">
                 <form class="unenrol_form login_cont">
-                    <p>Are you sure you want to unenrol from the <?php  ?> course?</p>
-                    <button>Confirm</button> 
+                    <h2>Are you sure you want to unenrol from the <?php  ?> course?</h2>
+                    <button class="submit">Confirm</button> 
                 </form>
             </div>
     </div>
