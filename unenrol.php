@@ -29,18 +29,12 @@
                 WHERE student_id = $student_id AND enrol_id = $enrolment_id
                 ORDER BY `course_dates`.`course_date` ASC 
                 ";
-
-
-          $sql = "SELECT accounts.student_id, accounts.email, accounts.first_name, accounts.last_name, accounts.phone, accounts.age, course_dates.course_id, course_dates.course_date, course_dates.start_time, courses.course_name, enrolments.enrol_id  FROM `accounts` 
-            JOIN `enrolments` 
-            ON accounts.student_id = enrolments.student_id 
-            JOIN `course_dates` 
-            ON id = enrolments.course_date_id 
-            JOIN `courses`
-            ON courses.id = course_dates.course_id 
-            WHERE accounts.student_id = 1
-            ORDER BY `course_dates`.`course_date` ASC;
+                $sql_result = $conn->query($sql);
+                $sql_count = $sql_result->num_rows;
+                $sql_find = $sql_result->fetch_assoc();
+                print_r($sql_find);
             ?>
+
             <div class="unenrol_cont">
                 <form class="unenrol_form login_cont">
                     <h2>Are you sure you want to unenrol from the <?php  ?> course?</h2>

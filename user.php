@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
 </head>
 <body>
- 
     <div class="wrapper">
         <?php include('includes/header.php'); 
             // print_r($_SESSION); 
@@ -25,7 +24,7 @@
                 header('Location: login.php');
             } else {
 
-
+            $student_id = $_SESSION['student_id'];
             $sql = "SELECT accounts.student_id, accounts.email, accounts.first_name, accounts.last_name, accounts.phone, accounts.age, course_dates.course_id, course_dates.course_date, course_dates.start_time, courses.course_name, enrolments.enrol_id  FROM `accounts` 
             JOIN `enrolments` 
             ON accounts.student_id = enrolments.student_id 
@@ -33,7 +32,7 @@
             ON id = enrolments.course_date_id 
             JOIN `courses`
             ON courses.id = course_dates.course_id 
-            WHERE accounts.student_id = 1
+            WHERE accounts.student_id = $student_id
             ORDER BY `course_dates`.`course_date` ASC
             ";
             $sql_result = $conn->query($sql);
