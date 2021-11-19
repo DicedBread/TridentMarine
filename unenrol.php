@@ -20,25 +20,38 @@
             <?php 
                 include('includes/header.php'); 
                 print_r($_SESSION);
-
                 $student_id = $_SESSION['student_id'];
+                if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                    $enrol_id = $_GET['enrol_id'];     
+                    //deletes enrolment
+                }
+                
                 $enrolment_id = $_GET['enrolment'];
-                $sql = "SELECT enrolments.enrol_id, enrolments.course_date_id, enrolments.student_id, course_dates.id, course_date.course_id, courses.id, courses.course_name FROM `enrolments` 
+                
+                $sql = "SELECT enrolments.enrol_id, enrolments.course_date_id, enrolments.student_id, course_dates.id, course_dates.course_id, courses.id, courses.course_name FROM `enrolments` 
                 JOIN `course_dates` 
                 ON enrolments.course_date_id = course_dates.id
-                WHERE student_id = $student_id AND enrol_id = $enrolment_id
+                JOIN `courses`
+                ON course_dates.course_id = courses.id
+                WHERE enrolments.student_id = $student_id AND enrolments.enrol_id = $enrolment_id
                 ORDER BY `course_dates`.`course_date` ASC 
                 ";
                 $sql_result = $conn->query($sql);
                 $sql_count = $sql_result->num_rows;
                 $sql_find = $sql_result->fetch_assoc();
-                print_r($sql_find);
+                // print_r($sql_find);
+                if ($sql_count > 0){ 
+                    $course_name = $sql_find['course_name'];
+                }else{
+                    header('Location: ./courses.php');
+                }
             ?>
 
             <div class="unenrol_cont">
-                <form class="unenrol_form login_cont">
-                    <h2>Are you sure you want to unenrol from the <?php  ?> course?</h2>
-                    <button class="submit">Confirm</button> 
+                <form class="unenrol_form login_cont" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+                    <input type="hidden" name="enrol_id" value=" <?php echo $enrolment_id?>"> 
+                    <h2>Are you sure you want to unenrol from the <?php echo $course_name ?> course?</h2>
+                    <input class="submit" type="submit" value="Confirm"> 
                 </form>
             </div>
     </div>
