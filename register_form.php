@@ -60,7 +60,7 @@
                 $passwordErr = "Passwords do not match";
             }
 
-            if (strlen($_POST['password']) < 5) {
+            if (strlen($_POST['password']) < 8) {
                 $passwordNotValid = true;
                 $passwordErr = "Password must be have at least 5 charaters";
                 // exit('Password must be between 5 and 20 characters long!');
