@@ -14,7 +14,7 @@
     // }
 
     //searches for username and stores pass and id
-    if ($stmt = $conn->prepare("SELECT student_id, password FROM `accounts` WHERE email = ?")) {
+    if ($stmt = $conn->prepare("SELECT student_id, password, admin FROM `accounts` WHERE email = ?")) {
         // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
         $stmt->bind_param('s', $_POST['email']);
         $stmt->execute();
@@ -22,7 +22,7 @@
         $stmt->store_result();
         
         if ($stmt->num_rows > 0) {
-            $stmt->bind_result($student_id, $password);
+            $stmt->bind_result($student_id, $password, $admin);
             $stmt->fetch();
             // Account exists, now we verify the password.
             // Note: remember to use password_hash in your registration file to store the hashed passwords.
@@ -33,6 +33,9 @@
                 $_SESSION['loggedin'] = TRUE;
                 $_SESSION['name'] = $_POST['email'];
                 $_SESSION['student_id'] = $student_id;
+                if($admin == 1){
+                    $_SESSION['admin'] = TRUE;
+                }
                 header('Location: ./courses.php');
 
             } else {
