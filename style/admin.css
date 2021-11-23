@@ -1,0 +1,5 @@
+.add_courses{
+    background-color: red;
+    width: 50%;
+    height: calc(100% - 50px);
+}

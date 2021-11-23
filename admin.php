@@ -12,26 +12,36 @@
 
     <script src="script/courses_nav.js"></script>
     <script src="script/dateSelector.js"></script>
-    <link rel="stylesheet" href="../style/font.css">
-    <link rel="stylesheet" href="../style/header.css">
-    <link rel="stylesheet" href="../style/footer.css">
-    <link rel="stylesheet" href="../style/courses.css">
-    <link rel="stylesheet" href="../style/about.css">
-    <link rel="stylesheet" href="../style/booking.css">
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../login_register.css">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="style/font.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/courses.css">
+    <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/booking.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/login_register.css">
+    <link rel="stylesheet" href="style/admin.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
         <?php
-            include('../includes/header.php');
-            if (!isset($_SESSION['loggedin'])){
-                header('Location: a_login.php');
+            // print_r($_SESSION); 
+            include('includes/header.php');
+            if (!isset($_SESSION['loggedin']) || !isset($_SESSION['admin'])){
+                header('Location: index.php');
+            }elseif ($_SESSION['admin'] = TRUE){
+                ?>
+                    <div class="add_courses">
+                        
+                    </div>
+                
+                
+                
+                
+                <?php
             }
         ?>
-        <div class=""></div>
     </div>
 </body>
