@@ -34,7 +34,30 @@
             }elseif ($_SESSION['admin'] = TRUE){
                 ?>
                     <div class="add_courses">
-                        
+                        <h2>add session</h2>
+                        <form action="">
+                            <label for="course">Choose course:</label>
+                            <select name="course" id="course">
+                                <optgroup label="Power Boating">
+                                    <?php 
+                                        $powerBoating = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Power Boating'";
+                                        $powerBoating_result = $conn->query($powerBoating);
+                                        $powerBoating_count = $powerBoating_result->num_rows;
+                                        $powerBoating_find = $powerBoating_result->fetch_assoc();
+                                        if ($powerBoating_count < 1) {
+                                            echo "no courses";
+                                        }
+                                        else{
+                                            do{
+                                                ?>
+                                                    <option value="<?php echo $powerBoating_find["id"] ?>"><?php echo $powerBoating_find['course_name'] ?></option>
+                                                <?php
+                                            } while ($powerBoating_find = $powerBoating_result->fetch_assoc());  
+                                        }
+                                    ?>
+                                </optgroup> 
+                            </select>
+                        </form>
                     </div>
                 
                 
