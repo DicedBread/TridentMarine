@@ -1,8 +1,5 @@
-<?php 
-// session_start();
-include('./includes/setup.php')?>
-
 <?php
+    include('./includes/setup.php');
     $selectedCourse = $_GET['selection'];
 
     // `id`, `course_type`, `course_name`, `aim`, `prerequisite`, `minimum_age`, `endorsement`, `image_path`

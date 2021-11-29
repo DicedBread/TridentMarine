@@ -12,6 +12,7 @@
 
     <script src="script/courses_nav.js"></script>
     <script src="script/dateSelector.js"></script>
+    <script src="script/courseSessions.js"></script>
     <link rel="stylesheet" href="style/font.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/footer.css">
@@ -33,11 +34,12 @@
                 header('Location: index.php');
             }elseif ($_SESSION['admin'] = TRUE){
                 ?>
+                <div class="admin_cont">
                     <div class="add_courses">
                         <h2>add session</h2>
                         <form action="">
                             <label for="course">Choose course:</label>
-                            <select name="course" id="course">
+                            <select name="course" id="course" onchange="courseSessions()">
                                 <optgroup label="Power Boating">
                                     <?php 
                                         $powerBoating = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Power Boating'";
@@ -56,15 +58,51 @@
                                         }
                                     ?>
                                 </optgroup> 
+                                <optgroup label="Motor Cruising">
+                                    <?php 
+                                        $motorCruising = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Motor Cruising'";
+                                        $motorCruising_result = $conn->query($motorCruising);
+                                        $motorCruising_count = $motorCruising_result->num_rows;
+                                        $motorCruising_find = $motorCruising_result->fetch_assoc();
+                                        if ($motorCruising_count < 1) {
+                                            echo "no courses";
+                                        }
+                                        else{
+                                            do{
+                                                ?>
+                                                    <option value="<?php echo $motorCruising_find["id"] ?>"><?php echo $motorCruising_find['course_name'] ?></option>
+                                                <?php
+                                            } while ($motorCruising_find = $motorCruising_result->fetch_assoc());  
+                                        }
+                                    ?>
+                                </optgroup> 
+                                <optgroup label="Personal Watercraft">
+                                    <?php 
+                                        $personalWatercraft = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Personal Watercraft'";
+                                        $personalWatercraft_result = $conn->query($personalWatercraft);
+                                        $personalWatercraft_count = $personalWatercraft_result->num_rows;
+                                        $personalWatercraft_find = $personalWatercraft_result->fetch_assoc();
+                                        if ($personalWatercraft_count < 1) {
+                                            echo "no courses";
+                                        }
+                                        else{
+                                            do{
+                                                ?>
+                                                    <option value="<?php echo $personalWatercraft_find["id"] ?>"><?php echo $personalWatercraft_find['course_name'] ?></option>
+                                                <?php
+                                            } while ($personalWatercraft_find = $personalWatercraft_result->fetch_assoc());  
+                                        }
+                                    ?>
+                                </optgroup> 
                             </select>
                         </form>
+                    </div> <!-- end add course -->
+                    <div class="display" id="display">
+                        
                     </div>
-                
-                
-                
-                
+                </div>  <!--end ad_cont-->  
                 <?php
-            }
+            }//end of log conditions
         ?>
     </div>
 </body>
