@@ -21,26 +21,41 @@
                 include('includes/header.php'); 
                 print_r($_SESSION);
                 $student_id = $_SESSION['student_id'];
+
                 if ($_SERVER["REQUEST_METHOD"] == "POST"){ 
-                    echo "bruh";
                     $enrol_id = $_POST['enrol_id'];   
                     echo $enrol_id;
-                    echo gettype($enrol_id);
-                    // $enrol_id = 20;  
+                    // echo gettype($enrol_id);
+                    
+                    $enrolCount = "SELECT enrolments.enrol_id, enrolments.course_date_id, course_dates.id, course_dates.enrolment_count FROM `enrolments`
+                    JOIN course_dates ON course_dates.id = enrolments.course_date_id
+                    WHERE enrolments.enrol_id = $enrol_id";
+                    $enrolCount_result = $conn->query($enrolCount);
+                    $enrolCount_count = $enrolCount_result->num_rows;
+                    $enrolCount_find = $enrolCount_result->fetch_assoc();
+                    $course_date_id = $enrolCount_find['id'];
+                    $currentEnrolCount = $enrolCount_find['enrolment_count'];
+
                     //deletes enrolment
                     if ($stmt = $conn->prepare("DELETE FROM enrolments WHERE student_id = ? AND enrol_id = ?")){
                         $stmt->bind_param('ii', $student_id, $enrol_id);
                         $stmt->execute();
+                        
+                        //decrement enrol count
+                        $updated_enrolCount = $currentEnrolCount - 1;
+                        $enrolDown = "UPDATE `course_dates` SET enrolment_count='$updated_enrolCount' WHERE id = $course_date_id"; 
+                        if($conn->query($enrolDown) === TRUE){
+                        //      header('Location: index.php');
+                        // }else{
+                        //     echo "Error: " . $enrolDown . "<br>" . mysqli_error($conn);
+                        // }
                     }else{
                         echo "Failed to prepare statement";
                     }
 
                     $stmt->close();
                     header('Location: ./user.php');
-                }else{
-                    
                 }
-
 
                 
                 $enrolment_id = $_GET['enrolment'];

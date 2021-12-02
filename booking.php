@@ -18,7 +18,7 @@
     $enrolCount_count = $enrolCount_result->num_rows;
     $enrolCount_find = $enrolCount_result->fetch_assoc();
 
-    echo $enrolCount_count;
+    // echo $enrolCount_count;
     $currentEnrolCount = $enrolCount_find['enrolment_count'];
 
     $sql = "INSERT INTO `enrolments`(`course_date_id`, `student_id`) 
