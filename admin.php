@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="courseSessions()">
     <div class="wrapper">
         <?php
             // print_r($_SESSION); 
