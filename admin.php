@@ -36,10 +36,11 @@
                 ?>
                 <div class="admin_cont">
                     <div class="add_courses">
-                        <h2>add session</h2>
+                        <h2>Add session</h2>
                         <form action="">
-                            <label for="course">Choose course:</label>
-                            <select name="course" id="course" onchange="courseSessions()">
+                            <label for="course">Course:</label>
+                            <!-- <br> -->
+                            <select name="course" id="course" class="course_select" onchange="courseSessions()">
                                 <optgroup label="Power Boating">
                                     <?php 
                                         $powerBoating = "SELECT `id`, `course_name` FROM `courses` WHERE course_type='Power Boating'";
@@ -95,10 +96,19 @@
                                     ?>
                                 </optgroup> 
                             </select>
+                            <br>
+                            <label for="date">Date: </label> 
+                            <input name="date" class="datePicker" type="text" id="alternate">
+                            <div type="text" id="datePicker" value=""></div>
+                            <br>
+                            <label for="time">Select a time:</label>
+                            <input type="time" id="timePicker" name="time" class="datePicker">
+                            <br>
+                            <button class="submit">Add session</button>
                         </form>
                     </div> <!-- end add course -->
                     <div class="display" id="display">
-                        
+
                     </div>
                 </div>  <!--end ad_cont-->  
                 <?php

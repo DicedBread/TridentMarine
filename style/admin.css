@@ -1,18 +1,67 @@
 .admin_cont{
+    background-color: var(--blue);
     width: 100%;
     height: calc(100% - 50px);
     display: flex;
     flex-direction: row;
+    padding: 0 var(--page-padding);
+    box-sizing: border-box;
+
     /* background-color: red; */
 }
 
 .add_courses{
-    /* background-color: red; */
+    background-color: white;
     width: 50%;
-    height: calc(100% - 50px);
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
 }
 
+.course_select{
+    border: none;
+    outline: none;
+    border: 1px solid var(--blue);
+    /* width: 100%; */
+    height: 30px;
+    box-sizing: border-box;
+    margin: 10px 0 10px 0;
+    border-radius: 5px;
+}
+
+.datePicker{
+    border: none;
+    outline: none;
+    border: 1px solid var(--blue);
+    /* width: 100%; */
+    height: 30px;
+    box-sizing: border-box;
+    margin: 10px 0 0 0;
+    border-radius: 5px;
+}
+
+/* .add_sess{
+    background-color: var(--blue-grey);
+    padding: 10px 30px;
+    border: 1px solid var(--blue-grey);
+    margin: 14px 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.submit:hover{
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    box-sizing: border-box;
+    color: white;
+    transition: 0.3s;
+} */
+
 .display{
+    background-color: white;
     width: 50%;
     height: 100%;
 }
@@ -22,3 +71,35 @@
     height: 50px;
     background-color: red;
 }
+
+.session_info{
+    border: 3px solid var(--blue);
+    border-radius: 10px;
+    width: calc(100% - 4);
+    height: auto;
+    /* background-color: red; */
+    box-sizing: border-box;
+    margin: 0px 8px;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.session_time{
+    width: 50%;
+    height: auto;
+
+}
+
+.session_enroled{
+    width: 50%;
+    height: auto;
+}
+
+.session_enroled li{
+    /* list-style-type: none; */
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+}
+
