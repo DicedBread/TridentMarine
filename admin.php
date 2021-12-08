@@ -37,7 +37,7 @@
                 <div class="admin_cont">
                     <div class="add_courses">
                         <h2>Add session</h2>
-                        <form action="">
+                        <form>
                             <label for="course">Course:</label>
                             <!-- <br> -->
                             <select name="course" id="course" class="course_select" onchange="courseSessions()">
@@ -98,17 +98,18 @@
                             </select>
                             <br>
                             <label for="date">Date: </label> 
-                            <input name="date" class="datePicker" type="text" id="alternate">
+                            <input name="date" class="datePicker" type="text" id="alternate" readonly>
                             <div type="text" id="datePicker" value=""></div>
                             <br>
                             <label for="time">Select a time:</label>
                             <input type="time" id="timePicker" name="time" class="datePicker">
+                            <p class="error" id="timeError">please select time</p>
                             <br>
-                            <button class="submit">Add session</button>
+                            <button onclick="addCourse()" class="submit">Add session</button>
                         </form>
                     </div> <!-- end add course -->
                     <div class="display" id="display">
-
+                        <!-- displays relevent course sessions when select is updated -->
                     </div>
                 </div>  <!--end ad_cont-->  
                 <?php

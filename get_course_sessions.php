@@ -19,7 +19,7 @@
                         ?>
                         <div class="session_info">
                             <div class="session_time">
-                                <h2>Date: <?php echo $sql_find['course_date']; ?></h2>
+                                <p>Date: <?php echo $sql_find['course_date']; ?></p>
                                 <p>Start time:<?php echo $sql_find['start_time']; ?></p>
                             </div>
                             <ul class="session_enroled">
@@ -36,7 +36,7 @@
                             </div>
                             <div class="session_info">
                                 <div class="session_time">
-                                    <h2>Date: <?php echo $sql_find['course_date']; ?></h2>
+                                    <p>Date: <?php echo $sql_find['course_date']; ?></p>
                                     <p>Start time: <?php echo $sql_find['start_time']; ?></p>
                                 </div>
                             <ul class="session_enroled">

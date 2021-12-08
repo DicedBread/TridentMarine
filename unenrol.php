@@ -44,11 +44,6 @@
                         //decrement enrol count
                         $updated_enrolCount = $currentEnrolCount - 1;
                         $enrolDown = "UPDATE `course_dates` SET enrolment_count='$updated_enrolCount' WHERE id = $course_date_id"; 
-                        // if($conn->query($enrolDown) === TRUE){
-                        //      header('Location: index.php');
-                        // }else{
-                        //     echo "Error: " . $enrolDown . "<br>" . mysqli_error($conn);
-                        // }
                     }else{
                         echo "Failed to prepare statement";
                     }
